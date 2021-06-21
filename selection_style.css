@@ -1,0 +1,102 @@
+selected path.link {
+	fill: none;
+	stroke: red;
+	stroke-width: 5px;
+}
+
+.mainHeader{
+	color: white;
+	text-align: center;
+	font: 20px "Century Gothic", Futura, sans-serif;
+}
+
+g:first-of-type text {
+    transform: translate(0, 5px);
+}
+
+.contentStyle{
+	display: flex;
+	justify-content:space-between;
+}
+
+.detailPanelMainStyle{
+	display: inline-block;
+	/*position: relative;*/
+
+}
+
+.detailPanelStyle{
+	/*border-left-style: dotted;*/
+	border-left-color: white;
+	border-left-width: 2px;
+	/*padding-left: 10px;*/
+	border-radius: 10px;
+	/*background: rgba(255,255,255,0.15);*/
+	background: rgba(52, 189, 235,1); /*52, 189, 235*/ /*0, 116, 156*/
+}
+
+.detailPanelStyle p{
+	color: white;
+	text-align: center;
+	font: 14px "Century Gothic", Futura, sans-serif;
+}
+
+.detailHeader{
+	padding-top: 15px;
+}
+
+.sampleImage img{
+	border: 2px solid white;
+	margin: 1px;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	/*justify-content: center;
+	align-items: center;*/
+}
+
+.imageBox{
+	/*border: 2px solid white;*/
+	border-radius: 10px;
+	background: rgba(55,55,55,1); /*rgba(255,255,255,0.25)*/
+	padding: 5px;
+	/*margin: auto;*/
+	min-height: 75px;
+	/*min-width: 168px;*/
+	min-width: 450px;
+	max-width: 1200px;
+}
+
+.spaceing{
+	padding-bottom: 5px;
+}
+
+.info{
+
+}
+
+.info p, a{
+	color: white;
+	text-align: left;
+	font: 12px "Century Gothic", Futura, sans-serif;
+}
+
+.custom-table{
+	border:50px;
+	border-color:red;
+}
+
+table{
+	border-collapse: collapse !important;
+	width: 100% !important;
+}
+td, th{
+	border: 2px solid #3d3d3d !important; /*#ddd;*/
+  	padding: 8px !important;
+}
+
+tr:hover:not(.ka-thead-row) {background-color: #4d4d4d;}
+
+tr:nth-child(even){background-color: #404040;}
+
+tr:is(.ka-thead-row){background-color: /*#292929*/ #1f1f1f;}
