@@ -8,6 +8,8 @@ import DataType from 'ka-table/enums';
 
 import $ from 'jquery';
 
+import seg_methods from '../seg_methods';
+
 
 function SampleImage(props){
 	return (
@@ -141,6 +143,34 @@ export default class Detail extends React.Component {
 		return methodsDiv;
 	}
 
+	fillMethods3(data){
+		//console.log(data);
+		if (!data || (data.length===1 && !data[0])) {
+			console.log('its a null');
+			return null;
+		}
+		let methodsDiv=[];
+		//console.log(data);
+		for (var i = 0; i < data.length-1; i++) {
+			let stars=this.state.stats_stars[i+1];
+			let forks=this.state.stats_forks[i+1];
+			methodsDiv.push(
+				{	
+					name:data[i].name,
+					author:data[i].author,
+					year:data[i].year,
+					journal:data[i].journal,
+					link:data[i].link,
+					stars:stars, //this.state.methods_data_all[i].stars,
+					forks:forks, //this.state.methods_data_all[i].forks,
+					id:i
+				}
+			);
+		}
+		//this.setState({methods_data_all:methodsDiv});
+		return methodsDiv;
+	}
+
 	checkTableData(data){
 		let isReady=true;
 		for (var i = 0; i < data.length; i++) {
@@ -150,6 +180,27 @@ export default class Detail extends React.Component {
 			}
 		}
 		return isReady;
+	}
+
+	filterJSONid(json, id){
+		return json.filter(
+			function(json) {
+				return (json['m_id'] == id);
+			}
+		)[0];
+	}
+
+	collectMethods(json,ids){
+		let resMethods=[];
+		for (var i = 0; i < ids.length; i++) {
+			// collect details from the methods struct
+			var thisMethod=this.filterJSONid(json['seg_methods'], ids[i]);
+			if (!thisMethod) {
+				continue;
+			}
+			resMethods.push(thisMethod);
+		}
+		return resMethods;
 	}
 
 	initMethods(methods,set){
@@ -178,8 +229,36 @@ export default class Detail extends React.Component {
 		return outMethods;
 	}
 
+	initMethods2(set){
+		let methods=this.collectMethods(seg_methods,this.props.data.methods);
+		let outMethods=Array(methods.length).fill(null);
+		for (var i = 0; i < methods.length; i++) {
+			let curMethod=methods[i];
+			outMethods[i]={	
+					name:curMethod.m_name,
+					author:curMethod.m_author,
+					year:curMethod.m_year,
+					journal:curMethod.m_journal,
+					link:curMethod.m_link,
+					stars:null,
+					forks:null,
+					id:i
+				};
+		}
+		//console.log('inited methods:');
+		//console.log(outMethods);
+		if (set) {
+			this.setState({methods_data_all:outMethods}, () => {
+				//console.log(this.state.methods_data_all, 'methods_data_all');
+				this.fetchGithubStats(methods);
+			});
+		}
+		return outMethods;
+	}
+
 	componentDidMount(){
-		this.initMethods(this.props.data.methods,true);
+		//this.initMethods(this.props.data.methods,true);
+		this.initMethods2(true);
 		//this.fetchGithubStats(this.props.data.methods);
 	}
 
@@ -192,7 +271,8 @@ export default class Detail extends React.Component {
 			});
             //this.setState({methods_data_all:this.initMethods(this.props.data.methods)});
             
-            this.initMethods(this.props.data.methods,true);
+            //this.initMethods(this.props.data.methods,true);
+            this.initMethods2(true);
             //this.fetchGithubStats(this.props.data.methods);
         }
     }
@@ -239,6 +319,7 @@ export default class Detail extends React.Component {
 
 	fetchGithubStats(methods){
 		//console.log('got methods: '+methods.length);
+		//console.log(methods);
 
 		let url=null;
 		let m=methods.length;
@@ -313,12 +394,14 @@ export default class Detail extends React.Component {
 	    let col_keys=['name','author','year','journal','link','stars','forks'];
 	    let col_names=['Name','Author','Year','Journal','Link','Github ★','Forks'];
 	    let col_types=['string','string','number','string','string','number','number'];
-	    let tableData=this.fillMethods2(this.props.data,this.state);
+	    //let tableData=this.fillMethods2(this.props.data,this.state);
+	    let tableData=this.fillMethods3(this.state.methods_data_all);
 	    /*
 	    let tableData=this.state.methods_data_all;
 		*/
 		//console.log(tableData);
 		//let ready=this.checkTableData(tableData);
+		let ready=tableData!==null;
 
 		//if (ready) {
 			return(
@@ -346,13 +429,14 @@ export default class Detail extends React.Component {
 						<div className="info">
 							<p>Methods:</p>
 							
-
+							{ready && 
 								<TableComponent 
 									data={tableData}
 									columns_keys={col_keys}
 									columns_names={col_names}
 									columns_types={col_types}
 								/>
+							}
 							
 						</div>
 					</div>

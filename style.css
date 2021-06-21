@@ -53,7 +53,7 @@ input:focus {
 	outline: none;
 }
 
-a, button {
+button {
 	background-image: linear-gradient(to bottom, #337ab7 0%, #265a88 100%);
 	border: 0;
 	color: white;
@@ -66,12 +66,12 @@ a, button {
 	border-radius: 50px;
 }
 
-a:hover, button:hover {
+button:hover {
 	background-image: linear-gradient(to top, #337ab7 0%, #265a88 100%);
 	cursor: pointer;
 }
 
-a:focus, button:focus {
+button:focus {
 	outline: none;
 	background-image: linear-gradient(to top, #337ab7 0%, #265a88 100%);
 }

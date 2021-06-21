@@ -10,13 +10,7 @@ export default {
     mini_hrefs: ['nuc_r.png','nuc_g.png','nuc_b.png'],
     mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3'],
     parent_tag: null,
-    methods:[{
-    	m_name: 'U-Net',
-    	m_author: 'Ronneberger et al.',
-    	m_year: '2015',
-    	m_journal: 'aRxiv',
-    	m_link: 'https://github.com/zhixuhao/unet'
-    }],
+    methods:[0],
     pathProps: {
     	className: 'link'
     },
@@ -30,10 +24,10 @@ export default {
 			width: 50,
             href: 'nuc_r.png'
         },
-        mini_hrefs: [],
-        mini_info: [],
+        mini_hrefs: ['nuc_r.png','nuc_g.png'],
+        mini_info: ['BBBC0xyz1','BBBC0xyz2'],
         parent_tag: null,
-        methods:[],
+        methods:[0,3],
 	    pathProps: {
 	    	className: 'link'
 	    },
@@ -62,19 +56,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_b.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2'],
         		parent_tag: 'Culture',
-        		methods:[{
-			    	m_name: 'U-Net',
-			    	m_author: 'Ronneberger et al.',
-			    	m_year: '2015',
-			    	m_journal: 'aRxiv',
-			    	m_link: 'https://github.com/zhixuhao/unet'
-			    }, {
-			    	m_name: 'Mask R-CNN',
-			    	m_author: 'He et al.',
-			    	m_year: '2017',
-			    	m_journal: 'aRxiv',
-			    	m_link: 'https://github.com/matterport/Mask_RCNN'
-			    }],
+        		methods:[0,1],
 				children: []
 			}, {
 				name: 'Other',
@@ -88,25 +70,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Culture',
-        		methods:[{
-			    	m_name: 'U-Net',
-			    	m_author: 'Ronneberger et al.',
-			    	m_year: '2015',
-			    	m_journal: 'aRxiv',
-			    	m_link: 'https://github.com/zhixuhao/unet'
-			    }, {
-			    	m_name: 'Mask R-CNN',
-			    	m_author: 'He et al.',
-			    	m_year: '2017',
-			    	m_journal: 'aRxiv',
-			    	m_link: 'https://github.com/matterport/Mask_RCNN'
-			    }, {
-			    	m_name: 'StarDist',
-			    	m_author: 'Schmidt et al.',
-			    	m_year: '2018',
-			    	m_journal: 'aRxiv',
-			    	m_link: 'https://github.com/stardist/stardist'
-			    }],
+        		methods:[0,1,2],
 				children: []
 			}]
 		}, {

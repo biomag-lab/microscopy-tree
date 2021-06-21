@@ -75,10 +75,21 @@ g:first-of-type text {
 
 }
 
-.info p, a{
+.info p{
 	color: white;
 	text-align: left;
 	font: 12px "Century Gothic", Futura, sans-serif;
+}
+
+.info a{
+	color: rgba(52, 189, 235,1);
+	text-align: left;
+	text-decoration: none;
+	font: 12px "Century Gothic", Futura, sans-serif;
+}
+
+.info a:hover{
+	color: rgba(7, 130, 171,1);
 }
 
 .custom-table{
