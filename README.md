@@ -12,9 +12,9 @@ To use this tool you need to:
 
 1. Clone this repository with
 
-	```
-		git clone https://github.com/spreka/microscopy-tree.git
-	```
+```
+	git clone https://github.com/spreka/microscopy-tree.git
+```
 
 2. Run
 
@@ -43,8 +43,10 @@ Initially, the full tree is displayed on the left will all nodes visible, and th
 
 # Data structure
 
-The data is currently stored in [`json.js`](https://github.com/spreka/microscopy-tree/json.js), a simple text file in json format.
+The data is currently stored in [`json.js`](https://github.com/spreka/microscopy-tree/blob/main/json.js), a simple text file in json format.
 Methods are currently also stored in the tree, however, as this would quickly become redundant, they will be stored in a separate data file later.
 
-# Misc
-The tree is based on the [react-tree-graph](https://github.com/jpb12/react-tree-graph) demo.
+# Deployment
+
+TODO:
+- publish on github pages once ready (the repo must be public)
