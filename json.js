@@ -32,7 +32,7 @@ export default {
 	    	className: 'link'
 	    },
 		children: [{
-			name: 'Stained',
+			name: 'Labelled',
 			id: '15',
 			parent_id: '2',
 			nodeProps: {
@@ -59,8 +59,36 @@ export default {
         		methods:[0,1],
 				children: []
 			}, {
-				name: 'Other',
+				name: 'Confocal',
 				id: '18',
+				parent_id: '15',
+				nodeProps: {
+                    height: 50,
+					width: 50,
+			        href: 'nuc.png'
+                },
+        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
+        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		parent_tag: 'Culture',
+        		methods:[0,1,2],
+				children: []
+			}, {
+				name: 'Light-sheet',
+				id: '25',
+				parent_id: '15',
+				nodeProps: {
+                    height: 50,
+					width: 50,
+			        href: 'nuc.png'
+                },
+        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
+        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		parent_tag: 'Culture',
+        		methods:[0,1,2],
+				children: []
+			}, {
+				name: 'BF',
+				id: '26',
 				parent_id: '15',
 				nodeProps: {
                     height: 50,
@@ -156,20 +184,6 @@ export default {
         		parent_tag: 'Culture',
         		methods:[],
 				children: []
-			}, {
-				name: 'Holo',
-				id: '22',
-				parent_id: '16',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Culture',
-        		methods:[],
-				children: []
 			}]
 		}]
 
@@ -193,7 +207,7 @@ export default {
 	    	className: 'link'
 	    },
 		children: [{
-			name: 'Stained',
+			name: 'Labelled',
 			id: '5',
 			parent_id: '3',
 			nodeProps: {
@@ -220,7 +234,7 @@ export default {
        			methods:[],
 				children: []
 			}, {
-				name: 'Other',
+				name: 'Confocal',
 				id: '8',
 				parent_id: '5',
 				nodeProps: {
@@ -232,6 +246,34 @@ export default {
         		mini_info: [],
         		parent_tag: 'Tissue',
         		methods:[],
+				children: []
+			}, {
+				name: 'Light-sheet',
+				id: '27',
+				parent_id: '5',
+				nodeProps: {
+                    height: 50,
+					width: 50,
+			        href: 'nuc.png'
+                },
+        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
+        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		parent_tag: 'Tissue',
+        		methods:[0,1,2],
+				children: []
+			}, {
+				name: 'BF',
+				id: '28',
+				parent_id: '5',
+				nodeProps: {
+                    height: 50,
+					width: 50,
+			        href: 'nuc.png'
+                },
+        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
+        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		parent_tag: 'Tissue',
+        		methods:[0,1,2],
 				children: []
 			}]
 		}, {
@@ -317,180 +359,9 @@ export default {
         		parent_tag: 'Tissue',
         		methods:[],
 				children: []
-			}, {
-				name: 'Holo',
-				id: '12',
-				parent_id: '6',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Tissue',
-        		methods:[],
-				children: []
 			}]
 		}]
 
 
-	}, {
-		name: 'Organ',
-		id: '4',
-		parent_id: '1',
-		nodeProps: {
-            height: 50,
-			width: 50,
-	        href: 'nuc_b.png'
-        },
-        mini_hrefs: [],
-        mini_info: [],
-        parent_tag: null,
-        methods:[],
-	    pathProps: {
-	    	className: 'link'
-	    },
-		children: [{
-			name: 'Stained',
-			id: '25',
-			parent_id: '4',
-			nodeProps: {
-                height: 50,
-				width: 50,
-		        href: 'nuc.png'
-	        },
-        	mini_hrefs: [],
-        	mini_info: [],
-        	parent_tag: 'Organ',
-        	methods:[],
-			children: [{
-				name: 'Fluo',
-				id: '27',
-				parent_id: '25',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Organ',
-        		methods:[],
-				children: []
-			}, {
-				name: 'Other',
-				id: '28',
-				parent_id: '25',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Organ',
-        		methods:[],
-				children: []
-			}]
-		}, {
-			name: 'Label-free',
-			id: '26',
-			parent_id: '4',
-			nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-    		mini_hrefs: [],
-    		mini_info: [],
-    		parent_tag: 'Organ',
-    		methods:[],
-			children: [{
-				name: 'BF',
-				id: '29',
-				parent_id: '26',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Organ',
-        		methods:[],
-				children: [{
-					name: 'Transparent',
-					id: '33',
-					parent_id: '29',
-					nodeProps: {
-                        height: 50,
-						width: 50,
-				        href: 'nuc.png'
-                	},
-        			mini_hrefs: [],
-        			mini_info: [],
-        			parent_tag: 'Organ BF',
-        			methods:[],
-					children: []
-				}, {
-					name: 'Non-transparent',
-					id: '34',
-					parent_id: '29',
-					nodeProps: {
-                        height: 50,
-						width: 50,
-				        href: 'nuc.png'
-                	},
-        			mini_hrefs: [],
-        			mini_info: [],
-        			parent_tag: 'Organ BF',
-        			methods:[],
-					children: []
-				}]
-			}, {
-				name: 'DIC',
-				id: '30',
-				parent_id: '26',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Organ',
-        		methods:[],
-				children: []
-			},	{
-				name: 'PC',
-				id: '31',
-				parent_id: '26',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Organ',
-        		methods:[],
-				children: []
-			}, {
-				name: 'Holo',
-				id: '32',
-				parent_id: '26',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: 'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Organ',
-        		methods:[],
-				children: []
-			}]
-		}]
 	}]
 };

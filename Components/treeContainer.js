@@ -34,7 +34,7 @@ export default class TreeContainer extends React.PureComponent {
 
 	showInfo(event, nodeKey){
 		event.preventDefault();
-		//console.log(`Hover over ${nodeKey}`);
+		console.log(`Hover over ${nodeKey}`);
 		//alert('Cites: [...]');
 
 		let i='10';

@@ -26,7 +26,9 @@ export default class Detail extends React.Component {
 			curNodeId:null,
 			curImInfo:"",
 			curImInfoList:null,
-			methods_data_all:Array(this.props.data.methods.length).fill(null)//this.initMethods(this.props.data.methods)
+			methods_data_all:Array(this.props.data.methods.length).fill(null), //this.initMethods(this.props.data.methods)
+			is2D: true,
+			is3D: false
 		}
 		//this.fetchGithubStats(this.props.data.methods);
 		
@@ -36,6 +38,7 @@ export default class Detail extends React.Component {
       	}
       	*/
       	//this.state=this.fetchGithubStats()
+      	this.handleInputChange = this.handleInputChange.bind(this);
 	}
 
 	setI(i){
@@ -143,7 +146,7 @@ export default class Detail extends React.Component {
 		return methodsDiv;
 	}
 
-	fillMethods3(data){
+	fillMethods3(data,is2D,is3D){
 		//console.log(data);
 		if (!data || (data.length===1 && !data[0])) {
 			console.log('its a null');
@@ -152,6 +155,9 @@ export default class Detail extends React.Component {
 		let methodsDiv=[];
 		//console.log(data);
 		for (var i = 0; i < data.length-1; i++) {
+			if ((is2D && !data[i]._2d) || (is3D && !data[i]._3d)) {
+				continue;
+			}
 			let stars=this.state.stats_stars[i+1];
 			let forks=this.state.stats_forks[i+1];
 			methodsDiv.push(
@@ -160,9 +166,11 @@ export default class Detail extends React.Component {
 					author:data[i].author,
 					year:data[i].year,
 					journal:data[i].journal,
-					link:data[i].link,
+					link:[data[i].link,data[i].paper],
 					stars:stars, //this.state.methods_data_all[i].stars,
 					forks:forks, //this.state.methods_data_all[i].forks,
+					_2d:data[i]._2d,
+					_3d:data[i]._3d,
 					id:i
 				}
 			);
@@ -242,6 +250,9 @@ export default class Detail extends React.Component {
 					link:curMethod.m_link,
 					stars:null,
 					forks:null,
+					_2d:curMethod.m_2d,
+					_3d:curMethod.m_3d,
+					paper:curMethod.m_paper,
 					id:i
 				};
 		}
@@ -310,6 +321,9 @@ export default class Detail extends React.Component {
 					link:method.m_link,
 					stars:stats.stargazers_count,
 					forks:stats.forks,
+					_2d:method.m_2d,
+					_3d:method.m_3d,
+					paper:method.m_paper,
 					id:i
 				};
 		this.setState({stats_stars:stats_stars, stats_forks:stats_forks, curNodeId:this.props.currentId, methods_data_all:methods_data_all});
@@ -356,6 +370,17 @@ export default class Detail extends React.Component {
 	}
 
 
+	handleInputChange(event) {
+		const target = event.target;
+		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const name = target.name;
+
+		this.setState({
+			[name]: value
+		});
+	}
+
+
 	render(){
 		let currentMiniImages=this.props.data.mini_hrefs;
 		let imDiv=this.fillMiniImages(currentMiniImages,this.props.data.mini_info,this.props.data.id);
@@ -391,17 +416,19 @@ export default class Detail extends React.Component {
 
 		
 		// construct details as a table
-	    let col_keys=['name','author','year','journal','link','stars','forks'];
-	    let col_names=['Name','Author','Year','Journal','Link','Github ★','Forks'];
-	    let col_types=['string','string','number','string','string','number','number'];
+	    let col_keys=['name','author','year','journal','link','stars','forks','_2d','_3d'];
+	    let col_names=['Name','Author','Year','Journal','Links','Github ★','Forks','2D','3D'];
+	    let col_types=['string','string','number','string','string','number','number','boolean','boolean'];
 	    //let tableData=this.fillMethods2(this.props.data,this.state);
-	    let tableData=this.fillMethods3(this.state.methods_data_all);
+	    let tableData=this.fillMethods3(this.state.methods_data_all,this.state.is2D,this.state.is3D);
 	    /*
 	    let tableData=this.state.methods_data_all;
 		*/
 		//console.log(tableData);
 		//let ready=this.checkTableData(tableData);
 		let ready=tableData!==null;
+
+		//console.log('2D: '+this.state.is2D+' | 3D: '+this.state.is3D);
 
 		//if (ready) {
 			return(
@@ -428,6 +455,28 @@ export default class Detail extends React.Component {
 						<div className="spaceing"></div>
 						<div className="info">
 							<p>Methods:</p>
+
+							<div>
+								<form>
+									<label>
+										<input
+											name="is2D"
+											type="checkbox"
+											checked={this.state.is2D}
+											onChange={this.handleInputChange} />
+										2D
+									</label>
+									<br />
+									<label>
+										<input
+											name="is3D"
+											type="checkbox"
+											checked={this.state.is3D}
+											onChange={this.handleInputChange} />
+										3D
+									</label>
+								</form>
+							</div>
 							
 							{ready && 
 								<TableComponent 

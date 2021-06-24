@@ -75,7 +75,7 @@ g:first-of-type text {
 
 }
 
-.info p{
+.info p, label{
 	color: white;
 	text-align: left;
 	font: 12px "Century Gothic", Futura, sans-serif;

@@ -6,6 +6,8 @@ import { IHeadCellProps } from 'ka-table/props';
 
 import '../selection_style.css';
 
+import $ from 'jquery';
+
 const HeadCell = ({
   column: { title },
 }) => {
@@ -34,11 +36,11 @@ class TableComponent extends React.Component {
       textAlign: 'left',
       color: 'white',
       paddingBottom: '10px',
-      width: 70, 
-      minWidth: 50,
+      width: 40, 
+      minWidth: 20,
       border: '50px',
       borderColor: 'white'
-    };
+    }; // width: 70, minWidth: 50,
 
     let cols=[];
     for (var i = 0; i < this.props.columns_keys.length; i++) {
@@ -48,6 +50,10 @@ class TableComponent extends React.Component {
           type=DataType.String;
         case 'number':
           type=DataType.Number;
+        case 'boolean':
+          type=DataType.Boolean;
+        case 'object':
+          type=DataType.Object;
         default:
           type=DataType.String;
       }
@@ -74,7 +80,7 @@ class TableComponent extends React.Component {
       data: this.props.data,
       editingMode: EditingMode.None,
       rowKeyField: 'id',
-      sortingMode: SortingMode.Single,
+      sortingMode: SortingMode.Single
 
     }
   }
@@ -86,6 +92,29 @@ class TableComponent extends React.Component {
     });
   }
   */
+
+  popLinks(links){
+    let output=[];
+    //console.log(links);
+    let linkNames=['code','paper'];
+    ///*
+    for (var i = 0; i < links.length; i++) {
+      output.push(<a key={i} href={links[i]}>{linkNames[i]}<br /></a>);
+    }
+    //*/
+    /*
+    console.log(links.code);
+    let c=0;
+    for (const property in links) {
+      //console.log(`${property}: ${links[property]}`);
+      console.log(property+': '+links[property]);
+      output.push(<a key={c} href={links[property]}>{property}</a>);
+      c++;
+    }
+    */
+    return output;
+    
+  }
 
   render() {
     //console.log(JSON.stringify(this.state.tableProps));
@@ -106,7 +135,20 @@ class TableComponent extends React.Component {
           content: (props) => {
             switch (props.column.key){
               case 'link':
-                return <a href={props.value}>visit</a>;
+                let multi=false;
+                let links=props.value.split(',');
+                //console.log(links);
+                if ((links.length && links.length>1)){ // || (props.value.hasOwnProperty('code') && props.value.hasOwnProperty('paper'))) {
+                  multi=true;
+                  return this.popLinks(links);
+                } else {
+                  return <a href={props.value}>visit</a>;
+                }
+                
+              case '_2d':
+              case '_3d':
+                let val=props.value==="true"?'✓':'x';
+                return <p>{val}</p>;
             }
           }
         }
