@@ -9,7 +9,16 @@ export default {
 			m_link: 'https://github.com/zhixuhao/unet',
 			m_paper: 'https://arxiv.org/abs/1505.04597',
 			m_2d: true,
-			m_3d: true
+			m_3d: true,
+			m_challenges:{
+				m_elongated:true,
+				m_concave:true,
+				m_deviating:false,
+				m_wobbling:false,
+				m_multinuc:true,
+				m_heterogen:true,
+				m_fragmented:true
+			}
 		}, {
 			m_id: 1,
 			m_name: 'Mask R-CNN',
@@ -19,7 +28,16 @@ export default {
 			m_link: 'https://github.com/matterport/Mask_RCNN',
 			m_paper: 'https://arxiv.org/abs/1703.06870',
 			m_2d: true,
-			m_3d: false
+			m_3d: false,
+			m_challenges:{
+				m_elongated:true,
+				m_concave:true,
+				m_deviating:false,
+				m_wobbling:false,
+				m_multinuc:false,
+				m_heterogen:true,
+				m_fragmented:false
+			}
 		}, {
 			m_id: 2,
 			m_name: 'StarDist',
@@ -29,7 +47,16 @@ export default {
 			m_link: 'https://github.com/stardist/stardist',
 			m_paper: 'https://arxiv.org/abs/1806.03535',
 			m_2d: true,
-			m_3d: true
+			m_3d: true,
+			m_challenges:{
+				m_elongated:true,
+				m_concave:true,
+				m_deviating:false,
+				m_wobbling:false,
+				m_multinuc:false,
+				m_heterogen:true,
+				m_fragmented:false
+			}
 		}, {
 			m_id: 3,
 			m_name: 'nucleAIzer',
@@ -39,6 +66,15 @@ export default {
 			m_link: 'https://github.com/spreka/biomagdsb',
 			m_paper: 'https://www.cell.com/cell-systems/fulltext/S2405-4712(20)30117-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2405471220301174%3Fshowall%3Dtrue',
 			m_2d: true,
-			m_3d: false
+			m_3d: false,
+			m_challenges:{
+				m_elongated:true,
+				m_concave:true,
+				m_deviating:true,
+				m_wobbling:false,
+				m_multinuc:true,
+				m_heterogen:true,
+				m_fragmented:false
+			}
 		}]
 };

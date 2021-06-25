@@ -1,3 +1,7 @@
+body{
+	overflow-y: auto;
+}
+
 selected path.link {
 	fill: none;
 	stroke: red;
@@ -92,6 +96,12 @@ g:first-of-type text {
 	color: rgba(7, 130, 171,1);
 }
 
+.info span{
+	color: white;
+	font: 12px "Century Gothic", Futura, sans-serif;
+	padding:3px;
+}
+
 .custom-table{
 	border:50px;
 	border-color:red;
@@ -99,7 +109,7 @@ g:first-of-type text {
 
 table{
 	border-collapse: collapse !important;
-	width: 100% !important;
+	/*width: 100% !important;*/
 }
 td, th{
 	border: 2px solid #3d3d3d !important; /*#ddd;*/
@@ -111,3 +121,111 @@ tr:hover:not(.ka-thead-row) {background-color: #4d4d4d;}
 tr:nth-child(even){background-color: #404040;}
 
 tr:is(.ka-thead-row){background-color: /*#292929*/ #1f1f1f;}
+
+/*
+.custom-theme-demo{
+	min-width: 750px;
+}
+
+tbody{
+	display:block;
+	overflow-y:scroll;
+	max-height:60vh;
+}
+
+thead tr{
+	display:block;
+}
+*/
+
+
+/*-------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgba(52, 189, 235,1);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgba(52, 189, 235,1);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*--------------*/
+
+
+
+/*--------------*/
+
+.challenge{
+	border: 0;
+	color: white;
+	font-size: 14px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+	text-decoration: none;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+	margin-left: 8px;
+	padding: 5px 12px;
+	border-radius: 50px;
+
+	margin-block-start:0.3em;
+	margin-block-end: 0.3em;
+}
+
+.challengeTrue{
+	background-image: linear-gradient(to bottom, #33b83a 0%, #288f2d 100%);
+}
+
+.challengeFalse{
+	color:gray !important;
+	background-image: linear-gradient(to bottom, #1f1f1f 0%, #303030 100%);
+}

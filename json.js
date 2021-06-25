@@ -70,7 +70,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Culture',
-        		methods:[0,1,2],
+        		methods:[0,1,2,3],
 				children: []
 			}, {
 				name: 'Light-sheet',

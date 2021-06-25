@@ -171,6 +171,7 @@ export default class Detail extends React.Component {
 					forks:forks, //this.state.methods_data_all[i].forks,
 					_2d:data[i]._2d,
 					_3d:data[i]._3d,
+					challenges:JSON.stringify(data[i].challenges),
 					id:i
 				}
 			);
@@ -253,6 +254,7 @@ export default class Detail extends React.Component {
 					_2d:curMethod.m_2d,
 					_3d:curMethod.m_3d,
 					paper:curMethod.m_paper,
+					challenges:curMethod.m_challenges,
 					id:i
 				};
 		}
@@ -324,6 +326,7 @@ export default class Detail extends React.Component {
 					_2d:method.m_2d,
 					_3d:method.m_3d,
 					paper:method.m_paper,
+					challenges:method.m_challenges,
 					id:i
 				};
 		this.setState({stats_stars:stats_stars, stats_forks:stats_forks, curNodeId:this.props.currentId, methods_data_all:methods_data_all});
@@ -416,15 +419,15 @@ export default class Detail extends React.Component {
 
 		
 		// construct details as a table
-	    let col_keys=['name','author','year','journal','link','stars','forks','_2d','_3d'];
-	    let col_names=['Name','Author','Year','Journal','Links','Github ★','Forks','2D','3D'];
-	    let col_types=['string','string','number','string','string','number','number','boolean','boolean'];
+	    let col_keys=['name','author','year','journal','link','stars','forks','_2d','_3d','challenges'];
+	    let col_names=['Name','Author','Year','Journal','Links','Github ★','Forks','2D','3D','Challenges'];
+	    let col_types=['string','string','number','string','string','number','number','boolean','boolean','string'];
 	    //let tableData=this.fillMethods2(this.props.data,this.state);
 	    let tableData=this.fillMethods3(this.state.methods_data_all,this.state.is2D,this.state.is3D);
 	    /*
 	    let tableData=this.state.methods_data_all;
 		*/
-		//console.log(tableData);
+		console.log(tableData);
 		//let ready=this.checkTableData(tableData);
 		let ready=tableData!==null;
 
@@ -456,27 +459,33 @@ export default class Detail extends React.Component {
 						<div className="info">
 							<p>Methods:</p>
 
-							<div>
+							<div style={{display:'flex'}}>
 								<form>
-									<label>
+									<span>2D</span>
+									<label className="switch">
 										<input
 											name="is2D"
 											type="checkbox"
 											checked={this.state.is2D}
 											onChange={this.handleInputChange} />
-										2D
+											<span class="slider round"></span>
+										
 									</label>
 									<br />
-									<label>
+									<span>3D</span>
+									<label className="switch">
 										<input
 											name="is3D"
 											type="checkbox"
 											checked={this.state.is3D}
 											onChange={this.handleInputChange} />
-										3D
+											<span class="slider round"></span>
+										
 									</label>
-								</form>
+								</form>					
 							</div>
+
+							
 							
 							{ready && 
 								<TableComponent 

@@ -36,11 +36,12 @@ class TableComponent extends React.Component {
       textAlign: 'left',
       color: 'white',
       paddingBottom: '10px',
-      width: 40, 
+      width: 20, 
       minWidth: 20,
       border: '50px',
       borderColor: 'white'
     }; // width: 70, minWidth: 50,
+    // width: 40, minWidth: 20,
 
     let cols=[];
     for (var i = 0; i < this.props.columns_keys.length; i++) {
@@ -81,7 +82,6 @@ class TableComponent extends React.Component {
       editingMode: EditingMode.None,
       rowKeyField: 'id',
       sortingMode: SortingMode.Single
-
     }
   }
 
@@ -114,6 +114,24 @@ class TableComponent extends React.Component {
     */
     return output;
     
+  }
+
+  popChallenges(data){
+    let output=[];
+    console.log(data);
+    let c=0;
+    for (const property in data) {
+      name=property.substring(2);
+      console.log(name+': '+data[property]);
+      if (data[property]) {
+        output.push(<p className="challenge challengeTrue" key={c}>{name}</p>); //style={{color: 'green', marginBlockStart: '0.3em', marginBlockEnd: '0.3em'}}
+      } else {
+        output.push(<p className="challenge challengeFalse" key={c}>{name}</p>); //style={{color: 'gray', marginBlockStart: '0.3em', marginBlockEnd: '0.3em'}}
+      }
+      
+      c++;
+    }
+    return output;
   }
 
   render() {
@@ -149,6 +167,9 @@ class TableComponent extends React.Component {
               case '_3d':
                 let val=props.value==="true"?'✓':'x';
                 return <p>{val}</p>;
+
+              case 'challenges':
+                return this.popChallenges(JSON.parse(props.value));
             }
           }
         }
