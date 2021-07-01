@@ -118,15 +118,21 @@ class TableComponent extends React.Component {
 
   popChallenges(data){
     let output=[];
-    console.log(data);
+    //console.log(data);
     let c=0;
     for (const property in data) {
       name=property.substring(2);
-      console.log(name+': '+data[property]);
+      //console.log(name+': '+data[property]);
+      /*
       if (data[property]) {
         output.push(<p className="challenge challengeTrue" key={c}>{name}</p>); //style={{color: 'green', marginBlockStart: '0.3em', marginBlockEnd: '0.3em'}}
       } else {
         output.push(<p className="challenge challengeFalse" key={c}>{name}</p>); //style={{color: 'gray', marginBlockStart: '0.3em', marginBlockEnd: '0.3em'}}
+      }
+      */
+
+      if (data[property]){
+        output.push(<p style={{marginBlockStart: '0em', marginBlockEnd: '0em'}} key={c}>{name}</p>);
       }
       
       c++;

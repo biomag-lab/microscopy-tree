@@ -160,7 +160,8 @@ thead tr{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  /*background-color: #ccc;*/
+  background-image: linear-gradient(to bottom, #1f1f1f 0%, #303030 100%);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -178,7 +179,8 @@ thead tr{
 }
 
 input:checked + .slider {
-  background-color: rgba(52, 189, 235,1);
+  /*background-color: rgba(52, 189, 235,1);*/
+  background-image: linear-gradient(to bottom, #34bdeb 0%, #2381a1 100%);
 }
 
 input:focus + .slider {
@@ -201,7 +203,65 @@ input:checked + .slider:before {
 }
 
 /*--------------*/
+.challenge2Outer input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin:0;
+}
 
+.challenge2{
+	cursor: pointer;
+	border: 0;
+	
+	font-size: 14px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+	text-decoration: none;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+	background-image: linear-gradient(to bottom, #1f1f1f 0%, #303030 100%);
+	color:gray !important;
+	
+	padding: 5px 12px !important;
+	border-radius: 50px;
+
+	margin-block-start:0.3em;
+	margin-block-end: 0.3em;
+
+	-webkit-transition: .4s;
+  	transition: .4s;
+
+  	float: left;
+  	margin-right: 3px;
+}
+
+.challenge2:before{
+	content: "";
+}
+
+.challengeLabel:before {
+	content: attr(data-off);
+}
+
+.challengeLabel:after {
+	content: attr(data-on);
+}
+
+input:checked + .challenge2 {
+	color: white !important;
+	background-image: linear-gradient(to bottom, #34bdeb 0%, #2381a1 100%); 
+	/*green:*/ /*linear-gradient(to bottom, #33b83a 0%, #288f2d 100%);*/
+	/*blue:*/ /*linear-gradient(to bottom, #34bdeb 0%, #2381a1 100%);*/
+}
+/*
+input:focus + .challenge2 {
+	box-shadow: 0 0 1px rgba(52, 189, 235,1);
+}
+*/
+
+input:checked + .challenge2:before {
+	color:gray !important;
+	background-image: linear-gradient(to bottom, #1f1f1f 0%, #303030 100%);
+}
 
 
 /*--------------*/
@@ -213,7 +273,7 @@ input:checked + .slider:before {
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
 	text-decoration: none;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
-	margin-left: 8px;
+	/*margin-left: 8px;*/
 	padding: 5px 12px;
 	border-radius: 50px;
 
@@ -229,3 +289,18 @@ input:checked + .slider:before {
 	color:gray !important;
 	background-image: linear-gradient(to bottom, #1f1f1f 0%, #303030 100%);
 }
+
+.hoverImg{
+	/*display: hidden;*/
+	/*visibility: hidden;*/
+	padding-left: 50px;
+	transition: 2s;
+}
+
+/*
+.hoverImg:hover{
+	display: block;
+	-webkit-transition: 2s;
+  	transition: 2s;
+}
+*/

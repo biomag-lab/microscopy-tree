@@ -10,6 +10,8 @@ import $ from 'jquery';
 
 import seg_methods from '../seg_methods';
 
+import nuc from '../nuc.png';
+
 
 function SampleImage(props){
 	return (
@@ -28,7 +30,15 @@ export default class Detail extends React.Component {
 			curImInfoList:null,
 			methods_data_all:Array(this.props.data.methods.length).fill(null), //this.initMethods(this.props.data.methods)
 			is2D: true,
-			is3D: false
+			is3D: false,
+			isElongated: false,
+			isConcanve: false,
+			isDeviating: false,
+			isWobbling: false,
+			isMultinuc: false,
+			isHeterogen: false,
+			isFragmented: false,
+			hoverImg: '../challenge_none.png'
 		}
 		//this.fetchGithubStats(this.props.data.methods);
 		
@@ -39,6 +49,7 @@ export default class Detail extends React.Component {
       	*/
       	//this.state=this.fetchGithubStats()
       	this.handleInputChange = this.handleInputChange.bind(this);
+      	this.showTooltipImg=this.showTooltipImg.bind(this);
 	}
 
 	setI(i){
@@ -146,7 +157,7 @@ export default class Detail extends React.Component {
 		return methodsDiv;
 	}
 
-	fillMethods3(data,is2D,is3D){
+	fillMethods3(data){
 		//console.log(data);
 		if (!data || (data.length===1 && !data[0])) {
 			console.log('its a null');
@@ -155,11 +166,57 @@ export default class Detail extends React.Component {
 		let methodsDiv=[];
 		//console.log(data);
 		for (var i = 0; i < data.length-1; i++) {
-			if ((is2D && !data[i]._2d) || (is3D && !data[i]._3d)) {
+			// 2D/3D:
+			if ((this.state.is2D && !data[i]._2d) || (this.state.is3D && !data[i]._3d)) {
 				continue;
 			}
+			// challenges:
+			if ((this.state.isElongated && !data[i].challenges.m_elongated) || (this.state.isConcanve && !data[i].challenges.m_concave) || (this.state.isDeviating && !data[i].challenges.m_deviating) || (this.state.isWobbling && !data[i].challenges.m_wobbling) || (this.state.isMultinuc && !data[i].challenges.m_multinuc) || (this.state.isHeterogen && !data[i].challenges.m_heterogen) || (this.state.isFragmented && !data[i].challenges.m_fragmented)) {
+				continue;
+			}
+
 			let stars=this.state.stats_stars[i+1];
 			let forks=this.state.stats_forks[i+1];
+			methodsDiv.push(
+				{	
+					name:data[i].name,
+					author:data[i].author,
+					year:data[i].year,
+					journal:data[i].journal,
+					link:[data[i].link,data[i].paper],
+					stars:stars, //this.state.methods_data_all[i].stars,
+					forks:forks, //this.state.methods_data_all[i].forks,
+					_2d:data[i]._2d,
+					_3d:data[i]._3d,
+					challenges:JSON.stringify(data[i].challenges),
+					id:i
+				}
+			);
+		}
+		//this.setState({methods_data_all:methodsDiv});
+		return methodsDiv;
+	}
+
+	fillMethods4(data){
+		//console.log(data);
+		if (!data || (data.length===1 && !data[0])) {
+			console.log('its a null');
+			return null;
+		}
+		let methodsDiv=[];
+		//console.log(data);
+		for (var i = 0; i < data.length; i++) {
+			// 2D/3D:
+			if ((this.state.is2D && !data[i]._2d) || (this.state.is3D && !data[i]._3d)) {
+				continue;
+			}
+			// challenges:
+			if ((this.state.isElongated && !data[i].challenges.m_elongated) || (this.state.isConcanve && !data[i].challenges.m_concave) || (this.state.isDeviating && !data[i].challenges.m_deviating) || (this.state.isWobbling && !data[i].challenges.m_wobbling) || (this.state.isMultinuc && !data[i].challenges.m_multinuc) || (this.state.isHeterogen && !data[i].challenges.m_heterogen) || (this.state.isFragmented && !data[i].challenges.m_fragmented)) {
+				continue;
+			}
+
+			let stars=this.state.stats_stars[i];
+			let forks=this.state.stats_forks[i];
 			methodsDiv.push(
 				{	
 					name:data[i].name,
@@ -340,6 +397,8 @@ export default class Detail extends React.Component {
 
 		let url=null;
 		let m=methods.length;
+		let links=Array(m).fill(null);
+		const promises=Array(m).fill(null);
 		for (var i = 0; i < m; i++) {
 			url=methods[i].m_link;
 
@@ -363,14 +422,129 @@ export default class Detail extends React.Component {
 
 			console.log('fetching link: '+link);
 			//console.log(methods[i]);
+
+			// this works more or less:
+			/*
 			fetch(link)
 				.then(response => response.json())
 				.then(data => { this.getGithubStats(data,i,methods[i-1]) })
 				.catch(err => { console.error(err) });
+			*/
+
+			links[i]=link;
+			//promises.push(this.getGithubStatsLight2(link));
 
 		}
 
+		// try this:
+		/*
+		this.callGithubStatsFetch(links)
+			.then((res) => {
+		    // both have loaded!
+		    console.log('in main fetch fcn');
+		    console.log(res);
+		});
+		*/
+		/*
+		Promise.all(promises)
+           .then((results) => {
+               console.log("All done");
+               console.log(results);
+           })
+           .catch((e) => {
+               // Handle errors here
+           });
+		*/
+
+		Promise.all(links.map(url =>
+			fetch(url)
+			    .then(response => response.json())
+				.then(data => { return [this.getGithubStatsLight(data), url] })
+				.catch(err => { console.error(err) })
+		)).then(results => {
+		    //console.log("All done");
+            //console.log(results[0]);
+            this.storeGithubStats(methods,results,links);
+		})
+		.catch((e) => {
+           console.error(err)
+       });
 	}
+
+	getGithubStatsLight(stats){
+		//console.log([stats.stargazers_count, stats.forks]);
+		return [stats.stargazers_count, stats.forks];
+	}
+
+	storeGithubStats(methods,stats,oriLinks){
+		const methods_data_all=this.state.methods_data_all.slice();
+		const stats_stars=this.state.stats_stars.slice();
+		const stats_forks=this.state.stats_forks.slice();
+		for (var i = 0; i < stats.length; i++) {
+			let curStat=stats[i];
+			let idx=oriLinks.indexOf(curStat[1]);
+			let method=methods[idx];
+			let stat=curStat[0];
+			methods_data_all[i]={	
+				name:method.m_name,
+				author:method.m_author,
+				year:method.m_year,
+				journal:method.m_journal,
+				link:method.m_link,
+				stars:stat[0],
+				forks:stat[1],
+				_2d:method.m_2d,
+				_3d:method.m_3d,
+				paper:method.m_paper,
+				challenges:method.m_challenges,
+				id:i
+			};
+			stats_stars[i]=stat[0];
+			stats_forks[i]=stat[1];
+		}
+		//console.log(methods_data_all);
+		this.setState({stats_stars:stats_stars, stats_forks:stats_forks, curNodeId:this.props.currentId, methods_data_all:methods_data_all});
+	}
+
+	/*---- these didn't help ----*/
+	/*
+	getGithubStatsLight2(url){
+		//return new Promise((resolve) => {
+	    //    fetch(url)
+		//		.then(response => response.json())
+		//		.then(data => { this.getGithubStatsLight(data) })
+	    //});
+		
+	    return fetch(url)
+			.then(response => response.json())
+			.then(data => { this.getGithubStatsLight(data) })
+	}
+
+	callGithubStatsFetch(urls){
+		console.log(urls);
+		return Promise.all(urls.map(url =>
+		    fetch(url)
+		    	.then(response => response.json()
+		    	.then(data => { this.getGithubStatsLight(data) })
+				.catch(err => { console.error(err) })
+		    )
+		)).then(stats => {
+		    console.log(stats);
+		})
+	}
+
+	callGithubStatsFetch2(urls){
+		return Promise.all(urls)
+           .then((results) => {
+               console.log("All done");
+               console.log(results);
+           })
+           .catch((e) => {
+               
+           });
+	}
+	*/
+	/*---------------------------*/
 
 
 	handleInputChange(event) {
@@ -381,6 +555,32 @@ export default class Detail extends React.Component {
 		this.setState({
 			[name]: value
 		});
+	}
+
+
+	showTooltipImg(event){
+		setTimeout(function (){
+			const name=event.target.childNodes[0].data;
+
+			console.log('mouse over '+name);
+			let imgEl=document.getElementById('hoverImgEl');
+			//console.log(imgEl);
+			imgEl.setAttribute('src','../challenge_'+name+'.png');
+			//imgEl.setAttribute('style','display:block');	
+		}, 150);
+		
+	}
+
+	hideTooltipImg(event){
+		setTimeout(function (){
+			const name=event.target.childNodes[0].data;
+
+			console.log('mouse leave '+name);
+			let imgEl=document.getElementById('hoverImgEl');
+			//console.log(imgEl);
+			//imgEl.setAttribute('style','display:none');
+			imgEl.setAttribute('src','../challenge_'+'none'+'.png');
+		}, 150);
 	}
 
 
@@ -423,11 +623,12 @@ export default class Detail extends React.Component {
 	    let col_names=['Name','Author','Year','Journal','Links','Github ★','Forks','2D','3D','Challenges'];
 	    let col_types=['string','string','number','string','string','number','number','boolean','boolean','string'];
 	    //let tableData=this.fillMethods2(this.props.data,this.state);
-	    let tableData=this.fillMethods3(this.state.methods_data_all,this.state.is2D,this.state.is3D);
+	    //let tableData=this.fillMethods3(this.state.methods_data_all);
+	    let tableData=this.fillMethods4(this.state.methods_data_all);
 	    /*
 	    let tableData=this.state.methods_data_all;
 		*/
-		console.log(tableData);
+		//console.log(tableData);
 		//let ready=this.checkTableData(tableData);
 		let ready=tableData!==null;
 
@@ -468,7 +669,7 @@ export default class Detail extends React.Component {
 											type="checkbox"
 											checked={this.state.is2D}
 											onChange={this.handleInputChange} />
-											<span class="slider round"></span>
+											<span className="slider round"></span>
 										
 									</label>
 									<br />
@@ -479,13 +680,101 @@ export default class Detail extends React.Component {
 											type="checkbox"
 											checked={this.state.is3D}
 											onChange={this.handleInputChange} />
-											<span class="slider round"></span>
+											<span className="slider round"></span>
 										
 									</label>
 								</form>					
 							</div>
 
-							
+
+
+							<p>Challenges:</p>
+							<div style={{display:'flex'}}>
+								<form>	
+									<label className="challenge2Outer" 
+										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
+										
+										<input
+											name="isElongated"
+											type="checkbox"
+											checked={this.state.isElongated}
+											onChange={this.handleInputChange} />
+											<span className="challenge2" >
+												elongated
+											</span>
+											
+										
+									</label>
+
+									<label className="challenge2Outer" onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
+										<input
+											name="isConcanve"
+											type="checkbox"
+											checked={this.state.isConcanve}
+											onChange={this.handleInputChange} />
+											<span className="challenge2">concave</span>
+										
+									</label>
+
+									<label className="challenge2Outer" 
+										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
+										<input
+											name="isDeviating"
+											type="checkbox"
+											checked={this.state.isDeviating}
+											onChange={this.handleInputChange} />
+											<span className="challenge2">deviating</span>
+										
+									</label>
+
+									<label className="challenge2Outer" 
+										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
+										<input
+											name="isWobbling"
+											type="checkbox"
+											checked={this.state.isWobbling}
+											onChange={this.handleInputChange} />
+											<span className="challenge2">wobbling</span>
+										
+									</label>
+									<br />
+
+									<label className="challenge2Outer" 
+										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
+										<input
+											name="isMultinuc"
+											type="checkbox"
+											checked={this.state.isMultinuc}
+											onChange={this.handleInputChange} />
+											<span className="challenge2">multinuc</span>
+										
+									</label>
+
+									<label className="challenge2Outer" 
+										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
+										<input
+											name="isHeterogen"
+											type="checkbox"
+											checked={this.state.isHeterogen}
+											onChange={this.handleInputChange} />
+											<span className="challenge2">heterogen</span>
+										
+									</label>
+
+									<label className="challenge2Outer" 
+										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
+										<input
+											name="isFragmented"
+											type="checkbox"
+											checked={this.state.isFragmented}
+											onChange={this.handleInputChange} />
+											<span className="challenge2">fragmented</span>
+										
+									</label>
+								</form>	
+
+								<div><img id="hoverImgEl" className="hoverImg" src={this.state.hoverImg}/></div>
+							</div>
 							
 							{ready && 
 								<TableComponent 
