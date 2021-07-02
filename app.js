@@ -38,6 +38,8 @@ class App extends React.PureComponent {
 					filter={this.props.filter}
 					height={this.props.height}
 					width={this.props.width}/>
+
+				<footer id="footer" className="mainFooter">Copyright (©) 2021 BIOMAG group. All rights reserved.</footer>
 					
 			</div>
 

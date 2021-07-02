@@ -639,6 +639,17 @@ export default class Detail extends React.Component {
 				<div className="detailPanelStyle">
 					<p id="imageBoxHeader" className="detailHeader">{panelName}</p>
 					<div className="imageBox">
+
+
+						<div className="helpDiv info">
+							<p className="listText">Do you think your method works on this kind of data? E-mail us at <a href="mailto:email">email@address.c</a>
+								<br />
+								Get help <a href="https://github.com/spreka/microscopy-tree/issues">here</a>
+							</p>		
+							
+						</div>
+						<br />
+
 						<div className="sampleImage">{imDiv}</div>
 
 						<div id="imInfo" className="info">
