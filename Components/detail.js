@@ -199,7 +199,7 @@ export default class Detail extends React.Component {
 
 	fillMethods4(data){
 		//console.log(data);
-		if (!data || (data.length===1 && !data[0])) {
+		if (!data || (data.length===1 && !data[0]) || this.checkNull(data)) {
 			console.log('its a null');
 			return null;
 		}
@@ -223,7 +223,8 @@ export default class Detail extends React.Component {
 					author:data[i].author,
 					year:data[i].year,
 					journal:data[i].journal,
-					link:[data[i].link,data[i].paper],
+					//link:[data[i].link,data[i].paper],
+					links:JSON.stringify(data[i].links),
 					stars:stars, //this.state.methods_data_all[i].stars,
 					forks:forks, //this.state.methods_data_all[i].forks,
 					_2d:data[i]._2d,
@@ -235,6 +236,18 @@ export default class Detail extends React.Component {
 		}
 		//this.setState({methods_data_all:methodsDiv});
 		return methodsDiv;
+	}
+
+	checkNull(data){
+		// return true if all values are null
+		let res=true;
+		for (var i = 0; i < data.length; i++) {
+			if (data[i]){
+				res=false;
+				break;
+			}
+		}
+		return res;
 	}
 
 	checkTableData(data){
@@ -305,12 +318,13 @@ export default class Detail extends React.Component {
 					author:curMethod.m_author,
 					year:curMethod.m_year,
 					journal:curMethod.m_journal,
-					link:curMethod.m_link,
+					//link:curMethod.m_link,
+					links:curMethod.m_links,
 					stars:null,
 					forks:null,
 					_2d:curMethod.m_2d,
 					_3d:curMethod.m_3d,
-					paper:curMethod.m_paper,
+					//paper:curMethod.m_paper,
 					challenges:curMethod.m_challenges,
 					id:i
 				};
@@ -377,7 +391,7 @@ export default class Detail extends React.Component {
 					author:method.m_author,
 					year:method.m_year,
 					journal:method.m_journal,
-					link:method.m_link,
+					links:method.m_links,
 					stars:stats.stargazers_count,
 					forks:stats.forks,
 					_2d:method.m_2d,
@@ -400,7 +414,17 @@ export default class Detail extends React.Component {
 		let links=Array(m).fill(null);
 		const promises=Array(m).fill(null);
 		for (var i = 0; i < m; i++) {
-			url=methods[i].m_link;
+			//url=methods[i].m_link;
+
+			// get code links
+			//console.log(JSON.stringify(methods[i].m_links));
+			let allUrls=methods[i].m_links;
+			for (const property in allUrls) {
+				if (property==="m_code") {
+     				url=allUrls[property];
+     				break;
+     			}
+     		}
 
 			//let link='https://api.github.com/repos/spreka/biomagdsb';
 			//let link='https://api.github.com/repos/napari/napari';
@@ -417,7 +441,9 @@ export default class Detail extends React.Component {
 				link='https://api.github.com/repos'+tmp;
 			} else {
 				console.log('cannot fetch github stats from non-github repo');
-				return null;
+				//return null;
+				// use this as a placeholder link:
+				link='https://api.github.com/repos/atom/github';
 			}
 
 			console.log('fetching link: '+link);
@@ -459,7 +485,13 @@ export default class Detail extends React.Component {
 		Promise.all(links.map(url =>
 			fetch(url)
 			    .then(response => response.json())
-				.then(data => { return [this.getGithubStatsLight(data), url] })
+				.then(data => { 
+					// check if placeholder link
+					if (url==='https://api.github.com/repos/atom/github')
+						return [-1,-1]
+					else
+						return [this.getGithubStatsLight(data), url] 
+				})
 				.catch(err => { console.error(err) })
 		)).then(results => {
 		    //console.log("All done");
@@ -467,7 +499,7 @@ export default class Detail extends React.Component {
             this.storeGithubStats(methods,results,links);
 		})
 		.catch((e) => {
-           console.error(err)
+			console.error(e);
        });
 	}
 
@@ -484,18 +516,24 @@ export default class Detail extends React.Component {
 			let curStat=stats[i];
 			let idx=oriLinks.indexOf(curStat[1]);
 			let method=methods[idx];
+			if (!method) {
+				//console.log('No data found for method');
+				//console.log(methods);
+				continue;
+			}
 			let stat=curStat[0];
 			methods_data_all[i]={	
 				name:method.m_name,
 				author:method.m_author,
 				year:method.m_year,
 				journal:method.m_journal,
-				link:method.m_link,
+				//link:method.m_link,
+				links:method.m_links,
 				stars:stat[0],
 				forks:stat[1],
 				_2d:method.m_2d,
 				_3d:method.m_3d,
-				paper:method.m_paper,
+				//paper:method.m_paper,
 				challenges:method.m_challenges,
 				id:i
 			};
@@ -619,7 +657,7 @@ export default class Detail extends React.Component {
 
 		
 		// construct details as a table
-	    let col_keys=['name','author','year','journal','link','stars','forks','_2d','_3d','challenges'];
+	    let col_keys=['name','author','year','journal','links','stars','forks','_2d','_3d','challenges'];
 	    let col_names=['Name','Author','Year','Journal','Links','Github ★','Forks','2D','3D','Challenges'];
 	    let col_types=['string','string','number','string','string','number','number','boolean','boolean','string'];
 	    //let tableData=this.fillMethods2(this.props.data,this.state);

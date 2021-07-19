@@ -116,6 +116,18 @@ class TableComponent extends React.Component {
     
   }
 
+  popLinks2(links){
+    let output=[];
+    //console.log(data);
+    let c=0;
+    for (const property in links) {
+      name=property.substring(2);
+      output.push(<a key={c} href={links[property]}>{name}<br /></a>);
+      c++;
+    }
+    return output;
+  }
+
   popChallenges(data){
     let output=[];
     //console.log(data);
@@ -158,7 +170,8 @@ class TableComponent extends React.Component {
         cellText: {
           content: (props) => {
             switch (props.column.key){
-              case 'link':
+              case 'links':
+                /*
                 let multi=false;
                 let links=props.value.split(',');
                 //console.log(links);
@@ -168,6 +181,9 @@ class TableComponent extends React.Component {
                 } else {
                   return <a href={props.value}>visit</a>;
                 }
+                */
+                //console.log(props.value);
+                return this.popLinks2(JSON.parse(props.value));
                 
               case '_2d':
               case '_3d':

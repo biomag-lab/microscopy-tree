@@ -10,7 +10,8 @@ export default {
     mini_hrefs: ['nuc_r.png','nuc_g.png','nuc_b.png'],
     mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3'],
     parent_tag: null,
-    methods:[0],
+    methods:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
+    backup_methods:[],
     pathProps: {
     	className: 'link'
     },
@@ -28,6 +29,7 @@ export default {
         mini_info: ['BBBC0xyz1','BBBC0xyz2'],
         parent_tag: null,
         methods:[0,3],
+        backup_methods:[],
 	    pathProps: {
 	    	className: 'link'
 	    },
@@ -44,6 +46,7 @@ export default {
         	mini_info: [],
         	parent_tag: 'Culture',
         	methods:[],
+        	backup_methods:[],
 			children: [{
 				name: 'Fluo',
 				id: '17',
@@ -57,6 +60,7 @@ export default {
         		mini_info: ['BBBC0xyz1','BBBC0xyz2'],
         		parent_tag: 'Culture',
         		methods:[0,1],
+        		backup_methods:[],
 				children: []
 			}, {
 				name: 'Confocal',
@@ -71,6 +75,7 @@ export default {
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3],
+        		backup_methods:[],
 				children: []
 			}, {
 				name: 'Light-sheet',
@@ -85,6 +90,7 @@ export default {
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Culture',
         		methods:[0,1,2],
+        		backup_methods:[],
 				children: []
 			}, {
 				name: 'BF',
@@ -99,6 +105,7 @@ export default {
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Culture',
         		methods:[0,1,2],
+        		backup_methods:[],
 				children: []
 			}]
 		}, {
@@ -114,6 +121,7 @@ export default {
     		mini_info: [],
     		parent_tag: 'Culture',
     		methods:[],
+    		backup_methods:[],
 			children: [{
 				name: 'BF',
 				id: '19',
@@ -127,6 +135,7 @@ export default {
         		mini_info: [],
         		parent_tag: 'Culture',
         		methods:[],
+        		backup_methods:[],
 				children: [{
 					name: 'Transparent',
 					id: '23',
@@ -140,6 +149,7 @@ export default {
         			mini_info: [],
         			parent_tag: 'Culture BF',
         			methods:[],
+        			backup_methods:[],
 					children: []
 				}, {
 					name: 'Non-transparent',
@@ -154,6 +164,7 @@ export default {
         			mini_info: [],
         			parent_tag: 'Culture BF',
         			methods:[],
+        			backup_methods:[],
 					children: []
 				}]
 			}, {
@@ -169,6 +180,7 @@ export default {
         		mini_info: [],
         		parent_tag: 'Culture',
         		methods:[],
+        		backup_methods:[],
 				children: []
 			},	{
 				name: 'PC',
@@ -183,6 +195,7 @@ export default {
         		mini_info: [],
         		parent_tag: 'Culture',
         		methods:[],
+        		backup_methods:[],
 				children: []
 			}]
 		}]
@@ -203,6 +216,7 @@ export default {
         mini_info: [],
         parent_tag: null,
         methods:[],
+        backup_methods:[],
 	    pathProps: {
 	    	className: 'link'
 	    },
@@ -219,6 +233,7 @@ export default {
         	mini_info: [],
         	parent_tag: 'Tissue',
         	methods:[],
+        	backup_methods:[],
 			children: [{
 				name: 'Fluo',
 				id: '7',
@@ -232,6 +247,7 @@ export default {
        			mini_info: [],
        			parent_tag: 'Tissue',
        			methods:[],
+       			backup_methods:[],
 				children: []
 			}, {
 				name: 'Confocal',
@@ -246,6 +262,7 @@ export default {
         		mini_info: [],
         		parent_tag: 'Tissue',
         		methods:[],
+        		backup_methods:[],
 				children: []
 			}, {
 				name: 'Light-sheet',
@@ -260,6 +277,7 @@ export default {
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Tissue',
         		methods:[0,1,2],
+        		backup_methods:[],
 				children: []
 			}, {
 				name: 'BF',
@@ -274,6 +292,7 @@ export default {
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Tissue',
         		methods:[0,1,2],
+        		backup_methods:[],
 				children: []
 			}]
 		}, {
@@ -289,6 +308,7 @@ export default {
     		mini_info: [],
     		parent_tag: 'Tissue',
     		methods:[],
+    		backup_methods:[],
 			children: [{
 				name: 'BF',
 				id: '9',
@@ -302,6 +322,7 @@ export default {
         		mini_info: [],
         		parent_tag: 'Tissue',
         		methods:[],
+        		backup_methods:[],
 				children: [{
 					name: 'Transparent',
 					id: '13',
@@ -315,6 +336,7 @@ export default {
         			mini_info: [],
         			parent_tag: 'Tissue BF',
         			methods:[],
+        			backup_methods:[],
 					children: []
 				}, {
 					name: 'Non-transparent',
@@ -329,6 +351,7 @@ export default {
         			mini_info: [],
         			parent_tag: 'Tissue BF',
         			methods:[],
+        			backup_methods:[],
 					children: []
 				}]
 			}, {
@@ -344,6 +367,7 @@ export default {
         		mini_info: [],
         		parent_tag: 'Tissue',
         		methods:[],
+        		backup_methods:[],
 				children: []
 			},	{
 				name: 'PC',
@@ -358,6 +382,7 @@ export default {
         		mini_info: [],
         		parent_tag: 'Tissue',
         		methods:[],
+        		backup_methods:[],
 				children: []
 			}]
 		}]

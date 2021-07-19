@@ -6,8 +6,10 @@ export default {
 			m_author: 'Ronneberger et al.',
 			m_year: '2015',
 			m_journal: 'MICCAI 2015',
-			m_link: 'https://github.com/zhixuhao/unet',
-			m_paper: 'http://dx.doi.org/10.1007/978-3-319-24574-4_28',
+			m_links:{
+				m_code: 'https://github.com/zhixuhao/unet',
+				m_paper: 'http://dx.doi.org/10.1007/978-3-319-24574-4_28'
+			},
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
@@ -24,8 +26,10 @@ export default {
 			m_author: 'He et al.',
 			m_year: '2017',
 			m_journal: 'ICCV 2017',
-			m_link: 'https://github.com/matterport/Mask_RCNN',
-			m_paper: 'https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html',
+			m_links:{
+				m_code: 'https://github.com/matterport/Mask_RCNN',
+				m_paper: 'https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html'
+			},
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
@@ -42,8 +46,10 @@ export default {
 			m_author: 'Schmidt et al.',
 			m_year: '2018',
 			m_journal: 'arXiv (WACV 2020)',
-			m_link: 'https://github.com/stardist/stardist',
-			m_paper: 'https://arxiv.org/abs/1806.03535',
+			m_links:{
+				m_code: 'https://github.com/stardist/stardist',
+				m_paper: 'https://arxiv.org/abs/1806.03535'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -60,8 +66,10 @@ export default {
 			m_author: 'Hollandi et al.',
 			m_year: '2020',
 			m_journal: 'CellSyst',
-			m_link: 'https://github.com/spreka/biomagdsb',
-			m_paper: 'https://doi.org/10.1016/j.cels.2020.04.003',
+			m_links:{
+				m_code: 'https://github.com/spreka/biomagdsb',
+				m_paper: 'https://doi.org/10.1016/j.cels.2020.04.003'
+			},
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
@@ -78,8 +86,10 @@ export default {
 			m_author: 'Stringer et al.',
 			m_year: '2021',
 			m_journal: 'Nature Methods',
-			m_link: 'https://github.com/MouseLand/cellpose',
-			m_paper: 'https://doi.org/10.1038/s41592-020-01018-x',
+			m_links:{
+				m_code: 'https://github.com/MouseLand/cellpose',
+				m_paper: 'https://doi.org/10.1038/s41592-020-01018-x'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -96,8 +106,10 @@ export default {
 			m_author: 'Zhou et al.',
 			m_year: '2018',
 			m_journal: 'DLMIA 2018, ML-CDS 2018',
-			m_link: 'https://github.com/MrGiovanni/UNetPlusPlus',
-			m_paper: 'https://doi.org/10.1007/978-3-030-00889-5_1',
+			m_links:{
+				m_code: 'https://github.com/MrGiovanni/UNetPlusPlus',
+				m_paper: 'https://doi.org/10.1007/978-3-030-00889-5_1'
+			},
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
@@ -114,8 +126,10 @@ export default {
 			m_author: 'Walter et al.',
 			m_year: '2021',
 			m_journal: 'arXiv (ISBI 2021)',
-			m_link: 'https://github.com/overlapping-instances/MultiStar',
-			m_paper: 'https://arxiv.org/abs/2011.13228',
+			m_links:{
+				m_code: 'https://github.com/overlapping-instances/MultiStar',
+				m_paper: 'https://arxiv.org/abs/2011.13228'
+			},
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
@@ -132,8 +146,10 @@ export default {
 			m_author: 'Upschulte et al.',
 			m_year: '2021',
 			m_journal: 'arXiv',
-			m_link: 'https://github.com/FZJ-INM1-BDA/celldetection',
-			m_paper: 'https://arxiv.org/abs/2104.03393',
+			m_links:{
+				m_code: 'https://github.com/FZJ-INM1-BDA/celldetection',
+				m_paper: 'https://arxiv.org/abs/2104.03393'
+			},
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
@@ -147,8 +163,10 @@ export default {
 			m_author: 'Lee et al.',
 			m_year: '2021',
 			m_journal: 'Cancer Research',
-			m_link: 'https://github.com/PathologyDataScience/HistomicsML2',
-			m_paper: 'https://doi.org/10.1158/0008-5472.CAN-20-0668',
+			m_links:{
+				m_code: 'https://github.com/PathologyDataScience/HistomicsML2',
+				m_paper: 'https://doi.org/10.1158/0008-5472.CAN-20-0668'
+			},
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
@@ -161,8 +179,10 @@ export default {
 			m_author: 'Mela et al.',
 			m_year: '2021',
 			m_journal: 'BMC Bioinformatics',
-			m_link: 'https://github.com/YangLiuLab/Super-Resolution-Nuclei-Segmentation',
-			m_paper: 'https://doi.org/10.1186/s12859-021-04245-x',
+			m_links:{
+				m_code: 'https://github.com/YangLiuLab/Super-Resolution-Nuclei-Segmentation',
+				m_paper: 'https://doi.org/10.1186/s12859-021-04245-x'
+			},
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
@@ -180,8 +200,9 @@ export default {
 			m_year: '2010',
 			m_journal: 'Nature Biotechnology',
 			m_links: {
-				m_code: 'http://vaa3d.org; https://github.com/Vaa3D',
-				m_paper: 'https://www.nature.com/articles/nbt.1612'
+				m_code: 'https://github.com/Vaa3D/vaa3d_tools',
+				m_paper: 'https://www.nature.com/articles/nbt.1612',
+				m_site: 'http://vaa3d.org'
 			},
 			m_2d: false,
 			m_3d: true,
@@ -274,7 +295,7 @@ export default {
 				m_fragmented: false
 			}
 		}, {
-			m_id: 16,
+			m_id: 15,
 			m_name: 'U-Net (3D)',
 			m_author: 'Cicek et al.',
 			m_year: '2016',
@@ -294,7 +315,7 @@ export default {
 				m_fragmented: false
 			}
 		}, {
-			m_id: 17,
+			m_id: 16,
 			m_name: 'Three-Dimensional Segmentation and Reconstruction of Neuronal Nuclei in Confocal Microscopic Images',
 			m_author: 'Ruszczycki et al.',
 			m_year: '2019',
@@ -314,7 +335,7 @@ export default {
 				m_fragmented: false
 			}
 		}, {
-			m_id: 18,
+			m_id: 17,
 			m_name: 'Semi supervised segmentation and graph-based tracking of 3D nuclei in time-lapse microscopy',
 			m_author: 'Shailja et al.',
 			m_year: '2020',
@@ -334,7 +355,7 @@ export default {
 				m_fragmented: false
 			}
 		}, {
-			m_id: 19,
+			m_id: 18,
 			m_name: 'QCANet',
 			m_author: 'Tokuoka et al.',
 			m_year: '2020',
@@ -354,7 +375,7 @@ export default {
 				m_fragmented: false
 			}
 		}, {
-			m_id: 20,
+			m_id: 19,
 			m_name: '3D-Cell-Annotator',
 			m_author: 'Tasnadi et al.',
 			m_year: '2020',
@@ -399,8 +420,10 @@ export default {
 			m_author: 'Lou et al.',
 			m_year: '2014',
 			m_journal: 'Stem Cell Reports',
-			m_link: 'http://katlab-tools.org/',
-			m_paper: 'https://doi.org/10.1016/j.stemcr.2014.01.010',
+			m_links:{
+				m_code: 'http://katlab-tools.org/',
+				m_paper: 'https://doi.org/10.1016/j.stemcr.2014.01.010'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -417,8 +440,10 @@ export default {
 			m_author: 'Bartschat et al.',
 			m_year: '2016',
 			m_journal: 'Bioinformatics',
-			m_link: 'https://bitbucket.org/jstegmaier/xpiwit/downloads/',
-			m_paper: 'https://doi.org/10.1093/bioinformatics/btv559',
+			m_links:{
+				m_code: 'https://bitbucket.org/jstegmaier/xpiwit/downloads/',
+				m_paper: 'https://doi.org/10.1093/bioinformatics/btv559'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -435,8 +460,10 @@ export default {
 			m_author: 'Berg et al.',
 			m_year: '2018',
 			m_journal: 'Nature Methods',
-			m_link: 'https://github.com/ilastik/ilastik',
-			m_paper: 'https://doi.org/10.1038/s41592-019-0582-9',
+			m_links:{
+				m_code: 'https://github.com/ilastik/ilastik',
+				m_paper: 'https://doi.org/10.1038/s41592-019-0582-9'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -453,8 +480,10 @@ export default {
 			m_author: 'Yang et al.',
 			m_year: '2020',
 			m_journal: 'PLoS Computational Biology',
-			m_link: 'https://github.com/yanglf1121/NuSeT',
-			m_paper: 'https://doi.org/10.1371/journal.pcbi.1008193',
+			m_links:{
+				m_code: 'https://github.com/yanglf1121/NuSeT',
+				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008193'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -471,8 +500,10 @@ export default {
 			m_author: 'Isensee et al.',
 			m_year: '2021',
 			m_journal: 'Nature Methods',
-			m_link: 'https://github.com/mic-dkfz/nnunet',
-			m_paper: 'https://doi.org/10.1038/s41592-020-01008-z',
+			m_links:{
+				m_code: 'https://github.com/mic-dkfz/nnunet',
+				m_paper: 'https://doi.org/10.1038/s41592-020-01008-z'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -489,8 +520,10 @@ export default {
 			m_author: 'Belevich et al.',
 			m_year: '2021',
 			m_journal: 'PLoS Computational Biology',
-			m_link: 'https://github.com/Ajaxels/MIB2',
-			m_paper: 'https://doi.org/10.1371/journal.pcbi.1008374',
+			m_links:{
+				m_code: 'https://github.com/Ajaxels/MIB2',
+				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008374'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -507,8 +540,10 @@ export default {
 			m_author: 'Waibel et al.',
 			m_year: '2021',
 			m_journal: 'BMC Bioinformatics',
-			m_link: 'https://github.com/marrlab/InstantDL',
-			m_paper: 'https://doi.org/10.1186/s12859-021-04037-3',
+			m_links:{
+				m_code: 'https://github.com/marrlab/InstantDL',
+				m_paper: 'https://doi.org/10.1186/s12859-021-04037-3'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -525,8 +560,11 @@ export default {
 			m_author: 'Gómez-de-Mariscal et al.',
 			m_year: '2019',
 			m_journal: 'biorXiv',
-			m_link: 'https://bioimage.io/',
-			m_paper: 'https://doi.org/10.1101/799270',
+			m_links:{
+				m_code: 'https://github.com/bioimage-io/bioimage.io',
+				m_paper: 'https://doi.org/10.1101/799270',
+				m_site: 'https://bioimage.io/'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -543,8 +581,10 @@ export default {
 			m_author: 'Ouyang et al.',
 			m_year: '2019',
 			m_journal: 'Nature Methods',
-			m_link: 'https://github.com/imjoy-team/ImJoy',
-			m_paper: 'https://doi.org/10.1038/s41592-019-0627-0',
+			m_links:{
+				m_code: 'https://github.com/imjoy-team/ImJoy',
+				m_paper: 'https://doi.org/10.1038/s41592-019-0627-0'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -561,8 +601,10 @@ export default {
 			m_author: 'von Chamier et al.',
 			m_year: '2021',
 			m_journal: 'Nature Communications',
-			m_link: 'https://github.com/HenriquesLab/ZeroCostDL4Mic',
-			m_paper: 'https://doi.org/10.1038/s41467-021-22518-0',
+			m_links:{
+				m_code: 'https://github.com/HenriquesLab/ZeroCostDL4Mic',
+				m_paper: 'https://doi.org/10.1038/s41467-021-22518-0'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
@@ -579,8 +621,10 @@ export default {
 			m_author: 'Bannon et al.',
 			m_year: '2021',
 			m_journal: 'Nature Methods',
-			m_link: 'https://github.com/vanvalenlab/kiosk-console',
-			m_paper: 'https://doi.org/10.1038/s41592-020-01023-0',
+			m_links:{
+				m_code: 'https://github.com/vanvalenlab/kiosk-console',
+				m_paper: 'https://doi.org/10.1038/s41592-020-01023-0'
+			},
 			m_2d: true,
 			m_3d: true,
 			m_challenges: {
