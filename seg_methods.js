@@ -154,11 +154,6 @@ export default {
 			m_challenges: {
 				m_elongated: true,
 				m_concave: true
-			//	m_deviating: false,
-			//	m_wobbling: false,
-			//	m_multinuc: false,
-			//	m_heterogen: false,
-			//	m_fragmented: false
 			}
 		}, {
 			m_id: 9,
@@ -175,7 +170,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				m_multinuc: true,
 				m_heterogen: true,
 				m_fragmented: true
 			}
@@ -196,7 +190,6 @@ export default {
 				m_concave: true,
 				m_deviating: false,
 				m_wobbling: false,
-				m_multinuc: true,
 				m_heterogen: false,
 				m_fragmented: false
 			}
@@ -217,7 +210,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: false,
-				m_multinuc: true,
 				m_heterogen: false,
 				m_fragmented: false
 			}
@@ -238,7 +230,6 @@ export default {
 				m_concave: false,
 				m_deviating: false,
 				m_wobbling: false,
-				m_multinuc: false,
 				m_heterogen: true,
 				m_fragmented: false
 			}
@@ -259,7 +250,6 @@ export default {
 				m_concave: true,
 				m_deviating: false,
 				m_wobbling: false,
-				m_multinuc: true,
 				m_heterogen: false,
 				m_fragmented: true
 			}
@@ -280,7 +270,6 @@ export default {
 				m_concave: true,
 				m_deviating: false,
 				m_wobbling: false,
-				m_multinuc: true,
 				m_heterogen: false,
 				m_fragmented: false
 			}
@@ -301,7 +290,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				m_multinuc: true,
 				m_heterogen: true,
 				m_fragmented: false
 			}
@@ -322,7 +310,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: false,
-				m_multinuc: true,
 				m_heterogen: true,
 				m_fragmented: false
 			}
@@ -343,7 +330,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				m_multinuc: true,
 				m_heterogen: true,
 				m_fragmented: false
 			}
@@ -364,7 +350,6 @@ export default {
 				m_concave: false,
 				m_deviating: false,
 				m_wobbling: true,
-				m_multinuc: true,
 				m_heterogen: false,
 				m_fragmented: false
 			}
@@ -385,7 +370,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: false,
-				m_multinuc: true,
 				m_heterogen: true,
 				m_fragmented: false
 			}
@@ -406,7 +390,6 @@ export default {
 				m_concave: false,
 				m_deviating: false,
 				m_wobbling: true,
-				m_multinuc: true,
 				m_heterogen: true,
 				m_fragmented: false
 			}
@@ -425,7 +408,6 @@ export default {
 				m_concave: true,
 				m_deviating: false,
 				m_wobbling: false,
-				//	m_multinuc:false,
 				m_heterogen: true,
 				m_fragmented: false
 			}
@@ -444,7 +426,6 @@ export default {
 				m_concave: true,
 				m_deviating: false,
 				m_wobbling: false,
-				//	m_multinuc:false,
 				m_heterogen: false,
 				m_fragmented: false
 			}
@@ -463,7 +444,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				//	m_multinuc:false,
 				m_heterogen: true,
 				m_fragmented: true
 			}
@@ -482,7 +462,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				//	m_multinuc:false,
 				m_heterogen: true,
 				m_fragmented: false
 			}
@@ -501,7 +480,6 @@ export default {
 				m_concave: true,
 				m_deviating: false,
 				m_wobbling: false,
-				//	m_multinuc:true,
 				m_heterogen: true,
 				m_fragmented: true
 			}
@@ -520,7 +498,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				//	m_multinuc:false,
 				m_heterogen: true,
 				m_fragmented: true
 			}
@@ -539,7 +516,6 @@ export default {
 				m_concave: true,
 				m_deviating: false,
 				m_wobbling: false,
-				//	m_multinuc:true,
 				m_heterogen: true,
 				m_fragmented: true
 			}
@@ -558,7 +534,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				//	m_multinuc:false,
 				m_heterogen: true,
 				m_fragmented: true
 			}
@@ -577,7 +552,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				//	m_multinuc:false,
 				m_heterogen: true,
 				m_fragmented: true
 			}
@@ -596,7 +570,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				//	m_multinuc:false,
 				m_heterogen: true,
 				m_fragmented: true
 			}
@@ -615,7 +588,6 @@ export default {
 				m_concave: true,
 				m_deviating: true,
 				m_wobbling: true,
-				//	m_multinuc:false,
 				m_heterogen: true,
 				m_fragmented: true
 			}
