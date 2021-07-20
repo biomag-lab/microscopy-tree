@@ -28,7 +28,7 @@ export default {
         mini_hrefs: ['nuc_r.png','nuc_g.png'],
         mini_info: ['BBBC0xyz1','BBBC0xyz2'],
         parent_tag: null,
-        methods:[0,3],
+        methods:[],
         backup_methods:[],
 	    pathProps: {
 	    	className: 'link'
@@ -45,7 +45,7 @@ export default {
         	mini_hrefs: [],
         	mini_info: [],
         	parent_tag: 'Culture',
-        	methods:[],
+        	methods:[0,1,2,3,],
         	backup_methods:[],
 			children: [{
 				name: 'Fluo',
@@ -59,7 +59,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_b.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2'],
         		parent_tag: 'Culture',
-        		methods:[0,1],
+        		methods:[0,1,2,3,4,9,31,23,24,25,28,27,],
         		backup_methods:[],
 				children: []
 			}, {
@@ -74,7 +74,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Culture',
-        		methods:[0,1,2,3],
+        		methods:[0,1,2,3,4,],
         		backup_methods:[],
 				children: []
 			}, {
@@ -89,7 +89,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Culture',
-        		methods:[0,1,2],
+        		methods:[0,1,2,3,],
         		backup_methods:[],
 				children: []
 			}, {
@@ -104,7 +104,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Culture',
-        		methods:[0,1,2],
+        		methods:[0,1,2,3,],
         		backup_methods:[],
 				children: []
 			}]
@@ -134,7 +134,7 @@ export default {
         		mini_hrefs: [],
         		mini_info: [],
         		parent_tag: 'Culture',
-        		methods:[],
+        		methods:[0,1,2,3,4,],
         		backup_methods:[],
 				children: [{
 					name: 'Transparent',
@@ -179,7 +179,7 @@ export default {
         		mini_hrefs: [],
         		mini_info: [],
         		parent_tag: 'Culture',
-        		methods:[],
+        		methods:[0,],
         		backup_methods:[],
 				children: []
 			},	{
@@ -194,7 +194,7 @@ export default {
         		mini_hrefs: [],
         		mini_info: [],
         		parent_tag: 'Culture',
-        		methods:[],
+        		methods:[0,4,],
         		backup_methods:[],
 				children: []
 			}]
@@ -246,7 +246,7 @@ export default {
        			mini_hrefs: [],
        			mini_info: [],
        			parent_tag: 'Tissue',
-       			methods:[],
+       			methods:[9,31,23,],
        			backup_methods:[],
 				children: []
 			}, {
@@ -276,7 +276,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Tissue',
-        		methods:[0,1,2],
+        		methods:[0,3,],
         		backup_methods:[],
 				children: []
 			}, {
@@ -291,7 +291,7 @@ export default {
         		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
         		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
         		parent_tag: 'Tissue',
-        		methods:[0,1,2],
+        		methods:[0,1,2,3,28,27,],
         		backup_methods:[],
 				children: []
 			}]

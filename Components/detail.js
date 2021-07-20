@@ -412,6 +412,7 @@ export default class Detail extends React.Component {
 		let url=null;
 		let m=methods.length;
 		let links=Array(m).fill(null);
+		let oriLinks=Array(m).fill(null);
 		const promises=Array(m).fill(null);
 		for (var i = 0; i < m; i++) {
 			//url=methods[i].m_link;
@@ -431,6 +432,7 @@ export default class Detail extends React.Component {
 
 			//console.log('received url: '+url);
 			let link='';
+			let dummy=false;
 			if (url.toLowerCase().indexOf('github.com')!==-1) {
 				let tmp='';
 				if (url.toLowerCase().indexOf('http://')!==-1) {
@@ -444,6 +446,7 @@ export default class Detail extends React.Component {
 				//return null;
 				// use this as a placeholder link:
 				link='https://api.github.com/repos/atom/github';
+				dummy=true;
 			}
 
 			console.log('fetching link: '+link);
@@ -458,6 +461,10 @@ export default class Detail extends React.Component {
 			*/
 
 			links[i]=link;
+			if (dummy)
+				oriLinks[i]=url;
+			else
+				oriLinks[i]=link;
 			//promises.push(this.getGithubStatsLight2(link));
 
 		}
@@ -487,8 +494,9 @@ export default class Detail extends React.Component {
 			    .then(response => response.json())
 				.then(data => { 
 					// check if placeholder link
+					console.log('---- in promise of link '+url);
 					if (url==='https://api.github.com/repos/atom/github')
-						return [-1,-1]
+						return [[-1,-1],url]
 					else
 						return [this.getGithubStatsLight(data), url] 
 				})
@@ -496,7 +504,7 @@ export default class Detail extends React.Component {
 		)).then(results => {
 		    //console.log("All done");
             //console.log(results[0]);
-            this.storeGithubStats(methods,results,links);
+            this.storeGithubStats(methods,results,oriLinks); //links);
 		})
 		.catch((e) => {
 			console.error(e);
@@ -666,7 +674,7 @@ export default class Detail extends React.Component {
 	    /*
 	    let tableData=this.state.methods_data_all;
 		*/
-		//console.log(tableData);
+		console.log(tableData);
 		//let ready=this.checkTableData(tableData);
 		let ready=tableData!==null;
 

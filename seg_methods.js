@@ -8,7 +8,13 @@ export default {
 			m_journal: 'MICCAI 2015',
 			m_links:{
 				m_code: 'https://github.com/zhixuhao/unet',
-				m_paper: 'http://dx.doi.org/10.1007/978-3-319-24574-4_28'
+				m_paper: 'http://dx.doi.org/10.1007/978-3-319-24574-4_28',
+				m_pretrained: {
+					m_PC: 'https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/',
+					m_DIC: 'https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/',
+					m_fluo: 'https://github.com/carpenterlab/2019_caicedo_cytometryA.git',
+					m_more: 'https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model'
+				}
 			},
 			m_2d: true,
 			m_3d: false,
@@ -28,7 +34,11 @@ export default {
 			m_journal: 'ICCV 2017',
 			m_links:{
 				m_code: 'https://github.com/matterport/Mask_RCNN',
-				m_paper: 'https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html'
+				m_paper: 'https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html',
+				m_pretrained: {
+					m_more: 'https://github.com/mirzaevinom/data_science_bowl_2018',
+					m_more2: 'https://github.com/spreka/biomagdsb'
+				}
 			},
 			m_2d: true,
 			m_3d: false,
@@ -48,7 +58,13 @@ export default {
 			m_journal: 'arXiv (WACV 2020)',
 			m_links:{
 				m_code: 'https://github.com/stardist/stardist',
-				m_paper: 'https://arxiv.org/abs/1806.03535'
+				m_paper: 'https://arxiv.org/abs/1806.03535',
+				m_3D_paper: 'https://dx.doi.org/10.1109/WACV45572.2020.9093435',
+				m_pretrained: {
+					m_fluo: 'https://github.com/stardist/stardist/tree/master/models/paper/2D_dsb2018',
+					m_he: 'https://github.com/stardist/stardist/tree/master/models/paper/2D_dsb2018',
+					m_3d: 'https://github.com/stardist/stardist/tree/master/models/examples/3D_demo'
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -68,7 +84,10 @@ export default {
 			m_journal: 'CellSyst',
 			m_links:{
 				m_code: 'https://github.com/spreka/biomagdsb',
-				m_paper: 'https://doi.org/10.1016/j.cels.2020.04.003'
+				m_paper: 'https://doi.org/10.1016/j.cels.2020.04.003',
+				m_pretrained: {
+					m_more: 'https://github.com/spreka/biomagdsb'
+				}
 			},
 			m_2d: true,
 			m_3d: false,
@@ -88,7 +107,18 @@ export default {
 			m_journal: 'Nature Methods',
 			m_links:{
 				m_code: 'https://github.com/MouseLand/cellpose',
-				m_paper: 'https://doi.org/10.1038/s41592-020-01018-x'
+				m_paper: 'https://doi.org/10.1038/s41592-020-01018-x',
+				m_site: 'https://www.cellpose.org',
+				m_pretrained: {
+					m_more: ['https://www.cellpose.org/models/nuclei_0',
+						        'https://www.cellpose.org/models/nuclei_1',
+						        'https://www.cellpose.org/models/nuclei_2',
+						        'https://www.cellpose.org/models/nuclei_3',
+						        'https://www.cellpose.org/models/nucleitorch_0',
+						        'https://www.cellpose.org/models/nucleitorch_1',
+						        'https://www.cellpose.org/models/nucleitorch_2',
+						        'https://www.cellpose.org/models/nucleitorch_3']
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -108,7 +138,9 @@ export default {
 			m_journal: 'DLMIA 2018, ML-CDS 2018',
 			m_links:{
 				m_code: 'https://github.com/MrGiovanni/UNetPlusPlus',
-				m_paper: 'https://doi.org/10.1007/978-3-030-00889-5_1'
+				m_paper: 'https://doi.org/10.1007/978-3-030-00889-5_1',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: false,
@@ -128,7 +160,9 @@ export default {
 			m_journal: 'arXiv (ISBI 2021)',
 			m_links:{
 				m_code: 'https://github.com/overlapping-instances/MultiStar',
-				m_paper: 'https://arxiv.org/abs/2011.13228'
+				m_paper: 'https://arxiv.org/abs/2011.13228',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: false,
@@ -148,7 +182,9 @@ export default {
 			m_journal: 'arXiv',
 			m_links:{
 				m_code: 'https://github.com/FZJ-INM1-BDA/celldetection',
-				m_paper: 'https://arxiv.org/abs/2104.03393'
+				m_paper: 'https://arxiv.org/abs/2104.03393',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: false,
@@ -165,7 +201,9 @@ export default {
 			m_journal: 'Cancer Research',
 			m_links:{
 				m_code: 'https://github.com/PathologyDataScience/HistomicsML2',
-				m_paper: 'https://doi.org/10.1158/0008-5472.CAN-20-0668'
+				m_paper: 'https://doi.org/10.1158/0008-5472.CAN-20-0668',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: false,
@@ -181,7 +219,11 @@ export default {
 			m_journal: 'BMC Bioinformatics',
 			m_links:{
 				m_code: 'https://github.com/YangLiuLab/Super-Resolution-Nuclei-Segmentation',
-				m_paper: 'https://doi.org/10.1186/s12859-021-04245-x'
+				m_paper: 'https://doi.org/10.1186/s12859-021-04245-x',
+				m_pretrained: {
+					m_fluo: 'https://drive.google.com/drive/folders/1yKxyXkk4ceXoDpd647i1_-JWLjzKOY7t?usp=sharing',
+					m_fluo_tissue: 'https://drive.google.com/drive/folders/1yKxyXkk4ceXoDpd647i1_-JWLjzKOY7t?usp=sharing',
+				}
 			},
 			m_2d: true,
 			m_3d: false,
@@ -202,7 +244,9 @@ export default {
 			m_links: {
 				m_code: 'https://github.com/Vaa3D/vaa3d_tools',
 				m_paper: 'https://www.nature.com/articles/nbt.1612',
-				m_site: 'http://vaa3d.org'
+				m_site: 'http://vaa3d.org',
+				m_pretrained: {
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -222,7 +266,9 @@ export default {
 			m_journal: 'Bioinformatics',
 			m_links: {
 				m_code: 'https://imagejdocu.tudor.lu/plugin/stacks/3d_ij_suite/start',
-				m_paper: 'https://academic.oup.com/bioinformatics/article/29/14/1840/231770'
+				m_paper: 'https://academic.oup.com/bioinformatics/article/29/14/1840/231770',
+				m_pretrained: {
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -242,7 +288,9 @@ export default {
 			m_journal: 'Computer Graphics Forum',
 			m_links: {
 				m_code: 'https://www.physikalischebiologie.de/downloads',
-				m_paper: 'https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.12169'
+				m_paper: 'https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.12169',
+				m_pretrained: {
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -262,7 +310,9 @@ export default {
 			m_journal: 'BioInformatics',
 			m_links: {
 				m_code: 'http://opensegspim.weebly.com/',
-				m_paper: 'https://academic.oup.com/bioinformatics/article/32/13/2075/1743029'
+				m_paper: 'https://academic.oup.com/bioinformatics/article/32/13/2075/1743029',
+				m_pretrained: {
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -282,7 +332,9 @@ export default {
 			m_journal: 'Developmental Cell',
 			m_links: {
 				m_code: 'https://bitbucket.org/jstegmaier/race',
-				m_paper: 'https://www.sciencedirect.com/science/article/pii/S1534580715008370'
+				m_paper: 'https://www.sciencedirect.com/science/article/pii/S1534580715008370',
+				m_pretrained: {
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -302,7 +354,10 @@ export default {
 			m_journal: 'MICCAI 2016',
 			m_links: {
 				m_code: 'https://lmb.informatik.uni-freiburg.de/resources/opensource/unet.en.html',
-				m_paper: 'https://link.springer.com/chapter/10.1007/978-3-319-46723-8_49'
+				m_paper: 'https://link.springer.com/chapter/10.1007/978-3-319-46723-8_49',
+				m_pretrained: {
+					m_3d: 'https://lmb.informatik.uni-freiburg.de/resources/opensource/k_seg_v4_cv_1_snapshot_iter_70000.caffemodel'
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -322,7 +377,9 @@ export default {
 			m_journal: 'Frontiers in Neuroanatomy',
 			m_links: {
 				m_code: 'https://gitlab.com/pnmis/nuclear-segmentation',
-				m_paper: 'https://www.frontiersin.org/articles/10.3389/fnana.2019.00081/full'
+				m_paper: 'https://www.frontiersin.org/articles/10.3389/fnana.2019.00081/full',
+				m_pretrained: {
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -342,7 +399,9 @@ export default {
 			m_journal: 'IEEE ISBI',
 			m_links: {
 				m_code: 'https://github.com/s-shailja/ucsb_ctc',
-				m_paper: 'https://ieeexplore.ieee.org/abstract/document/9433831/'
+				m_paper: 'https://ieeexplore.ieee.org/abstract/document/9433831/',
+				m_pretrained: {
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -362,7 +421,12 @@ export default {
 			m_journal: 'Nature NPJ Systems Biology',
 			m_links: {
 				m_code: 'https://github.com/funalab/QCANet',
-				m_paper: 'https://www.nature.com/articles/s41540-020-00152-8'
+				m_paper: 'https://www.nature.com/articles/s41540-020-00152-8',
+				m_pretrained: {
+					m_3d: ['https://fun.bio.keio.ac.jp/software/QCANet/learned_nsn.npz',
+							'https://fun.bio.keio.ac.jp/software/QCANet/learned_ndn.npz'
+					]
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -382,7 +446,9 @@ export default {
 			m_journal: 'BioInformatics',
 			m_links: {
 				m_code: 'https://github.com/etasnadi/3DCellAnnotator',
-				m_paper: 'https://academic.oup.com/bioinformatics/article/36/9/2948/5709038?login=true'
+				m_paper: 'https://academic.oup.com/bioinformatics/article/36/9/2948/5709038?login=true',
+				m_pretrained: {
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -402,7 +468,10 @@ export default {
 			m_journal: 'eLife',
 			m_links: {
 				m_code: 'https://github.com/WenChentao/3DeeCellTracker',
-				m_paper: 'https://elifesciences.org/articles/59187'
+				m_paper: 'https://elifesciences.org/articles/59187',
+				m_pretrained: {
+					m_3d: 'https://osf.io/dt76c/'
+				}
 			},
 			m_2d: false,
 			m_3d: true,
@@ -422,7 +491,9 @@ export default {
 			m_journal: 'Stem Cell Reports',
 			m_links:{
 				m_code: 'http://katlab-tools.org/',
-				m_paper: 'https://doi.org/10.1016/j.stemcr.2014.01.010'
+				m_paper: 'https://doi.org/10.1016/j.stemcr.2014.01.010',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -442,7 +513,9 @@ export default {
 			m_journal: 'Bioinformatics',
 			m_links:{
 				m_code: 'https://bitbucket.org/jstegmaier/xpiwit/downloads/',
-				m_paper: 'https://doi.org/10.1093/bioinformatics/btv559'
+				m_paper: 'https://doi.org/10.1093/bioinformatics/btv559',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -462,7 +535,11 @@ export default {
 			m_journal: 'Nature Methods',
 			m_links:{
 				m_code: 'https://github.com/ilastik/ilastik',
-				m_paper: 'https://doi.org/10.1038/s41592-019-0582-9'
+				m_paper: 'https://doi.org/10.1038/s41592-019-0582-9',
+				m_pretrained: {
+					m_fluo: 'https://bioimage.io/#/?partner=ilastik',
+					m_fluo_tissue: 'https://bioimage.io/#/?partner=ilastik'
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -482,7 +559,10 @@ export default {
 			m_journal: 'PLoS Computational Biology',
 			m_links:{
 				m_code: 'https://github.com/yanglf1121/NuSeT',
-				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008193'
+				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008193',
+				m_pretrained: {
+					m_fluo: 'https://drive.google.com/file/d/1fcs1F2lGPX0ejzEGPZ63YNF3AmUbdBcM/view?usp=sharing https://drive.google.com/file/d/1hythQfvD6kbaUClAPY96nHcXB7RXVmBx/view?usp=sharing'
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -502,7 +582,10 @@ export default {
 			m_journal: 'Nature Methods',
 			m_links:{
 				m_code: 'https://github.com/mic-dkfz/nnunet',
-				m_paper: 'https://doi.org/10.1038/s41592-020-01008-z'
+				m_paper: 'https://doi.org/10.1038/s41592-020-01008-z',
+				m_pretrained: {
+					m_fluo: 'https://zenodo.org/record/4003545/files/Task089_Fluo-N2DH-SIM_thickborder_time.zip?download=1'
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -522,7 +605,9 @@ export default {
 			m_journal: 'PLoS Computational Biology',
 			m_links:{
 				m_code: 'https://github.com/Ajaxels/MIB2',
-				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008374'
+				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008374',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -542,7 +627,11 @@ export default {
 			m_journal: 'BMC Bioinformatics',
 			m_links:{
 				m_code: 'https://github.com/marrlab/InstantDL',
-				m_paper: 'https://doi.org/10.1186/s12859-021-04037-3'
+				m_paper: 'https://doi.org/10.1186/s12859-021-04037-3',
+				m_pretrained: {
+					m_fluo: 'https://hmgubox2.helmholtz-muenchen.de/index.php/s/YXRD4a7qHnCa9x5',
+					m_he: 'https://hmgubox2.helmholtz-muenchen.de/index.php/s/YXRD4a7qHnCa9x5'
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -563,7 +652,13 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/bioimage-io/bioimage.io',
 				m_paper: 'https://doi.org/10.1101/799270',
-				m_site: 'https://bioimage.io/'
+				m_site: 'https://bioimage.io/',
+				m_pretrained: {
+					m_fluo: 'https://bioimage.io/#/?tags=deepimagej&id=10.5072%2Fzenodo.881940&type=model',
+					m_he: 'https://bioimage.io/#/?tags=deepimagej&id=10.5072%2Fzenodo.880528&type=model',
+					m_sth: 'https://bioimage.io/#/?partner=deepimagej&type=all&tags=deepimagej'
+
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -583,7 +678,9 @@ export default {
 			m_journal: 'Nature Methods',
 			m_links:{
 				m_code: 'https://github.com/imjoy-team/ImJoy',
-				m_paper: 'https://doi.org/10.1038/s41592-019-0627-0'
+				m_paper: 'https://doi.org/10.1038/s41592-019-0627-0',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -603,7 +700,9 @@ export default {
 			m_journal: 'Nature Communications',
 			m_links:{
 				m_code: 'https://github.com/HenriquesLab/ZeroCostDL4Mic',
-				m_paper: 'https://doi.org/10.1038/s41467-021-22518-0'
+				m_paper: 'https://doi.org/10.1038/s41467-021-22518-0',
+				m_pretrained: {
+				}
 			},
 			m_2d: true,
 			m_3d: true,
@@ -623,7 +722,11 @@ export default {
 			m_journal: 'Nature Methods',
 			m_links:{
 				m_code: 'https://github.com/vanvalenlab/kiosk-console',
-				m_paper: 'https://doi.org/10.1038/s41592-020-01023-0'
+				m_paper: 'https://doi.org/10.1038/s41592-020-01023-0',
+				m_pretrained: {
+					m_fluo: 'https://deepcell-data.s3-us-west-1.amazonaws.com/saved-models/NuclearSegmentation-4.tar.gz',
+					m_fluo_tissue: 'https://deepcell-data.s3-us-west-1.amazonaws.com/saved-models/NuclearSegmentation-4.tar.gz'
+				}
 			},
 			m_2d: true,
 			m_3d: true,
