@@ -494,7 +494,7 @@ export default class Detail extends React.Component {
 			    .then(response => response.json())
 				.then(data => { 
 					// check if placeholder link
-					console.log('---- in promise of link '+url);
+					//console.log('---- in promise of link '+url);
 					if (url==='https://api.github.com/repos/atom/github')
 						return [[-1,-1],url]
 					else
@@ -674,7 +674,7 @@ export default class Detail extends React.Component {
 	    /*
 	    let tableData=this.state.methods_data_all;
 		*/
-		console.log(tableData);
+		//console.log(tableData);
 		//let ready=this.checkTableData(tableData);
 		let ready=tableData!==null;
 
@@ -839,6 +839,7 @@ export default class Detail extends React.Component {
 									columns_keys={col_keys}
 									columns_names={col_names}
 									columns_types={col_types}
+									cur_node_id={this.props.currentId}
 								/>
 							}
 							

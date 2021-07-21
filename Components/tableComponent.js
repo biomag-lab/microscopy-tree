@@ -23,6 +23,8 @@ const HeadCell = ({
   );
 };
 
+const moreIds=['17','18','27','28'];
+
 class TableComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -116,14 +118,67 @@ class TableComponent extends React.Component {
     
   }
 
-  popLinks2(links){
+  popLinks2(links,nodeId){
     let output=[];
-    //console.log(data);
+    //console.log(links);
     let c=0;
     for (const property in links) {
-      name=property.substring(2);
-      output.push(<a key={c} href={links[property]}>{name}<br /></a>);
-      c++;
+      let name=property.substring(2);
+      if (name==='pretrained') {
+        // loop all
+        let subProp=links[property];
+        //console.log(subProp);
+        let tmpLinks=null;
+        let multiLink=false;
+        for (var i = 0; i < subProp.length; i++) {
+          // check if it corresponds to the current node
+          let curId=subProp[i].m_pr_id;
+          //console.log('curid: '+curId+' | nodeid: '+nodeId);
+          let subName=null;
+          let goodSub=false;
+          if (curId && curId===nodeId){
+            subName='pretrained';
+            goodSub=true;
+          }
+          else if(!curId && moreIds.indexOf(nodeId)!==-1) {
+            // this node or one of the mixed set nodes (defined on top)
+            // construct pretrained model name in list
+            subName='pretrained_general';
+            goodSub=true;
+          } 
+          else if (curId==='3d') {
+            subName='pretrained_3D';
+            goodSub=true;
+          } else {
+            // do nothing
+            continue;
+          }
+
+          tmpLinks=subProp[i].m_link;
+          multiLink=Array.isArray(tmpLinks) && tmpLinks.length>1;
+          if (!multiLink) {
+            tmpLinks=null;
+          }
+
+          if (goodSub && !multiLink) {
+            output.push(<a key={c} href={subProp[i].m_link} title={subProp[i].m_link}>{subName}<br /></a>);
+            c++;
+          } else if (goodSub && multiLink) {
+            for (const tmpLink in tmpLinks){
+              if (c>100) {
+                break;
+              }
+              output.push(<a key={c} href={tmpLinks[tmpLink]} title={tmpLinks[tmpLink]}>{subName}<br /></a>);
+              c++;
+            }
+          }
+          
+        }
+        
+      } else{
+        output.push(<a key={c} href={links[property]}>{name}<br /></a>);
+        c++;
+      }
     }
     return output;
   }
@@ -183,7 +238,7 @@ class TableComponent extends React.Component {
                 }
                 */
                 //console.log(props.value);
-                return this.popLinks2(JSON.parse(props.value));
+                return this.popLinks2(JSON.parse(props.value),this.props.cur_node_id);
                 
               case '_2d':
               case '_3d':

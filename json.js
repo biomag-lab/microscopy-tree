@@ -136,37 +136,7 @@ export default {
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,4,],
         		backup_methods:[],
-				children: [{
-					name: 'Transparent',
-					id: '23',
-					parent_id: '19',
-					nodeProps: {
-                        height: 50,
-						width: 50,
-				        href: 'nuc.png'
-                	},
-        			mini_hrefs: [],
-        			mini_info: [],
-        			parent_tag: 'Culture BF',
-        			methods:[],
-        			backup_methods:[],
-					children: []
-				}, {
-					name: 'Non-transparent',
-					id: '24',
-					parent_id: '19',
-					nodeProps: {
-                        height: 50,
-						width: 50,
-				        href: 'nuc.png'
-                	},
-        			mini_hrefs: [],
-        			mini_info: [],
-        			parent_tag: 'Culture BF',
-        			methods:[],
-        			backup_methods:[],
-					children: []
-				}]
+				children: []
 			}, {
 				name: 'DIC',
 				id: '20',
@@ -323,37 +293,7 @@ export default {
         		parent_tag: 'Tissue',
         		methods:[],
         		backup_methods:[],
-				children: [{
-					name: 'Transparent',
-					id: '13',
-					parent_id: '9',
-					nodeProps: {
-                        height: 50,
-						width: 50,
-				        href: 'nuc.png'
-                	},
-        			mini_hrefs: [],
-        			mini_info: [],
-        			parent_tag: 'Tissue BF',
-        			methods:[],
-        			backup_methods:[],
-					children: []
-				}, {
-					name: 'Non-transparent',
-					id: '14',
-					parent_id: '9',
-					nodeProps: {
-                        height: 50,
-						width: 50,
-				        href: 'nuc.png'
-                	},
-        			mini_hrefs: [],
-        			mini_info: [],
-        			parent_tag: 'Tissue BF',
-        			methods:[],
-        			backup_methods:[],
-					children: []
-				}]
+				children: []
 			}, {
 				name: 'DIC',
 				id: '10',
