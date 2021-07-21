@@ -23,7 +23,7 @@ export default class Detail extends React.Component {
 	constructor(props){
 		super(props);
 		this.state={
-			stats_stars:Array(this.props.data.methods.length).fill(null), 
+			stats_stars:Array(this.props.data.methods.length).fill(null),
 			stats_forks:Array(this.props.data.methods.length).fill(null),
 			curNodeId:null,
 			curImInfo:"",
@@ -35,13 +35,12 @@ export default class Detail extends React.Component {
 			isConcanve: false,
 			isDeviating: false,
 			isWobbling: false,
-			isMultinuc: false,
 			isHeterogen: false,
 			isFragmented: false,
 			hoverImg: '../challenge_none.png'
 		}
 		//this.fetchGithubStats(this.props.data.methods);
-		
+
 		/*
 		this.state={
       		stats_stars:this.fetchGithubStats(this.props.data.methods)
@@ -141,7 +140,7 @@ export default class Detail extends React.Component {
 			let stars=this.state.stats_stars[i+1];
 			let forks=this.state.stats_forks[i+1];
 			methodsDiv.push(
-				{	
+				{
 					name:data.methods[i].m_name,
 					author:data.methods[i].m_author,
 					year:data.methods[i].m_year,
@@ -171,14 +170,14 @@ export default class Detail extends React.Component {
 				continue;
 			}
 			// challenges:
-			if ((this.state.isElongated && !data[i].challenges.m_elongated) || (this.state.isConcanve && !data[i].challenges.m_concave) || (this.state.isDeviating && !data[i].challenges.m_deviating) || (this.state.isWobbling && !data[i].challenges.m_wobbling) || (this.state.isMultinuc && !data[i].challenges.m_multinuc) || (this.state.isHeterogen && !data[i].challenges.m_heterogen) || (this.state.isFragmented && !data[i].challenges.m_fragmented)) {
+			if ((this.state.isElongated && !data[i].challenges.m_elongated) || (this.state.isConcanve && !data[i].challenges.m_concave) || (this.state.isDeviating && !data[i].challenges.m_deviating) || (this.state.isWobbling && !data[i].challenges.m_wobbling) || (this.state.isHeterogen && !data[i].challenges.m_heterogen) || (this.state.isFragmented && !data[i].challenges.m_fragmented)) {
 				continue;
 			}
 
 			let stars=this.state.stats_stars[i+1];
 			let forks=this.state.stats_forks[i+1];
 			methodsDiv.push(
-				{	
+				{
 					name:data[i].name,
 					author:data[i].author,
 					year:data[i].year,
@@ -211,14 +210,14 @@ export default class Detail extends React.Component {
 				continue;
 			}
 			// challenges:
-			if ((this.state.isElongated && !data[i].challenges.m_elongated) || (this.state.isConcanve && !data[i].challenges.m_concave) || (this.state.isDeviating && !data[i].challenges.m_deviating) || (this.state.isWobbling && !data[i].challenges.m_wobbling) || (this.state.isMultinuc && !data[i].challenges.m_multinuc) || (this.state.isHeterogen && !data[i].challenges.m_heterogen) || (this.state.isFragmented && !data[i].challenges.m_fragmented)) {
+			if ((this.state.isElongated && !data[i].challenges.m_elongated) || (this.state.isConcanve && !data[i].challenges.m_concave) || (this.state.isDeviating && !data[i].challenges.m_deviating) || (this.state.isWobbling && !data[i].challenges.m_wobbling) || (this.state.isHeterogen && !data[i].challenges.m_heterogen) || (this.state.isFragmented && !data[i].challenges.m_fragmented)) {
 				continue;
 			}
 
 			let stars=this.state.stats_stars[i];
 			let forks=this.state.stats_forks[i];
 			methodsDiv.push(
-				{	
+				{
 					name:data[i].name,
 					author:data[i].author,
 					year:data[i].year,
@@ -286,7 +285,7 @@ export default class Detail extends React.Component {
 		let outMethods=Array(methods.length).fill(null);
 		for (var i = 0; i < methods.length; i++) {
 			let curMethod=methods[i];
-			outMethods[i]={	
+			outMethods[i]={
 					name:curMethod.m_name,
 					author:curMethod.m_author,
 					year:curMethod.m_year,
@@ -313,7 +312,7 @@ export default class Detail extends React.Component {
 		let outMethods=Array(methods.length).fill(null);
 		for (var i = 0; i < methods.length; i++) {
 			let curMethod=methods[i];
-			outMethods[i]={	
+			outMethods[i]={
 					name:curMethod.m_name,
 					author:curMethod.m_author,
 					year:curMethod.m_year,
@@ -354,7 +353,7 @@ export default class Detail extends React.Component {
 				curImInfoList:null
 			});
             //this.setState({methods_data_all:this.initMethods(this.props.data.methods)});
-            
+
             //this.initMethods(this.props.data.methods,true);
             this.initMethods2(true);
             //this.fetchGithubStats(this.props.data.methods);
@@ -386,7 +385,7 @@ export default class Detail extends React.Component {
 
 		///*
 		const methods_data_all=this.state.methods_data_all.slice();
-		methods_data_all[i]={	
+		methods_data_all[i]={
 					name:method.m_name,
 					author:method.m_author,
 					year:method.m_year,
@@ -492,13 +491,13 @@ export default class Detail extends React.Component {
 		Promise.all(links.map(url =>
 			fetch(url)
 			    .then(response => response.json())
-				.then(data => { 
+				.then(data => {
 					// check if placeholder link
 					console.log('---- in promise of link '+url);
 					if (url==='https://api.github.com/repos/atom/github')
 						return [[-1,-1],url]
 					else
-						return [this.getGithubStatsLight(data), url] 
+						return [this.getGithubStatsLight(data), url]
 				})
 				.catch(err => { console.error(err) })
 		)).then(results => {
@@ -530,7 +529,7 @@ export default class Detail extends React.Component {
 				continue;
 			}
 			let stat=curStat[0];
-			methods_data_all[i]={	
+			methods_data_all[i]={
 				name:method.m_name,
 				author:method.m_author,
 				year:method.m_year,
@@ -560,7 +559,7 @@ export default class Detail extends React.Component {
 		//		.then(response => response.json())
 		//		.then(data => { this.getGithubStatsLight(data) })
 	    //});
-		
+
 	    return fetch(url)
 			.then(response => response.json())
 			.then(data => { this.getGithubStatsLight(data) })
@@ -586,7 +585,7 @@ export default class Detail extends React.Component {
                console.log(results);
            })
            .catch((e) => {
-               
+
            });
 	}
 	*/
@@ -612,9 +611,9 @@ export default class Detail extends React.Component {
 			let imgEl=document.getElementById('hoverImgEl');
 			//console.log(imgEl);
 			imgEl.setAttribute('src','../challenge_'+name+'.png');
-			//imgEl.setAttribute('style','display:block');	
+			//imgEl.setAttribute('style','display:block');
 		}, 150);
-		
+
 	}
 
 	hideTooltipImg(event){
@@ -635,7 +634,7 @@ export default class Detail extends React.Component {
 		let imDiv=this.fillMiniImages(currentMiniImages,this.props.data.mini_info,this.props.data.id);
 		//console.log(currentMiniImages);
 		let panelName=this.getNodeName(this.props.data.name,this.props.parent);
-		//let infoDiv=this.fillMethods(this.props.data,this.state);	
+		//let infoDiv=this.fillMethods(this.props.data,this.state);
 
 		// check if need to change
 		//console.log('update detail stats?');
@@ -663,7 +662,7 @@ export default class Detail extends React.Component {
 			//console.log(infoTableData);
 		}
 
-		
+
 		// construct details as a table
 	    let col_keys=['name','author','year','journal','links','stars','forks','_2d','_3d','challenges'];
 	    let col_names=['Name','Author','Year','Journal','Links','Github ★','Forks','2D','3D','Challenges'];
@@ -691,8 +690,8 @@ export default class Detail extends React.Component {
 							<p className="listText">Do you think your method works on this kind of data? E-mail us at <a href="mailto:email">email@address.c</a>
 								<br />
 								Get help <a href="https://github.com/spreka/microscopy-tree/issues">here</a>
-							</p>		
-							
+							</p>
+
 						</div>
 						<br />
 
@@ -700,7 +699,7 @@ export default class Detail extends React.Component {
 
 						<div id="imInfo" className="info">
 
-							{dispImTable && 
+							{dispImTable &&
 								<div>
 									<p>Images:</p>
 									<TableComponent
@@ -711,7 +710,7 @@ export default class Detail extends React.Component {
 									/>
 								</div>
 							}
-							
+
 						</div>
 						<div className="spaceing"></div>
 						<div className="info">
@@ -727,7 +726,7 @@ export default class Detail extends React.Component {
 											checked={this.state.is2D}
 											onChange={this.handleInputChange} />
 											<span className="slider round"></span>
-										
+
 									</label>
 									<br />
 									<span>3D</span>
@@ -738,19 +737,19 @@ export default class Detail extends React.Component {
 											checked={this.state.is3D}
 											onChange={this.handleInputChange} />
 											<span className="slider round"></span>
-										
+
 									</label>
-								</form>					
+								</form>
 							</div>
 
 
 
 							<p>Challenges:</p>
 							<div style={{display:'flex'}}>
-								<form>	
-									<label className="challenge2Outer" 
+								<form>
+									<label className="challenge2Outer"
 										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
-										
+
 										<input
 											name="isElongated"
 											type="checkbox"
@@ -759,8 +758,8 @@ export default class Detail extends React.Component {
 											<span className="challenge2" >
 												elongated
 											</span>
-											
-										
+
+
 									</label>
 
 									<label className="challenge2Outer" onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
@@ -770,10 +769,10 @@ export default class Detail extends React.Component {
 											checked={this.state.isConcanve}
 											onChange={this.handleInputChange} />
 											<span className="challenge2">concave</span>
-										
+
 									</label>
 
-									<label className="challenge2Outer" 
+									<label className="challenge2Outer"
 										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
 										<input
 											name="isDeviating"
@@ -781,10 +780,10 @@ export default class Detail extends React.Component {
 											checked={this.state.isDeviating}
 											onChange={this.handleInputChange} />
 											<span className="challenge2">deviating</span>
-										
+
 									</label>
 
-									<label className="challenge2Outer" 
+									<label className="challenge2Outer"
 										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
 										<input
 											name="isWobbling"
@@ -792,22 +791,10 @@ export default class Detail extends React.Component {
 											checked={this.state.isWobbling}
 											onChange={this.handleInputChange} />
 											<span className="challenge2">wobbling</span>
-										
-									</label>
-									<br />
 
-									<label className="challenge2Outer" 
-										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
-										<input
-											name="isMultinuc"
-											type="checkbox"
-											checked={this.state.isMultinuc}
-											onChange={this.handleInputChange} />
-											<span className="challenge2">multinuc</span>
-										
 									</label>
 
-									<label className="challenge2Outer" 
+									<label className="challenge2Outer"
 										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
 										<input
 											name="isHeterogen"
@@ -815,10 +802,10 @@ export default class Detail extends React.Component {
 											checked={this.state.isHeterogen}
 											onChange={this.handleInputChange} />
 											<span className="challenge2">heterogen</span>
-										
+
 									</label>
 
-									<label className="challenge2Outer" 
+									<label className="challenge2Outer"
 										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
 										<input
 											name="isFragmented"
@@ -826,22 +813,22 @@ export default class Detail extends React.Component {
 											checked={this.state.isFragmented}
 											onChange={this.handleInputChange} />
 											<span className="challenge2">fragmented</span>
-										
+
 									</label>
-								</form>	
+								</form>
 
 								<div><img id="hoverImgEl" className="hoverImg" src={this.state.hoverImg}/></div>
 							</div>
-							
-							{ready && 
-								<TableComponent 
+
+							{ready &&
+								<TableComponent
 									data={tableData}
 									columns_keys={col_keys}
 									columns_names={col_names}
 									columns_types={col_types}
 								/>
 							}
-							
+
 						</div>
 					</div>
 				</div>
@@ -862,9 +849,9 @@ export default class Detail extends React.Component {
 						<div className="info">
 							<p>Methods:</p>
 							<p>Loading...</p>
-							 
-								
-							
+
+
+
 						</div>
 					</div>
 				</div>
