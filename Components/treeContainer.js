@@ -160,7 +160,7 @@ export default class TreeContainer extends React.PureComponent {
 		if (count<15) {
 			iconSize=65;
 		} else {
-			iconSize=30;
+			iconSize=45;
 		}
 		// set the icon sizes
 		this.setCurIconSize(json,iconSize);
@@ -191,7 +191,7 @@ export default class TreeContainer extends React.PureComponent {
 				return tmp;
 			}
 		//}
-		
+
 		for (let i=0; i<node.children.length; i++){
 			//let child=node.children[i];
 			let child=this.checkName(node.children[i],name);
@@ -216,7 +216,7 @@ export default class TreeContainer extends React.PureComponent {
 			return res.name;
 	}
 
-	
+
 	render() {
 		let root = this.props.data;
 		let currentNode = this.props.activeNode ? this.getRoot(this.props.data) : this.props.data;
@@ -261,7 +261,7 @@ export default class TreeContainer extends React.PureComponent {
 				/>
 
 				<div id="detail-panel" className="detailPanelMainStyle">
-					<Detail 
+					<Detail
 						data={currentNode}
 						currentId={currentNode.id}
 						parent={parentName}
