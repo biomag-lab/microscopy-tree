@@ -10,7 +10,7 @@ import $ from 'jquery';
 
 import seg_methods from '../seg_methods';
 
-import nuc from '../nuc.png';
+//import nuc from '../nuc.png';
 
 
 function SampleImage(props){
@@ -37,7 +37,7 @@ export default class Detail extends React.Component {
 			isWobbling: false,
 			isHeterogen: false,
 			isFragmented: false,
-			hoverImg: '../challenge_none.png'
+			hoverImg: '../data/images/challenge_none.png'
 		}
 		//this.fetchGithubStats(this.props.data.methods);
 
@@ -610,7 +610,7 @@ export default class Detail extends React.Component {
 			console.log('mouse over '+name);
 			let imgEl=document.getElementById('hoverImgEl');
 			//console.log(imgEl);
-			imgEl.setAttribute('src','../challenge_'+name+'.png');
+			imgEl.setAttribute('src','../data/images/challenge_'+name+'.png');
 			//imgEl.setAttribute('style','display:block');
 		}, 150);
 
@@ -624,7 +624,7 @@ export default class Detail extends React.Component {
 			let imgEl=document.getElementById('hoverImgEl');
 			//console.log(imgEl);
 			//imgEl.setAttribute('style','display:none');
-			imgEl.setAttribute('src','../challenge_'+'none'+'.png');
+			imgEl.setAttribute('src','../data/images/challenge_'+'none'+'.png');
 		}, 150);
 	}
 

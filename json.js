@@ -1,3 +1,4 @@
+let imDir='data/images/';
 export default {
 	name: 'Microscopy',
 	id: '1',
@@ -5,9 +6,9 @@ export default {
 	nodeProps: {
 		height: 50,
 		width: 50,
-        href: 'nuc.png'
+        href: imDir+'nuc.png'
     },
-    mini_hrefs: ['nuc_r.png','nuc_g.png','nuc_b.png'],
+    mini_hrefs: [imDir+'nuc_r.png',imDir+'nuc_g.png',imDir+'nuc_b.png'],
     mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3'],
     parent_tag: null,
     methods:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
@@ -23,10 +24,10 @@ export default {
 		nodeProps: {
 			height: 50,
 			width: 50,
-            href: 'nuc_r.png'
+            href: imDir+'culture_fluo_ex4.png'
         },
-        mini_hrefs: ['nuc_r.png','nuc_g.png'],
-        mini_info: ['BBBC0xyz1','BBBC0xyz2'],
+        mini_hrefs: [imDir+'culture_fluo_ex4.png'],
+        mini_info: ['BBBC021'],
         parent_tag: null,
         methods:[],
         backup_methods:[],
@@ -40,10 +41,10 @@ export default {
 			nodeProps: {
                 height: 50,
 				width: 50,
-		        href: 'nuc.png'
+		        href: imDir+'culture_fluo_ex3.png'
 	        },
-        	mini_hrefs: [],
-        	mini_info: [],
+        	mini_hrefs: [imDir+'culture_fluo_ex3.png'],
+        	mini_info: ['TODO'],
         	parent_tag: 'Culture',
         	methods:[0,1,2,3,],
         	backup_methods:[],
@@ -54,10 +55,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'culture_fluo.png'
                 },
-        		mini_hrefs: ['nuc_g.png','nuc_b.png'],
-        		mini_info: ['BBBC0xyz1','BBBC0xyz2'],
+        		mini_hrefs: [imDir+'culture_fluo.png',imDir+'culture_fluo_ex1.png',imDir+'culture_fluo_ex2.png',imDir+'culture_fluo_ex3.png'],
+        		mini_info: ['BBBC0xyz1','BBBC0xyz2','TODO','BBBC021'],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,4,9,31,23,24,25,28,27,],
         		backup_methods:[],
@@ -69,10 +70,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'culture_conf.png'
                 },
-        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
-        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		mini_hrefs: [imDir+'culture_conf.png',imDir+'culture_conf_ex1.png'],
+        		mini_info: ['BBBC0xyz1','TODO'],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,4,],
         		backup_methods:[],
@@ -84,10 +85,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'nuc.png'
                 },
-        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
-        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		mini_hrefs: [imDir+'nuc_g.png'],
+        		mini_info: ['BBBC0xyz1'],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,],
         		backup_methods:[],
@@ -99,10 +100,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'nuc.png'
                 },
-        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
-        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		mini_hrefs: [imDir+'nuc_g.png'],
+        		mini_info: ['BBBC0xyz1'],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,],
         		backup_methods:[],
@@ -115,10 +116,10 @@ export default {
 			nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'culture_dic_ex1.png'
                 },
-    		mini_hrefs: [],
-    		mini_info: [],
+    		mini_hrefs: [imDir+'culture_dic_ex1.png'],
+    		mini_info: ['TODO'],
     		parent_tag: 'Culture',
     		methods:[],
     		backup_methods:[],
@@ -129,10 +130,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'culture_bf.png'
                 },
-        		mini_hrefs: [],
-        		mini_info: [],
+        		mini_hrefs: [imDir+'culture_bf.png',imDir+'culture_bf_ex1.png'],
+        		mini_info: ['TODO','TODO'],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,4,],
         		backup_methods:[],
@@ -144,10 +145,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'culture_dic.png'
                 },
-        		mini_hrefs: [],
-        		mini_info: [],
+        		mini_hrefs: [imDir+'culture_dic.png',imDir+'culture_dic_ex1.png'],
+        		mini_info: ['TODO','TODO'],
         		parent_tag: 'Culture',
         		methods:[0,],
         		backup_methods:[],
@@ -159,10 +160,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'culture_pc.png'
                 },
-        		mini_hrefs: [],
-        		mini_info: [],
+        		mini_hrefs: [imDir+'culture_pc.png',imDir+'culture_pc_ex1.png',imDir+'culture_pc_ex2.png'],
+        		mini_info: ['TODO','TODO','TODO'],
         		parent_tag: 'Culture',
         		methods:[0,4,],
         		backup_methods:[],
@@ -180,10 +181,10 @@ export default {
 		nodeProps: {
             height: 50,
 			width: 50,
-	        href: 'nuc_g.png'
+	        href: imDir+'tissue_bf_ex5.png'
         },
-        mini_hrefs: [],
-        mini_info: [],
+        mini_hrefs: [imDir+'tissue_bf_ex5.png'],
+        mini_info: ['BBBC038'],
         parent_tag: null,
         methods:[],
         backup_methods:[],
@@ -197,10 +198,10 @@ export default {
 			nodeProps: {
                 height: 50,
 				width: 50,
-		        href: 'nuc.png'
+		        href: imDir+'tissue_bf_ex4.png'
 	        },
-        	mini_hrefs: [],
-        	mini_info: [],
+        	mini_hrefs: [imDir+'tissue_bf_ex4.png'],
+        	mini_info: ['TCGA'],
         	parent_tag: 'Tissue',
         	methods:[],
         	backup_methods:[],
@@ -211,7 +212,7 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'nuc.png'
                 },
        			mini_hrefs: [],
        			mini_info: [],
@@ -226,10 +227,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'tissue_conf.png'
                 },
-        		mini_hrefs: [],
-        		mini_info: [],
+        		mini_hrefs: [imDir+'tissue_conf.png',imDir+'tissue_conf_ex1.png'],
+        		mini_info: ['TODO','TODO'],
         		parent_tag: 'Tissue',
         		methods:[],
         		backup_methods:[],
@@ -241,10 +242,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'tissue_ls_ex1.png'
                 },
-        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
-        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		mini_hrefs: [imDir+'tissue_ls_ex1.png',imDir+'tissue_ls.png',imDir+'tissue_ls_ex2.png'],
+        		mini_info: ['BIOMAG','BIOMAG','BIOMAG'],
         		parent_tag: 'Tissue',
         		methods:[0,3,],
         		backup_methods:[],
@@ -256,10 +257,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'tissue_bf.png'
                 },
-        		mini_hrefs: ['nuc_g.png','nuc_g.png','nuc_g.png','nuc_g.png'],
-        		mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3','BBBC0xyz4'],
+        		mini_hrefs: [imDir+'tissue_bf.png',imDir+'tissue_bf_ex4.png',imDir+'tissue_bf_ex3.png',imDir+'tissue_bf_ex2.png'],
+        		mini_info: ['TCGA','TCGA','BBBC038','TNBC'],
         		parent_tag: 'Tissue',
         		methods:[0,1,2,3,28,27,],
         		backup_methods:[],
@@ -272,7 +273,7 @@ export default {
 			nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'nuc.png'
                 },
     		mini_hrefs: [],
     		mini_info: [],
@@ -286,7 +287,7 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'nuc.png'
                 },
         		mini_hrefs: [],
         		mini_info: [],
@@ -301,10 +302,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'tissue_dic.png'
                 },
-        		mini_hrefs: [],
-        		mini_info: [],
+        		mini_hrefs: [imDir+'tissue_dic.png',imDir+'tissue_dic_ex1.png'],
+        		mini_info: ['BIOMAG','BIOMAG'],
         		parent_tag: 'Tissue',
         		methods:[],
         		backup_methods:[],
@@ -316,7 +317,7 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: 'nuc.png'
+			        href: imDir+'nuc.png'
                 },
         		mini_hrefs: [],
         		mini_info: [],
