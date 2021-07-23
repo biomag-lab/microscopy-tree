@@ -886,7 +886,7 @@ export default class Detail extends React.Component {
 
 							{tableDataBackupReady && !isTableDataBackupEmpty && isTableDataEmpty &&
 							<div>
-								<p>There are no tested methods but here are suggested methods:</p>
+								<p>There are no tested methods, but here are suggested methods:</p>
 								<TableComponent
 									data={tableDataBackup}
 									columns_keys={col_keys}

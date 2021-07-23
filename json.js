@@ -107,7 +107,7 @@ export default {
     		mini_info: ['TODO'],
     		parent_tag: 'Culture',
     		methods:[],
-    		backup_methods:[],
+    		backup_methods:[0,1,2,3,4,],
 			children: [{
 				name: 'BF',
 				id: '19',
@@ -172,7 +172,7 @@ export default {
         mini_info: ['BBBC038'],
         parent_tag: null,
         methods:[],
-        backup_methods:[],
+        backup_methods:[0,9,31,23],
 	    pathProps: {
 	    	className: 'link'
 	    },
@@ -189,7 +189,7 @@ export default {
         	mini_info: ['TCGA'],
         	parent_tag: 'Tissue',
         	methods:[],
-        	backup_methods:[],
+        	backup_methods:[0,1,2,3,4,28,27,],
 			children: [{
 				name: 'Fluo',
 				id: '7',
@@ -218,7 +218,7 @@ export default {
         		mini_info: ['TODO','TODO'],
         		parent_tag: 'Tissue',
         		methods:[],
-        		backup_methods:[],
+        		backup_methods:[0,1,2,3,4,],
 				children: []
 			}, {
 				name: 'Light-sheet',
@@ -264,7 +264,7 @@ export default {
     		mini_info: [],
     		parent_tag: 'Tissue',
     		methods:[],
-    		backup_methods:[],
+    		backup_methods:[0,],
 			children: [{
 				name: 'DIC',
 				id: '10',
@@ -277,7 +277,7 @@ export default {
         		mini_hrefs: [imDir+'tissue_dic.png',imDir+'tissue_dic_ex1.png'],
         		mini_info: ['BIOMAG','BIOMAG'],
         		parent_tag: 'Tissue',
-        		methods:[],
+        		methods:[0,],
         		backup_methods:[],
 				children: []
 			}]
