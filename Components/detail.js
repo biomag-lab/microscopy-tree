@@ -29,6 +29,7 @@ export default class Detail extends React.Component {
 			curImInfo:"",
 			curImInfoList:null,
 			methods_data_all:Array(this.props.data.methods.length).fill(null), //this.initMethods(this.props.data.methods)
+			methods_data_all_backup:Array(this.props.data.methods.length).fill(null),
 			is2D: true,
 			is3D: false,
 			isElongated: false,
@@ -268,7 +269,7 @@ export default class Detail extends React.Component {
 		)[0];
 	}
 
-	collectMethods(json,ids){
+	collectMethods(json,ids,backupIds){
 		let resMethods=[];
 		for (var i = 0; i < ids.length; i++) {
 			// collect details from the methods struct
@@ -278,8 +279,19 @@ export default class Detail extends React.Component {
 			}
 			resMethods.push(thisMethod);
 		}
-		return resMethods;
+		let backupMethods = [];
+		for (var i = 0; i < backupIds.length; i++) {
+			// collect details from the methods struct
+			var thisMethod=this.filterJSONid(json['backup_methods'], backupIds[i]);
+			if (!thisMethod) {
+				continue;
+			}
+			backupMethods.push(thisMethod);
+		}
+		return {'methods': resMethods,
+			 'backup_methods': backupMethods};
 	}
+
 
 	initMethods(methods,set){
 		let outMethods=Array(methods.length).fill(null);
@@ -308,8 +320,11 @@ export default class Detail extends React.Component {
 	}
 
 	initMethods2(set){
-		let methods=this.collectMethods(seg_methods,this.props.data.methods);
+		let all_methods = this.collectMethods(seg_methods,this.props.data.methods,this.props.data.backup_methods);
+		let methods = all_methods['methods']
+		let backup_methods = all_methods['backup_methods'];
 		let outMethods=Array(methods.length).fill(null);
+		let outBackupMethods=Array(backup_methods.length).fill(null);
 		for (var i = 0; i < methods.length; i++) {
 			let curMethod=methods[i];
 			outMethods[i]={
@@ -328,6 +343,25 @@ export default class Detail extends React.Component {
 					id:i
 				};
 		}
+		for (var i = 0; i < backup_methods.length; i++) {
+			let curMethod=backup_methods[i];
+			outBackupMethods[i]={
+					name:curMethod.m_name,
+					author:curMethod.m_author,
+					year:curMethod.m_year,
+					journal:curMethod.m_journal,
+					//link:curMethod.m_link,
+					links:curMethod.m_links,
+					stars:null,
+					forks:null,
+					_2d:curMethod.m_2d,
+					_3d:curMethod.m_3d,
+					//paper:curMethod.m_paper,
+					challenges:curMethod.m_challenges,
+					id:i
+				};
+		}
+
 		//console.log('inited methods:');
 		//console.log(outMethods);
 		if (set) {
@@ -336,7 +370,12 @@ export default class Detail extends React.Component {
 				this.fetchGithubStats(methods);
 			});
 		}
-		return outMethods;
+		if (set) {
+			this.setState({methods_data_all_backup:outBackupMethods}, () => {
+				this.fetchGithubStats(backup_methods);
+			});
+		}
+		return {'methods':outMethods, 'backupMethods': outBackupMethods };
 	}
 
 	componentDidMount(){

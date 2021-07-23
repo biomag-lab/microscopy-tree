@@ -38,7 +38,7 @@ class TableComponent extends React.Component {
       textAlign: 'left',
       color: 'white',
       paddingBottom: '10px',
-      width: 20, 
+      width: 20,
       minWidth: 20,
       border: '50px',
       borderColor: 'white'
@@ -76,7 +76,7 @@ class TableComponent extends React.Component {
           style: tableStyle
         });
       }
-      
+
     }
     return {
       columns: cols,
@@ -115,7 +115,7 @@ class TableComponent extends React.Component {
     }
     */
     return output;
-    
+
   }
 
   popLinks2(links,nodeId){
@@ -145,7 +145,7 @@ class TableComponent extends React.Component {
             // construct pretrained model name in list
             subName='pretrained_general';
             goodSub=true;
-          } 
+          }
           else if (curId==='3d') {
             subName='pretrained_3D';
             goodSub=true;
@@ -172,9 +172,9 @@ class TableComponent extends React.Component {
               c++;
             }
           }
-          
+
         }
-        
+
       } else{
         output.push(<a key={c} href={links[property]}>{name}<br /></a>);
         c++;
@@ -201,7 +201,7 @@ class TableComponent extends React.Component {
       if (data[property]){
         output.push(<p style={{marginBlockStart: '0em', marginBlockEnd: '0em'}} key={c}>{name}</p>);
       }
-      
+
       c++;
     }
     return output;
@@ -221,7 +221,7 @@ class TableComponent extends React.Component {
           }
         },
 
-        
+
         cellText: {
           content: (props) => {
             switch (props.column.key){
@@ -239,7 +239,7 @@ class TableComponent extends React.Component {
                 */
                 //console.log(props.value);
                 return this.popLinks2(JSON.parse(props.value),this.props.cur_node_id);
-                
+
               case '_2d':
               case '_3d':
                 let val=props.value==="true"?'✓':'x';
@@ -251,7 +251,7 @@ class TableComponent extends React.Component {
           }
         }
 
-        
+
 
 
       }}
