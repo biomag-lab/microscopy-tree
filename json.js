@@ -6,10 +6,10 @@ export default {
 	nodeProps: {
 		height: 50,
 		width: 50,
-        href: imDir+'nuc.png'
+        href: imDir+'mic.png'
     },
-    mini_hrefs: [imDir+'nuc_r.png',imDir+'nuc_g.png',imDir+'nuc_b.png'],
-    mini_info: ['BBBC0xyz1','BBBC0xyz2','BBBC0xyz3'],
+    mini_hrefs: [],
+    mini_info: [],
     parent_tag: null,
     methods:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
     backup_methods:[],
@@ -29,7 +29,7 @@ export default {
         mini_hrefs: [imDir+'culture_fluo_ex4.png'],
         mini_info: ['BBBC021'],
         parent_tag: null,
-        methods:[],
+        methods:[0,3],
         backup_methods:[],
 	    pathProps: {
 	    	className: 'link'
@@ -79,31 +79,16 @@ export default {
         		backup_methods:[],
 				children: []
 			}, {
-				name: 'Light-sheet',
-				id: '25',
-				parent_id: '15',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: imDir+'nuc.png'
-                },
-        		mini_hrefs: [imDir+'nuc_g.png'],
-        		mini_info: ['BBBC0xyz1'],
-        		parent_tag: 'Culture',
-        		methods:[0,1,2,3,],
-        		backup_methods:[],
-				children: []
-			}, {
 				name: 'BF',
 				id: '26',
 				parent_id: '15',
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: imDir+'nuc.png'
+			        href: imDir+'culture_labelledbf.png'
                 },
-        		mini_hrefs: [imDir+'nuc_g.png'],
-        		mini_info: ['BBBC0xyz1'],
+        		mini_hrefs: [imDir+'culture_labelledbf.png'],
+        		mini_info: ['TODO'],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,],
         		backup_methods:[],
@@ -212,10 +197,10 @@ export default {
 				nodeProps: {
                     height: 50,
 					width: 50,
-			        href: imDir+'nuc.png'
+			        href: imDir+'tissue_fluo.png'
                 },
-       			mini_hrefs: [],
-       			mini_info: [],
+       			mini_hrefs: [imDir+'tissue_fluo.png'],
+       			mini_info: ['BIOMAG'],
        			parent_tag: 'Tissue',
        			methods:[9,31,23,],
        			backup_methods:[],
@@ -281,21 +266,6 @@ export default {
     		methods:[],
     		backup_methods:[],
 			children: [{
-				name: 'BF',
-				id: '9',
-				parent_id: '6',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: imDir+'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
-        		parent_tag: 'Tissue',
-        		methods:[],
-        		backup_methods:[],
-				children: []
-			}, {
 				name: 'DIC',
 				id: '10',
 				parent_id: '6',
@@ -306,21 +276,6 @@ export default {
                 },
         		mini_hrefs: [imDir+'tissue_dic.png',imDir+'tissue_dic_ex1.png'],
         		mini_info: ['BIOMAG','BIOMAG'],
-        		parent_tag: 'Tissue',
-        		methods:[],
-        		backup_methods:[],
-				children: []
-			},	{
-				name: 'PC',
-				id: '11',
-				parent_id: '6',
-				nodeProps: {
-                    height: 50,
-					width: 50,
-			        href: imDir+'nuc.png'
-                },
-        		mini_hrefs: [],
-        		mini_info: [],
         		parent_tag: 'Tissue',
         		methods:[],
         		backup_methods:[],
