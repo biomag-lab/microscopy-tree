@@ -273,7 +273,7 @@ export default class Detail extends React.Component {
 		ids = [...new Set(ids)]
 		backupIds= [...new Set(backupIds)]
 		let resMethods=[];
-		for (var i = 0; i <= ids.length; i++) {
+		for (var i = 0; i < ids.length; i++) {
 			// collect details from the methods struct
 			var thisMethod=this.filterJSONid(json['seg_methods'], ids[i]);
 			if (!thisMethod) {
