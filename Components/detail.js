@@ -104,7 +104,7 @@ export default class Detail extends React.Component {
 		const baseStyle={borderColor:'white !important'};
 		for (var i = 0; i < ims.length; i++) {
 			let id="miniIm_"+nodeId+"_"+i;
-			resDiv.push(<img key={i} src={ims[i]} id={id} onClick={this.previewIm.bind(this,ims[i],srcs[i],id,nodeId)} style={baseStyle}/>);
+			resDiv.push(<img key={i} src={ims[i]} id={id} onClick={this.previewIm.bind(this,ims[i],srcs[i],id,nodeId)} style={baseStyle} title='Click for more info'/>);
 		}
 
 		return resDiv;
@@ -704,7 +704,9 @@ export default class Detail extends React.Component {
 			info_keys=['name','src'];
 			info_names=['Dataset','Source'];
 			info_types=['string','string'];
-			infoTableData=[{name:this.state.curImInfoList[0], src:this.state.curImInfoList[1], id: 0}];
+			//infoTableData=[{name:this.state.curImInfoList[0], src:this.state.curImInfoList[1], id: 0}];
+			//console.log(this.state.curImInfoList);
+			infoTableData=[{name:this.state.curImInfoList[1].m_dataset, src:this.state.curImInfoList[1].m_source, id: 0}];
 			//console.log(infoTableData);
 		}
 

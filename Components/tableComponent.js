@@ -207,6 +207,12 @@ class TableComponent extends React.Component {
     return output;
   }
 
+  popSingleLink(link){
+    let c=1000;
+    let name='visit';
+    return <a key={c} href={link}>{name}<br /></a>;
+  }
+
   render() {
     //console.log(JSON.stringify(this.state.tableProps));
     return (
@@ -247,6 +253,9 @@ class TableComponent extends React.Component {
 
               case 'challenges':
                 return this.popChallenges(JSON.parse(props.value));
+
+              case 'src':
+                return this.popSingleLink(props.value);
             }
           }
         }

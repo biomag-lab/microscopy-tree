@@ -27,7 +27,7 @@ export default {
             href: imDir+'culture_fluo_ex4.png'
         },
         mini_hrefs: [imDir+'culture_fluo_ex4.png'],
-        mini_info: ['BBBC021'],
+        mini_info: [{m_dataset:'BBBC021', m_source:'https://bbbc.broadinstitute.org/BBBC021'}],
         parent_tag: null,
         methods:[0,3],
         backup_methods:[],
@@ -44,7 +44,7 @@ export default {
 		        href: imDir+'culture_fluo_ex3.png'
 	        },
         	mini_hrefs: [imDir+'culture_fluo_ex3.png'],
-        	mini_info: ['TODO'],
+        	mini_info: [{m_dataset:'BBBC021', m_source:'https://bbbc.broadinstitute.org/BBBC021'}],
         	parent_tag: 'Culture',
         	methods:[0,1,2,3,],
         	backup_methods:[],
@@ -58,7 +58,7 @@ export default {
 			        href: imDir+'culture_fluo.png'
                 },
         		mini_hrefs: [imDir+'culture_fluo.png',imDir+'culture_fluo_ex1.png',imDir+'culture_fluo_ex2.png',imDir+'culture_fluo_ex3.png'],
-        		mini_info: ['BBBC0xyz1','BBBC0xyz2','TODO','BBBC021'],
+        		mini_info: [{m_dataset:'BBBC038', m_source:'https://bbbc.broadinstitute.org/BBBC038'},{m_dataset:'BBBC038', m_source:'https://bbbc.broadinstitute.org/BBBC038'},{m_dataset:'BBBC039', m_source:'https://bbbc.broadinstitute.org/BBBC039'},{m_dataset:'BBBC021', m_source:'https://bbbc.broadinstitute.org/BBBC021'}],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,4,9,31,23,24,25,28,27,],
         		backup_methods:[],
@@ -73,7 +73,7 @@ export default {
 			        href: imDir+'culture_conf.png'
                 },
         		mini_hrefs: [imDir+'culture_conf.png',imDir+'culture_conf_ex1.png'],
-        		mini_info: ['BBBC0xyz1','TODO'],
+        		mini_info: [{m_dataset:'(Univ. Freiburg)', m_source:'http://portal.uni-freiburg.de/core-facility/microscopy/confocal'},{m_dataset:'(Univ. Queensland)', m_source:'https://imb.uq.edu.au/facilities/microscopy/hardware-software/confocal-microscopes'}],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,4,],
         		backup_methods:[],
@@ -88,7 +88,7 @@ export default {
 			        href: imDir+'culture_labelledbf.png'
                 },
         		mini_hrefs: [imDir+'culture_labelledbf.png'],
-        		mini_info: ['TODO'],
+        		mini_info: [{m_dataset:'(Researchgate)', m_source:'https://www.researchgate.net/post/H_E_staining_of_cultured_cells'}],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,],
         		backup_methods:[],
@@ -104,7 +104,7 @@ export default {
 			        href: imDir+'culture_dic_ex1.png'
                 },
     		mini_hrefs: [imDir+'culture_dic_ex1.png'],
-    		mini_info: ['TODO'],
+    		mini_info: [{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'}],
     		parent_tag: 'Culture',
     		methods:[],
     		backup_methods:[0,1,2,3,4,],
@@ -118,7 +118,7 @@ export default {
 			        href: imDir+'culture_bf.png'
                 },
         		mini_hrefs: [imDir+'culture_bf.png',imDir+'culture_bf_ex1.png'],
-        		mini_info: ['TODO','TODO'],
+        		mini_info: [{m_dataset:'(Medium)', m_source:'https://medium.com/@kerimov.nurlan/anomaly-detection-in-brightfield-microscopy-images-c92cdddafcc3'},{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'}],
         		parent_tag: 'Culture',
         		methods:[0,1,2,3,4,],
         		backup_methods:[],
@@ -133,7 +133,7 @@ export default {
 			        href: imDir+'culture_dic.png'
                 },
         		mini_hrefs: [imDir+'culture_dic.png',imDir+'culture_dic_ex1.png'],
-        		mini_info: ['TODO','TODO'],
+        		mini_info: [{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'},{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'}],
         		parent_tag: 'Culture',
         		methods:[0,],
         		backup_methods:[],
@@ -148,7 +148,7 @@ export default {
 			        href: imDir+'culture_pc.png'
                 },
         		mini_hrefs: [imDir+'culture_pc.png',imDir+'culture_pc_ex1.png',imDir+'culture_pc_ex2.png'],
-        		mini_info: ['TODO','TODO','TODO'],
+        		mini_info: [{m_dataset:'(internet)', m_source:'https://microscope-microscope.org/microscope-info/phase-contrast-microscope/'},{m_dataset:'(HexaBiogen)', m_source:'https://www.hexabiogen.com/astrocytes-de-souris-436/mouse-astrocytes-from-cd1-ma-put-2000619.html'},{m_dataset:'Galen et al.', m_source:'https://www.jci.org/articles/view/111300'}],
         		parent_tag: 'Culture',
         		methods:[0,4,],
         		backup_methods:[],
@@ -169,7 +169,7 @@ export default {
 	        href: imDir+'tissue_bf_ex5.png'
         },
         mini_hrefs: [imDir+'tissue_bf_ex5.png'],
-        mini_info: ['BBBC038'],
+        mini_info: [{m_dataset:'BBBC038', m_source:'https://bbbc.broadinstitute.org/BBBC038'}],
         parent_tag: null,
         methods:[],
         backup_methods:[0,9,31,23],
@@ -186,7 +186,7 @@ export default {
 		        href: imDir+'tissue_bf_ex4.png'
 	        },
         	mini_hrefs: [imDir+'tissue_bf_ex4.png'],
-        	mini_info: ['TCGA'],
+        	mini_info: [{m_dataset:'TCGA', m_source:'https://osf.io/rs67v/?pid=nqtys'}],
         	parent_tag: 'Tissue',
         	methods:[],
         	backup_methods:[0,1,2,3,4,28,27,],
@@ -200,7 +200,7 @@ export default {
 			        href: imDir+'tissue_fluo.png'
                 },
        			mini_hrefs: [imDir+'tissue_fluo.png'],
-       			mini_info: ['BIOMAG'],
+       			mini_info: [{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'}],
        			parent_tag: 'Tissue',
        			methods:[9,31,23,],
        			backup_methods:[],
@@ -215,7 +215,7 @@ export default {
 			        href: imDir+'tissue_conf.png'
                 },
         		mini_hrefs: [imDir+'tissue_conf.png',imDir+'tissue_conf_ex1.png'],
-        		mini_info: ['TODO','TODO'],
+        		mini_info: [{m_dataset:'(Univ. Bergen)', m_source:'https://www.uib.no/rg/mic/86218/11th-mic-confocal-microscopy-course'},{m_dataset:'(Queen Mary Univ. London)', m_source:'https://www.qmul.ac.uk/ow3-research/facilities-and-resources/amis/items/leica-sp8-confocal.html'}],
         		parent_tag: 'Tissue',
         		methods:[],
         		backup_methods:[0,1,2,3,4,],
@@ -230,7 +230,7 @@ export default {
 			        href: imDir+'tissue_ls_ex1.png'
                 },
         		mini_hrefs: [imDir+'tissue_ls_ex1.png',imDir+'tissue_ls.png',imDir+'tissue_ls_ex2.png'],
-        		mini_info: ['BIOMAG','BIOMAG','BIOMAG'],
+        		mini_info: [{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'},{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'},{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'}],
         		parent_tag: 'Tissue',
         		methods:[0,3,],
         		backup_methods:[],
@@ -245,7 +245,7 @@ export default {
 			        href: imDir+'tissue_bf.png'
                 },
         		mini_hrefs: [imDir+'tissue_bf.png',imDir+'tissue_bf_ex4.png',imDir+'tissue_bf_ex3.png',imDir+'tissue_bf_ex2.png'],
-        		mini_info: ['TCGA','TCGA','BBBC038','TNBC'],
+        		mini_info: [{m_dataset:'TCGA', m_source:'https://osf.io/rs67v/?pid=nqtys'},{m_dataset:'TCGA', m_source:'https://osf.io/rs67v/?pid=nqtys'},{m_dataset:'BBBC038', m_source:'https://bbbc.broadinstitute.org/BBBC038'},{m_dataset:'TCGA', m_source:'https://zenodo.org/record/1174353#.YPsGEOhLiUk'}],
         		parent_tag: 'Tissue',
         		methods:[0,1,2,3,28,27,],
         		backup_methods:[],
@@ -258,10 +258,10 @@ export default {
 			nodeProps: {
                     height: 50,
 					width: 50,
-			        href: imDir+'nuc.png'
+			        href: imDir+'tissue_dic_ex1.png'
                 },
-    		mini_hrefs: [],
-    		mini_info: [],
+    		mini_hrefs: [imDir+'tissue_dic_ex1.png'],
+    		mini_info: [{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'}],
     		parent_tag: 'Tissue',
     		methods:[],
     		backup_methods:[0,],
@@ -275,7 +275,7 @@ export default {
 			        href: imDir+'tissue_dic.png'
                 },
         		mini_hrefs: [imDir+'tissue_dic.png',imDir+'tissue_dic_ex1.png'],
-        		mini_info: ['BIOMAG','BIOMAG'],
+        		mini_info: [{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'},{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'}],
         		parent_tag: 'Tissue',
         		methods:[0,],
         		backup_methods:[],
