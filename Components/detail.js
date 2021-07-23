@@ -725,8 +725,10 @@ export default class Detail extends React.Component {
 		let tableDataReady = tableData!==null;
 		let tableDataBackupReady = tableDataBackup!=null;
 
-		let isTableDataEmpty = (tableData==null || tableData.length == 0)
-		let isTableDataBackupEmpty = (tableDataBackup==null || tableDataBackup.length == 0)
+		let isTableDataEmpty = (tableData==null || tableData.length == 0);
+		let isTableDataBackupEmpty = (tableDataBackup==null || tableDataBackup.length == 0);
+		let methodText=this.props.currentId==='1'?'All methods (suggested):':'Curated methods:';
+		let backupText=this.props.currentId==='1'?'All methods (suggested):':'There are no tested methods, but suggested methods:';
 		//console.log('2D: '+this.state.is2D+' | 3D: '+this.state.is3D);
 
 		//if (ready) {
@@ -873,7 +875,7 @@ export default class Detail extends React.Component {
 
 							{tableDataReady && !isTableDataEmpty &&
 								<div>
-								<p>Curated methods:</p>
+								<p>{methodText}</p>
 								<TableComponent
 									data={tableData}
 									columns_keys={col_keys}
@@ -886,7 +888,7 @@ export default class Detail extends React.Component {
 
 							{tableDataBackupReady && !isTableDataBackupEmpty && isTableDataEmpty &&
 							<div>
-								<p>There are no tested methods, but here are suggested methods:</p>
+								<p>{backupText}</p>
 								<TableComponent
 									data={tableDataBackup}
 									columns_keys={col_keys}
