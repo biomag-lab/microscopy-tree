@@ -29,6 +29,7 @@ export default class Detail extends React.Component {
 			curImInfo:"",
 			curImInfoList:null,
 			methods_data_all:Array(this.props.data.methods.length).fill(null), //this.initMethods(this.props.data.methods)
+			methods_data_all_backup:Array(this.props.data.methods.length).fill(null),
 			is2D: true,
 			is3D: false,
 			isElongated: false,
@@ -268,7 +269,9 @@ export default class Detail extends React.Component {
 		)[0];
 	}
 
-	collectMethods(json,ids){
+	collectMethods(json,ids,backupIds){
+		ids = [...new Set(ids)]
+		backupIds= [...new Set(backupIds)]
 		let resMethods=[];
 		for (var i = 0; i < ids.length; i++) {
 			// collect details from the methods struct
@@ -278,8 +281,19 @@ export default class Detail extends React.Component {
 			}
 			resMethods.push(thisMethod);
 		}
-		return resMethods;
+		let backupMethods = [];
+		for (var i = 0; i < backupIds.length; i++) {
+			// collect details from the methods struct
+			var thisMethod=this.filterJSONid(json['seg_methods'], backupIds[i]);
+			if (!thisMethod) {
+				continue;
+			}
+			backupMethods.push(thisMethod);
+		}
+		return {'methods': resMethods,
+			 'backup_methods': backupMethods};
 	}
+
 
 	initMethods(methods,set){
 		let outMethods=Array(methods.length).fill(null);
@@ -308,11 +322,32 @@ export default class Detail extends React.Component {
 	}
 
 	initMethods2(set){
-		let methods=this.collectMethods(seg_methods,this.props.data.methods);
+		let all_methods = this.collectMethods(seg_methods,this.props.data.methods,this.props.data.backup_methods);
+		let methods = all_methods['methods']
+		let backup_methods = all_methods['backup_methods'];
 		let outMethods=Array(methods.length).fill(null);
+		let outBackupMethods=Array(backup_methods.length).fill(null);
 		for (var i = 0; i < methods.length; i++) {
 			let curMethod=methods[i];
 			outMethods[i]={
+					name:curMethod.m_name,
+					author:curMethod.m_author,
+					year:curMethod.m_year,
+					journal:curMethod.m_journal,
+					//link:curMethod.m_link,
+					links:curMethod.m_links,
+					stars:null,
+					forks:null,
+					_2d:curMethod.m_2d,
+					_3d:curMethod.m_3d,
+					//paper:curMethod.m_paper,
+					challenges:curMethod.m_challenges,
+					id:i
+				};
+		}
+		for (var i = 0; i < backup_methods.length; i++) {
+			let curMethod=backup_methods[i];
+			outBackupMethods[i]={
 					name:curMethod.m_name,
 					author:curMethod.m_author,
 					year:curMethod.m_year,
@@ -333,10 +368,15 @@ export default class Detail extends React.Component {
 		if (set) {
 			this.setState({methods_data_all:outMethods}, () => {
 				//console.log(this.state.methods_data_all, 'methods_data_all');
-				this.fetchGithubStats(methods);
+				this.fetchGithubStats(methods, false);
 			});
 		}
-		return outMethods;
+		if (set) {
+			this.setState({methods_data_all_backup:outBackupMethods}, () => {
+				this.fetchGithubStats(backup_methods, true);
+			});
+		}
+		return {'methods':outMethods, 'backupMethods': outBackupMethods };
 	}
 
 	componentDidMount(){
@@ -371,7 +411,7 @@ export default class Detail extends React.Component {
     	return false;
     }
 
-	getGithubStats(stats,i,method){
+	getGithubStats(stats,i,method,backup){
 		//console.log('fetched '+stats.stargazers_count);
 		//console.log(method);
 		//console.log(i);
@@ -384,6 +424,7 @@ export default class Detail extends React.Component {
 		//*/
 
 		///*
+		console.log(method)
 		const methods_data_all=this.state.methods_data_all.slice();
 		methods_data_all[i]={
 					name:method.m_name,
@@ -400,11 +441,11 @@ export default class Detail extends React.Component {
 					id:i
 				};
 		this.setState({stats_stars:stats_stars, stats_forks:stats_forks, curNodeId:this.props.currentId, methods_data_all:methods_data_all});
-
+		console.log(methods_data_all)
 		//return stats;
 	}
 
-	fetchGithubStats(methods){
+	fetchGithubStats(methods, isBackup){
 		//console.log('got methods: '+methods.length);
 		//console.log(methods);
 
@@ -503,7 +544,7 @@ export default class Detail extends React.Component {
 		)).then(results => {
 		    //console.log("All done");
             //console.log(results[0]);
-            this.storeGithubStats(methods,results,oriLinks); //links);
+            this.storeGithubStats(methods,results,oriLinks, isBackup); //links);
 		})
 		.catch((e) => {
 			console.error(e);
@@ -515,7 +556,7 @@ export default class Detail extends React.Component {
 		return [stats.stargazers_count, stats.forks];
 	}
 
-	storeGithubStats(methods,stats,oriLinks){
+	storeGithubStats(methods,stats,oriLinks,isBackup){
 		const methods_data_all=this.state.methods_data_all.slice();
 		const stats_stars=this.state.stats_stars.slice();
 		const stats_forks=this.state.stats_forks.slice();
@@ -548,7 +589,12 @@ export default class Detail extends React.Component {
 			stats_forks[i]=stat[1];
 		}
 		//console.log(methods_data_all);
-		this.setState({stats_stars:stats_stars, stats_forks:stats_forks, curNodeId:this.props.currentId, methods_data_all:methods_data_all});
+		if (isBackup === false) {
+				this.setState({stats_stars:stats_stars, stats_forks:stats_forks, curNodeId:this.props.currentId, methods_data_all:methods_data_all});
+			}
+		else {
+			this.setState({stats_stars:stats_stars, stats_forks:stats_forks, curNodeId:this.props.currentId, methods_data_all_backup:methods_data_all});
+		}
 	}
 
 	/*---- these didn't help ----*/
@@ -670,13 +716,17 @@ export default class Detail extends React.Component {
 	    //let tableData=this.fillMethods2(this.props.data,this.state);
 	    //let tableData=this.fillMethods3(this.state.methods_data_all);
 	    let tableData=this.fillMethods4(this.state.methods_data_all);
+	    let tableDataBackup=this.fillMethods4(this.state.methods_data_all_backup);
 	    /*
 	    let tableData=this.state.methods_data_all;
 		*/
 		//console.log(tableData);
 		//let ready=this.checkTableData(tableData);
-		let ready=tableData!==null;
+		let tableDataReady = tableData!==null;
+		let tableDataBackupReady = tableDataBackup!=null;
 
+		let isTableDataEmpty = (tableData==null || tableData.length == 0)
+		let isTableDataBackupEmpty = (tableDataBackup==null || tableDataBackup.length == 0)
 		//console.log('2D: '+this.state.is2D+' | 3D: '+this.state.is3D);
 
 		//if (ready) {
@@ -820,7 +870,10 @@ export default class Detail extends React.Component {
 								<div><img id="hoverImgEl" className="hoverImg" src={this.state.hoverImg}/></div>
 							</div>
 
-							{ready &&
+
+							{tableDataReady && !isTableDataEmpty &&
+								<div>
+								<p>Curated methods:</p>
 								<TableComponent
 									data={tableData}
 									columns_keys={col_keys}
@@ -828,6 +881,20 @@ export default class Detail extends React.Component {
 									columns_types={col_types}
 									cur_node_id={this.props.currentId}
 								/>
+								</div>
+							}
+
+							{tableDataBackupReady && !isTableDataBackupEmpty && isTableDataEmpty &&
+							<div>
+								<p>There are no tested methods but here are suggested methods:</p>
+								<TableComponent
+									data={tableDataBackup}
+									columns_keys={col_keys}
+									columns_names={col_names}
+									columns_types={col_types}
+									cur_node_id={this.props.currentId}
+								/>
+							</div>
 							}
 
 						</div>
