@@ -1,4 +1,4 @@
-let imDir='data/images/';
+let imDir= './data/images/';
 export default {
 	name: 'Microscopy',
 	id: '1',
