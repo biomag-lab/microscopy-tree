@@ -32,9 +32,9 @@ module.exports = {
 					'css-loader'
 				]
 			},
-            { 
+            {
                 test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-                use: ["file-loader"] 
+                use: ["file-loader"]
             },
             {
 		        test: /\.s[ac]ss$/i,

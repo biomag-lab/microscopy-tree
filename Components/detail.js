@@ -215,8 +215,8 @@ export default class Detail extends React.Component {
 				continue;
 			}
 
-			let stars=this.state.stats_stars[i];
-			let forks=this.state.stats_forks[i];
+			let stars= (this.state.stats_stars[i] !== null) ? (this.state.stats_stars[i]) : ('N/A');
+			let forks= (this.state.stats_forks[i] !== null) ? (this.state.stats_forks[i]) : ('N/A');
 			methodsDiv.push(
 				{
 					name:data[i].name,
@@ -544,7 +544,7 @@ export default class Detail extends React.Component {
 		)).then(results => {
 		    //console.log("All done");
             //console.log(results[0]);
-            this.storeGithubStats(methods,results,oriLinks, isBackup); //links);
+            this.storeGithubStats(methods,results,oriLinks,isBackup); //links);
 		})
 		.catch((e) => {
 			console.error(e);
