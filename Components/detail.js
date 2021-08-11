@@ -741,9 +741,9 @@ export default class Detail extends React.Component {
 
 
 						<div className="helpDiv info">
-							<p className="listText">Do you think your method works on this kind of data? E-mail us at <a href="mailto:email">email@address.c</a>
+							<p className="listText">Do you think your method works on this kind of data? E-mail us at <a href="mailto:email">unbias.biomag@gmail.com</a>
 								<br />
-								Get help <a href="https://github.com/spreka/microscopy-tree/issues">here</a>
+								Get help <a href="https://github.com/biomag-lab/microscopy-tree/issues">here</a>
 							</p>
 
 						</div>

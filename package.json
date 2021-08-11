@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spreka/microscopy-tree.git"
+    "url": "git+https://github.com/biomag-lab/microscopy-tree.git"
   },
   "keywords": [
     "microscopy",
@@ -15,9 +15,9 @@
   "author": "Réka Hollandi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/spreka/microscopy-tree/issues"
+    "url": "https://github.com/biomag-lab/microscopy-tree/issues"
   },
-  "homepage": "https://spreka.github.io/microscopy-tree",
+  "homepage": "https://biomag-lab.github.io/microscopy-tree",
   "dependencies": {
     "clone": "^2.1.2",
     "jquery": "^3.5.1",
