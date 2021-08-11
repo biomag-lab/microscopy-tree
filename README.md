@@ -52,7 +52,7 @@ The tree is deployed on [Github pages](https://biomag-lab.github.io/microscopy-t
 
 # Contribution
 
-Methods and datasets are welcome to be added to the tree. For more information, please [contact us](unbias.biomag@gmail.com).
+Methods and datasets are welcome to be added to the tree. For more information, please contact us at <unbias.biomag@gmail.com>.
 
 # Citation
 
