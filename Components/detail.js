@@ -230,6 +230,7 @@ export default class Detail extends React.Component {
 					_2d:data[i]._2d,
 					_3d:data[i]._3d,
 					challenges:JSON.stringify(data[i].challenges),
+					cites:data[i].links.cites,
 					id:i
 				}
 			);
@@ -329,6 +330,8 @@ export default class Detail extends React.Component {
 		let outBackupMethods=Array(backup_methods.length).fill(null);
 		for (var i = 0; i < methods.length; i++) {
 			let curMethod=methods[i];
+			let curCites=this.createCiteLink(curMethod.m_links);
+			curMethod.m_links.m_cites=curCites;
 			outMethods[i]={
 					name:curMethod.m_name,
 					author:curMethod.m_author,
@@ -377,6 +380,39 @@ export default class Detail extends React.Component {
 			});
 		}
 		return {'methods':outMethods, 'backupMethods': outBackupMethods };
+	}
+
+	createCiteLink(baseLink){
+		let finalLink="";
+		if (baseLink.hasOwnProperty('m_cites')) {
+			finalLink=baseLink.m_cites;
+		} else {
+			return finalLink;
+		}
+		//debug:
+		console.log(finalLink);
+		let curName=this.props.data.name;
+		//debug:
+		let parentName=this.props.parent;
+		console.log(this.props);
+		let mod=false;
+		if (parentName!==null || parentName!=="") {
+			mod=true;
+			finalLink=finalLink.substring(0,finalLink.indexOf("&q=")+3);
+			finalLink=finalLink+""+parentName.toLowerCase()+"+";
+		}
+		if (curName!==null || curName!=="") {
+			if (curName==="Fluo") {
+				curName="fluorescent";
+			} else if (curName==="BF") {
+				curName="brightfield";
+			}
+			finalLink=finalLink+""+curName.toLowerCase()+"&btnG=&oq=";
+		}
+		//debug:
+		console.log(finalLink);		
+
+		return finalLink;
 	}
 
 	componentDidMount(){

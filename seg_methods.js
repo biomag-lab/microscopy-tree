@@ -9,6 +9,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/zhixuhao/unet',
 				m_paper: 'http://dx.doi.org/10.1007/978-3-319-24574-4_28',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=10845403114495995712&scipsc=1&q=&btnG=',
 				/*
 				m_pretrained: {
 					m_PC: 'https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/',
@@ -65,6 +66,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/matterport/Mask_RCNN',
 				m_paper: 'https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=11459229647356475672&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: null,
@@ -98,6 +100,8 @@ export default {
 				m_code: 'https://github.com/stardist/stardist',
 				m_paper: 'https://arxiv.org/abs/1806.03535',
 				m_3D_paper: 'https://dx.doi.org/10.1109/WACV45572.2020.9093435',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=6261085790694927391&scipsc=1&q=&btnG=',
+				m_3D_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=2139260067181824373&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
@@ -136,6 +140,7 @@ export default {
 				m_code: 'https://github.com/spreka/biomagdsb',
 				m_paper: 'https://doi.org/10.1016/j.cels.2020.04.003',
 				m_site: 'http://nucleaizer.org/',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=4183125655597734419&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: null,
@@ -164,6 +169,7 @@ export default {
 				m_code: 'https://github.com/MouseLand/cellpose',
 				m_paper: 'https://doi.org/10.1038/s41592-020-01018-x',
 				m_site: 'https://www.cellpose.org',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=2743286584966802094&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: null,
@@ -198,6 +204,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/MrGiovanni/UNetPlusPlus',
 				m_paper: 'https://doi.org/10.1007/978-3-030-00889-5_1',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=3438577305591755991&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -219,6 +226,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/overlapping-instances/MultiStar',
 				m_paper: 'https://arxiv.org/abs/2011.13228',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=7345388908580636549&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -240,6 +248,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/FZJ-INM1-BDA/celldetection',
 				m_paper: 'https://arxiv.org/abs/2104.03393',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=11779593445859050188&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -258,6 +267,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/PathologyDataScience/HistomicsML2',
 				m_paper: 'https://doi.org/10.1158/0008-5472.CAN-20-0668',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=98287935443345053&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -275,6 +285,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/YangLiuLab/Super-Resolution-Nuclei-Segmentation',
 				m_paper: 'https://doi.org/10.1186/s12859-021-04245-x',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=595912511406673690&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
@@ -308,6 +319,7 @@ export default {
 				m_code: 'https://github.com/Vaa3D/vaa3d_tools',
 				m_paper: 'https://www.nature.com/articles/nbt.1612',
 				m_site: 'http://vaa3d.org',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=3380503499651306453&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: false,
@@ -329,6 +341,7 @@ export default {
 			m_links: {
 				m_code: 'https://imagejdocu.tudor.lu/plugin/stacks/3d_ij_suite/start',
 				m_paper: 'https://academic.oup.com/bioinformatics/article/29/14/1840/231770',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=15174242674682245726&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: false,
@@ -350,6 +363,7 @@ export default {
 			m_links: {
 				m_code: 'https://www.physikalischebiologie.de/downloads',
 				m_paper: 'https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.12169',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=14687221567883628747&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: false,
@@ -371,6 +385,7 @@ export default {
 			m_links: {
 				m_code: 'http://opensegspim.weebly.com/',
 				m_paper: 'https://academic.oup.com/bioinformatics/article/32/13/2075/1743029',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=8492492200472410638&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: false,
@@ -392,6 +407,7 @@ export default {
 			m_links: {
 				m_code: 'https://bitbucket.org/jstegmaier/race',
 				m_paper: 'https://www.sciencedirect.com/science/article/pii/S1534580715008370',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=5100987867408303662&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: false,
@@ -413,6 +429,7 @@ export default {
 			m_links: {
 				m_code: 'https://lmb.informatik.uni-freiburg.de/resources/opensource/unet.en.html',
 				m_paper: 'https://link.springer.com/chapter/10.1007/978-3-319-46723-8_49',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=9776881218649496640&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '3d',
@@ -440,6 +457,7 @@ export default {
 			m_links: {
 				m_code: 'https://gitlab.com/pnmis/nuclear-segmentation',
 				m_paper: 'https://www.frontiersin.org/articles/10.3389/fnana.2019.00081/full',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=11591389986563403030&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: false,
@@ -461,6 +479,7 @@ export default {
 			m_links: {
 				m_code: 'https://github.com/s-shailja/ucsb_ctc',
 				m_paper: 'https://ieeexplore.ieee.org/abstract/document/9433831/',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=191409641997327519&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: false,
@@ -482,6 +501,7 @@ export default {
 			m_links: {
 				m_code: 'https://github.com/funalab/QCANet',
 				m_paper: 'https://www.nature.com/articles/s41540-020-00152-8',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=6074850203107615052&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '3d',
@@ -510,6 +530,7 @@ export default {
 			m_links: {
 				m_code: 'https://github.com/etasnadi/3DCellAnnotator',
 				m_paper: 'https://academic.oup.com/bioinformatics/article/36/9/2948/5709038?login=true',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=4513869250213071894&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: false,
@@ -531,6 +552,7 @@ export default {
 			m_links: {
 				m_code: 'https://github.com/WenChentao/3DeeCellTracker',
 				m_paper: 'https://elifesciences.org/articles/59187',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=10247056894798012587&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '3d',
@@ -558,6 +580,7 @@ export default {
 			m_links:{
 				m_code: 'http://katlab-tools.org/',
 				m_paper: 'https://doi.org/10.1016/j.stemcr.2014.01.010',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=18301631029227809726&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -579,6 +602,7 @@ export default {
 			m_links:{
 				m_code: 'https://bitbucket.org/jstegmaier/xpiwit/downloads/',
 				m_paper: 'https://doi.org/10.1093/bioinformatics/btv559',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=3199873719792382478&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -600,6 +624,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/ilastik/ilastik',
 				m_paper: 'https://doi.org/10.1038/s41592-019-0582-9',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=16212079596936357318&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
@@ -632,6 +657,8 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/yanglf1121/NuSeT',
 				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008193',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=5605215401951628263&scipsc=1&q=&btnG=',
+				//m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=5605215401951628263&scipsc=1&q=culture+fluorescence&btnG=&oq=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
@@ -660,6 +687,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/mic-dkfz/nnunet',
 				m_paper: 'https://doi.org/10.1038/s41592-020-01008-z',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=9470755338057003085&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
@@ -687,6 +715,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/Ajaxels/MIB2',
 				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008374',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=9172078048369452463&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -708,6 +737,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/marrlab/InstantDL',
 				m_paper: 'https://doi.org/10.1186/s12859-021-04037-3',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=10908939586118130609&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
@@ -741,6 +771,7 @@ export default {
 				m_code: 'https://github.com/bioimage-io/bioimage.io',
 				m_paper: 'https://doi.org/10.1101/799270',
 				m_site: 'https://bioimage.io/',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=1635645835919023708&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
@@ -773,6 +804,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/imjoy-team/ImJoy',
 				m_paper: 'https://doi.org/10.1038/s41592-019-0627-0',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=8018716968403025087&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -794,6 +826,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/HenriquesLab/ZeroCostDL4Mic',
 				m_paper: 'https://doi.org/10.1038/s41467-021-22518-0',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=3746013141384274700&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
 			m_2d: true,
@@ -815,6 +848,7 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/vanvalenlab/kiosk-console',
 				m_paper: 'https://doi.org/10.1038/s41592-020-01023-0',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=16399001016922599704&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
