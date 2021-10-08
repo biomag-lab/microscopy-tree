@@ -350,6 +350,8 @@ export default class Detail extends React.Component {
 		}
 		for (var i = 0; i < backup_methods.length; i++) {
 			let curMethod=backup_methods[i];
+			let curCites=this.createCiteLink(curMethod.m_links);
+			curMethod.m_links.m_cites=curCites;
 			outBackupMethods[i]={
 					name:curMethod.m_name,
 					author:curMethod.m_author,
@@ -390,11 +392,11 @@ export default class Detail extends React.Component {
 			return finalLink;
 		}
 		//debug:
-		console.log(finalLink);
+		//console.log(finalLink);
 		let curName=this.props.data.name;
 		//debug:
 		let parentName=this.props.parent;
-		console.log(this.props);
+		//console.log(this.props);
 		let mod=false;
 		if (parentName!==null || parentName!=="") {
 			mod=true;
@@ -406,11 +408,13 @@ export default class Detail extends React.Component {
 				curName="fluorescent";
 			} else if (curName==="BF") {
 				curName="brightfield";
+			} else if (curName==="Label-free") {
+				curName="labelfree";
 			}
 			finalLink=finalLink+""+curName.toLowerCase()+"&btnG=&oq=";
 		}
 		//debug:
-		console.log(finalLink);		
+		//console.log(finalLink);
 
 		return finalLink;
 	}
