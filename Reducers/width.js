@@ -3,7 +3,7 @@ import { ActionType } from './actions';
 
 export default function(state, action) {
 	if (typeof state === 'undefined') {
-		return $(window).width() -720; //200;
+		return $(window).width() -740; //200;
 	} else {
 		switch (action.type) {
 			case ActionType.RESIZE:

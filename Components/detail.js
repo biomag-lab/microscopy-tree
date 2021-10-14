@@ -404,12 +404,14 @@ export default class Detail extends React.Component {
 			finalLink=finalLink+""+parentName.toLowerCase()+"+";
 		}
 		if (curName!==null || curName!=="") {
-			if (curName==="Fluo") {
+			if (curName==="Fluo-WF") {
 				curName="fluorescent";
 			} else if (curName==="BF") {
 				curName="brightfield";
 			} else if (curName==="Label-free") {
 				curName="labelfree";
+			} else if (curName==="Fluo-confocal") {
+				curName="confocal";
 			}
 			finalLink=finalLink+""+curName.toLowerCase()+"&btnG=&oq=";
 		}
@@ -769,8 +771,8 @@ export default class Detail extends React.Component {
 
 		let isTableDataEmpty = (tableData==null || tableData.length == 0);
 		let isTableDataBackupEmpty = (tableDataBackup==null || tableDataBackup.length == 0);
-		let methodText=this.props.currentId==='1'?'All methods (suggested):':'Curated methods:';
-		let backupText=this.props.currentId==='1'?'All methods (suggested):':'There are no tested methods, but suggested methods:';
+		let methodText=this.props.currentId==='1'?'All methods:':'Potential methods:';
+		let backupText=this.props.currentId==='1'?'All methods:':'See also:';
 		//console.log('2D: '+this.state.is2D+' | 3D: '+this.state.is3D);
 
 		//if (ready) {

@@ -49,7 +49,7 @@ export default {
         	methods:[0,1,2,3,],
         	backup_methods:[],
 			children: [{
-				name: 'Fluo',
+				name: 'Fluo-WF',
 				id: '17',
 				parent_id: '15',
 				nodeProps: {
@@ -64,7 +64,7 @@ export default {
         		backup_methods:[],
 				children: []
 			}, {
-				name: 'Confocal',
+				name: 'Fluo-confocal',
 				id: '18',
 				parent_id: '15',
 				nodeProps: {
@@ -191,7 +191,7 @@ export default {
         	methods:[],
         	backup_methods:[0,1,2,3,4,28,27,],
 			children: [{
-				name: 'Fluo',
+				name: 'Fluo-WF',
 				id: '7',
 				parent_id: '5',
 				nodeProps: {
@@ -206,7 +206,7 @@ export default {
        			backup_methods:[],
 				children: []
 			}, {
-				name: 'Confocal',
+				name: 'Fluo-confocal',
 				id: '8',
 				parent_id: '5',
 				nodeProps: {
