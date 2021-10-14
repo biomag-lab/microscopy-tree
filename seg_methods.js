@@ -872,6 +872,29 @@ export default {
 				m_heterogen: true,
 				m_fragmented: true
 			}
-		}
+		},
+		{
+			m_id: 32,
+			m_name: 'SplineDist',
+			m_author: 'Mandal et al.',
+			m_year: '2021',
+			m_journal: 'ISBI 2021',
+			m_links:{
+				m_code: 'https://github.com/uhlmanngroup/splinedist',
+				m_paper: 'https://ieeexplore.ieee.org/document/9433928',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=14789189166887443383&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
+				m_pretrained: []
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+				m_elongated: true,
+				m_concave: true,
+				m_deviating: true,
+				m_wobbling: true,
+				m_heterogen: true,
+				m_fragmented: true
+			}
+		},
 	]
 };
