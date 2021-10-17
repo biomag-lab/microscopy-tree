@@ -896,5 +896,28 @@ export default {
 				m_fragmented: true
 			}
 		},
+		{
+			m_id: 33,
+			m_name: 'HoVer-Net',
+			m_author: 'Graham et al.',
+			m_year: '2019',
+			m_journal: 'Medical Image Analysis',
+			m_links:{
+				m_code: 'https://github.com/vqdang/hover_net',
+				m_paper: 'https://doi.org/10.1016/j.media.2019.101563',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=4408035528910723811&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
+				m_pretrained: []
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+				m_elongated: true,
+				m_concave: true,
+				m_deviating: true,
+				m_wobbling: true,
+				m_heterogen: false,
+				m_fragmented: false
+			}
+		},
 	]
 };
