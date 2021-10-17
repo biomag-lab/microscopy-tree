@@ -906,7 +906,39 @@ export default {
 				m_code: 'https://github.com/vqdang/hover_net',
 				m_paper: 'https://doi.org/10.1016/j.media.2019.101563',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=4408035528910723811&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
-				m_pretrained: []
+				m_pretrained: [
+					{
+						m_pr_id: '18',
+						m_pr_name: 'CoNSeP dataset',
+						m_link: 'https://drive.google.com/file/d/1BF0GIgNGYpfyqEyU0jMsA6MqcUpVQx0b/view?usp=sharing'
+					},
+					{
+						m_pr_id: '19',
+						m_pr_name: 'Kumar et al. checkpoint',
+						m_link: 'https://drive.google.com/file/d/1NUnO4oQRGL-b0fyzlT8LKZzo6KJD0_6X/view?usp=sharing'
+					},
+					{
+						m_pr_id: '20',
+						m_pr_name: 'CPM17 dataset checkpoint',
+						m_link: 'https://drive.google.com/file/d/1lR7yJbEwnF6qP8zu4lrmRPukylw9g-Ms/view?usp=sharing'
+					},
+					{
+						m_pr_id: '21',
+						m_pr_name: 'MoNuSAC dataset checkpoint',
+						m_link: 'https://drive.google.com/file/d/13qkxDqv7CUqxN-l5CpeFVmc24mDw6CeV/view?usp=sharing'
+					},
+					{
+						m_pr_id: '22',
+						m_pr_name: 'PanNuke dataset checkpoint (+ classification)',
+						m_link: 'https://drive.google.com/file/d/1SbSArI3KOOWHxRlxnjchO7_MbWzB4lNR/view?usp=sharing'
+					}
+					,
+					{
+						m_pr_id: '23',
+						m_pr_name: 'CoNSeP dataset checkpoint (+ classification)',
+						m_link: 'https://drive.google.com/file/d/1FtoTDDnuZShZmQujjaFSLVJLD5sAh2_P/view?usp=sharing'
+					}
+				]
 			},
 			m_2d: true,
 			m_3d: false,
