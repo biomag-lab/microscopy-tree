@@ -137,17 +137,17 @@ class TableComponent extends React.Component {
           let subName=null;
           let goodSub=false;
           if (curId && curId===nodeId){
-            subName='pretrained';
+            subName=subProp[i].m_pr_name;
             goodSub=true;
           }
           else if(!curId && moreIds.indexOf(nodeId)!==-1) {
             // this node or one of the mixed set nodes (defined on top)
             // construct pretrained model name in list
-            subName='pretrained_general';
+            subName=subProp[i].m_pr_name;
             goodSub=true;
           }
           else if (curId==='3d') {
-            subName='pretrained_3D';
+            subName=subProp[i].m_pr_name;
             goodSub=true;
           } else {
             // do nothing
