@@ -973,5 +973,33 @@ export default {
 				m_fragmented: false
 			}
 		},
+		{
+			m_id: 35,
+			m_name: 'Triple U-net: Hematoxylin-aware nuclei segmentation with progressive dense feature aggregation',
+			m_author: 'Zhao et al.',
+			m_year: '2020',
+			m_journal: 'Medical Image Analysis',
+			m_links:{
+				m_code: 'https://github.com/Bingchao-Zhao/Triple_U-net',
+				m_paper: 'https://doi.org/10.1016/j.media.2020.101786',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=3952565871787557801&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
+				m_pretrained: [					{
+						m_pr_id: '28',
+						m_pr_name: 'Pretrained Triple U-Net',
+						m_link: 'https://drive.google.com/file/d/1C2Zff0Y3xQ4nVJ3AVhv5neCYKx2qeE15/view?usp=sharing'
+					}
+				]
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+				m_elongated: true,
+				m_concave: true,
+				m_deviating: true,
+				m_wobbling: true,
+				m_heterogen: false,
+				m_fragmented: false
+			}
+		},
 	]
 };
