@@ -931,14 +931,36 @@ export default {
 						m_pr_id: '33',
 						m_pr_name: 'PanNuke_dataset_checkpoint_(with_classification)',
 						m_link: 'https://drive.google.com/file/d/1SbSArI3KOOWHxRlxnjchO7_MbWzB4lNR/view?usp=sharing'
-					}
-					,
+					},
 					{
 						m_pr_id: '34',
 						m_pr_name: 'CoNSeP_dataset_checkpoint_(with_classification)',
 						m_link: 'https://drive.google.com/file/d/1FtoTDDnuZShZmQujjaFSLVJLD5sAh2_P/view?usp=sharing'
 					}
 				]
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+				m_elongated: true,
+				m_concave: true,
+				m_deviating: true,
+				m_wobbling: true,
+				m_heterogen: false,
+				m_fragmented: false
+			}
+		},
+		{
+			m_id: 34,
+			m_name: 'Segmentation of Nuclei in Histopathology Images by Deep Regression of the Distance Map',
+			m_author: 'Naylor et al.',
+			m_year: '2018',
+			m_journal: 'IEEE Transactions on Medical Imaging',
+			m_links:{
+				m_code: 'https://github.com/PeterJackNaylor/DRFNS',
+				m_paper: 'https://doi.org/10.1109/TMI.2018.2865709',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=4026960218685687243&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
+				m_pretrained: []
 			},
 			m_2d: true,
 			m_3d: false,
