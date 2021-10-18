@@ -22,28 +22,28 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '21',
-						m_pr_name: 'PC',
+						m_pr_name: 'Pretrained phase-contrast model',
 						m_link: 'https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/'
 					},
 					{
 						m_pr_id: '20',
-						m_pr_name: 'DIC',
+						m_pr_name: 'Pretrained model for DIC',
 						m_link: 'https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/'
 					},
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: 'https://github.com/carpenterlab/2019_caicedo_cytometryA.git'
 					},
 					{
 						m_pr_id: null,
-						m_pr_name: 'more',
+						m_pr_name: 'AnnotatorJ model',
 						m_link: 'https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model'
 					},
 					{
 						m_pr_id: null,
 						m_pr_name: 'more',
-						m_link: 'https://drive.google.com/open?id=1lVJtS41vzMkIsCa3-i14mSmLBbaKazsq'
+						m_link: 'Pretrained U-Net by BIOMAG'
 					}
 				]
 			},
@@ -70,12 +70,12 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: null,
-						m_pr_name: 'more',
+						m_pr_name: 'DSB 2018 model',
 						m_link: 'https://github.com/mirzaevinom/data_science_bowl_2018'
 					},
 					{
 						m_pr_id: null,
-						m_pr_name: 'more',
+						m_pr_name: 'Mask R-CNN pretrained by BIOMAG',
 						m_link: 'https://drive.google.com/open?id=1lVJtS41vzMkIsCa3-i14mSmLBbaKazsq'
 					}
 				]
@@ -105,17 +105,17 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: 'https://github.com/stardist/stardist/tree/master/models/paper/2D_dsb2018'
 					},
 					{
 						m_pr_id: '28',
-						m_pr_name: 'he',
+						m_pr_name: 'Pretrained H&E model',
 						m_link: 'https://github.com/stardist/stardist/tree/master/models/paper/2D_dsb2018'
 					},
 					{
 						m_pr_id: '3d',
-						m_pr_name: '3d',
+						m_pr_name: 'Pretrained 3d model',
 						m_link: 'https://github.com/stardist/stardist/tree/master/models/examples/3D_demo'
 					}
 				]
@@ -144,7 +144,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: null,
-						m_pr_name: 'more',
+						m_pr_name: 'Pretrained model',
 						m_link: 'https://drive.google.com/open?id=1lVJtS41vzMkIsCa3-i14mSmLBbaKazsq'
 					}
 				]
@@ -173,7 +173,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: null,
-						m_pr_name: 'more',
+						m_pr_name: 'Nuclei model',
 						m_link: ['https://www.cellpose.org/models/nuclei_0',
 						        'https://www.cellpose.org/models/nuclei_1',
 						        'https://www.cellpose.org/models/nuclei_2',
@@ -289,12 +289,12 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: 'https://drive.google.com/drive/folders/1yKxyXkk4ceXoDpd647i1_-JWLjzKOY7t?usp=sharing'
 					},
 					{
 						m_pr_id: '7',
-						m_pr_name: 'fluo_tissue',
+						m_pr_name: 'Pretrained fluorescent tissue model',
 						m_link: 'https://drive.google.com/drive/folders/1yKxyXkk4ceXoDpd647i1_-JWLjzKOY7t?usp=sharing'
 					}
 				]
@@ -433,7 +433,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '3d',
-						m_pr_name: '3d',
+						m_pr_name: 'Pretrained 3d model',
 						m_link: 'https://lmb.informatik.uni-freiburg.de/resources/opensource/k_seg_v4_cv_1_snapshot_iter_70000.caffemodel'
 					}
 				]
@@ -505,7 +505,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '3d',
-						m_pr_name: '3d',
+						m_pr_name: 'Pretreained 3d model',
 						m_link: ['https://fun.bio.keio.ac.jp/software/QCANet/learned_nsn.npz',
 								'https://fun.bio.keio.ac.jp/software/QCANet/learned_ndn.npz']
 					}
@@ -556,7 +556,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '3d',
-						m_pr_name: '3d',
+						m_pr_name: 'Pretrained 3d model',
 						m_link: 'https://osf.io/dt76c/'
 					}
 				]
@@ -628,12 +628,12 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: 'https://bioimage.io/#/?partner=ilastik'
 					},
 					{
 						m_pr_id: '7',
-						m_pr_name: 'fluo_tissue',
+						m_pr_name: 'Pretrained fluorescent tissue model',
 						m_link: 'https://bioimage.io/#/?partner=ilastik'
 					}
 				]
@@ -662,7 +662,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: ['https://drive.google.com/file/d/1fcs1F2lGPX0ejzEGPZ63YNF3AmUbdBcM/view?usp=sharing',
 								'https://drive.google.com/file/d/1hythQfvD6kbaUClAPY96nHcXB7RXVmBx/view?usp=sharing']
 					}
@@ -691,7 +691,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: 'https://zenodo.org/record/4003545/files/Task089_Fluo-N2DH-SIM_thickborder_time.zip?download=1'
 					}
 				]
@@ -741,12 +741,12 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: 'https://hmgubox2.helmholtz-muenchen.de/index.php/s/YXRD4a7qHnCa9x5'
 					},
 					{
 						m_pr_id: '28',
-						m_pr_name: 'he',
+						m_pr_name: 'Pretrained H&E model',
 						m_link: 'https://hmgubox2.helmholtz-muenchen.de/index.php/s/YXRD4a7qHnCa9x5'
 					}
 				]
@@ -775,12 +775,12 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: 'https://bioimage.io/#/?tags=deepimagej&id=10.5072%2Fzenodo.881940&type=model'
 					},
 					{
 						m_pr_id: '28',
-						m_pr_name: 'he',
+						m_pr_name: 'Pretrained H&E model',
 						m_link: 'https://bioimage.io/#/?tags=deepimagej&id=10.5072%2Fzenodo.880528&type=model'
 					}
 				]
@@ -852,12 +852,12 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: '17',
-						m_pr_name: 'fluo',
+						m_pr_name: 'Pretrained fluorescent model',
 						m_link: 'https://deepcell-data.s3-us-west-1.amazonaws.com/saved-models/NuclearSegmentation-4.tar.gz'
 					},
 					{
 						m_pr_id: '7',
-						m_pr_name: 'fluo_tissue',
+						m_pr_name: 'Pretrained fluorescent tissue model',
 						m_link: 'https://deepcell-data.s3-us-west-1.amazonaws.com/saved-models/NuclearSegmentation-4.tar.gz'
 					}
 				]
@@ -908,33 +908,33 @@ export default {
 				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=4408035528910723811&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
 				m_pretrained: [
 					{
-						m_pr_id: '29',
-						m_pr_name: 'CoNSeP_dataset',
+						m_pr_id: '28',
+						m_pr_name: 'Pretrained on CoNSeP dataset',
 						m_link: 'https://drive.google.com/file/d/1BF0GIgNGYpfyqEyU0jMsA6MqcUpVQx0b/view?usp=sharing'
 					},
 					{
-						m_pr_id: '30',
-						m_pr_name: 'Kumar_paper_checkpoint',
+						m_pr_id: '28',
+						m_pr_name: 'Model checkpoint from Kumar et al. paper',
 						m_link: 'https://drive.google.com/file/d/1NUnO4oQRGL-b0fyzlT8LKZzo6KJD0_6X/view?usp=sharing'
 					},
 					{
-						m_pr_id: '31',
-						m_pr_name: 'CPM17_dataset_checkpoint',
+						m_pr_id: '28',
+						m_pr_name: 'Pretrained on CPM17 dataset',
 						m_link: 'https://drive.google.com/file/d/1lR7yJbEwnF6qP8zu4lrmRPukylw9g-Ms/view?usp=sharing'
 					},
 					{
-						m_pr_id: '32',
-						m_pr_name: 'MoNuSAC_dataset_checkpoint',
+						m_pr_id: '28',
+						m_pr_name: 'Preatrained on MoNuSAC dataset',
 						m_link: 'https://drive.google.com/file/d/13qkxDqv7CUqxN-l5CpeFVmc24mDw6CeV/view?usp=sharing'
 					},
 					{
-						m_pr_id: '33',
-						m_pr_name: 'PanNuke_dataset_checkpoint_(with_classification)',
+						m_pr_id: '28',
+						m_pr_name: 'Pretrained on PanNuke dataset (with_classification)',
 						m_link: 'https://drive.google.com/file/d/1SbSArI3KOOWHxRlxnjchO7_MbWzB4lNR/view?usp=sharing'
 					},
 					{
-						m_pr_id: '34',
-						m_pr_name: 'CoNSeP_dataset_checkpoint_(with_classification)',
+						m_pr_id: '28',
+						m_pr_name: 'Pretrained on CoNSeP dataset (with_classification)',
 						m_link: 'https://drive.google.com/file/d/1FtoTDDnuZShZmQujjaFSLVJLD5sAh2_P/view?usp=sharing'
 					}
 				]
