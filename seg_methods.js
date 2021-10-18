@@ -1001,5 +1001,33 @@ export default {
 				m_fragmented: false
 			}
 		},
+		{
+			m_id: 36,
+			m_name: 'NucleiSegNet: Robust deep learning architecture for the nuclei segmentation of liver cancer histopathology images',
+			m_author: 'Lal et al.',
+			m_year: '2021',
+			m_journal: 'Computers in Biology and Medicine',
+			m_links:{
+				m_code: 'https://github.com/shyamfec/NucleiSegNet',
+				m_paper: 'https://doi.org/10.1016/j.compbiomed.2020.104075',
+				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=4244248300674709504&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
+				m_pretrained: [					{
+						m_pr_id: '28',
+						m_pr_name: 'Pretrained NucleiSegNet',
+						m_link: 'https://drive.google.com/file/d/1-6Y_cnkerKEtaLHb8L1VnPQkM8GarTiV/view?usp=sharing'
+					}
+				]
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+				m_elongated: true,
+				m_concave: true,
+				m_deviating: true,
+				m_wobbling: true,
+				m_heterogen: false,
+				m_fragmented: false
+			}
+		},
 	]
 };

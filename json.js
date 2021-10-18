@@ -247,7 +247,7 @@ export default {
         		mini_hrefs: [imDir+'tissue_bf.png',imDir+'tissue_bf_ex4.png',imDir+'tissue_bf_ex3.png',imDir+'tissue_bf_ex2.png'],
         		mini_info: [{m_dataset:'TCGA', m_source:'https://osf.io/rs67v/?pid=nqtys'},{m_dataset:'TCGA', m_source:'https://osf.io/rs67v/?pid=nqtys'},{m_dataset:'BBBC038', m_source:'https://bbbc.broadinstitute.org/BBBC038'},{m_dataset:'TCGA', m_source:'https://zenodo.org/record/1174353#.YPsGEOhLiUk'}],
         		parent_tag: 'Tissue',
-        		methods:[0,1,2,3,28,27,33,34,],
+        		methods:[0,1,2,3,28,27,33,34,35,36,],
         		backup_methods:[],
 				children: []
 			}]
