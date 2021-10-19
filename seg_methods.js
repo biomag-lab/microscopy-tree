@@ -37,13 +37,13 @@ export default {
 					},
 					{
 						m_pr_id: null,
-						m_pr_name: 'AnnotatorJ model',
+						m_pr_name: 'AnnotatorJ model (general)',
 						m_link: 'https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model'
 					},
 					{
 						m_pr_id: null,
-						m_pr_name: 'more',
-						m_link: 'Pretrained U-Net by BIOMAG'
+						m_pr_name: 'Pretrained U-Net by BIOMAG (general)',
+						m_link: 'https://drive.google.com/open?id=1lVJtS41vzMkIsCa3-i14mSmLBbaKazsq'
 					}
 				]
 			},
@@ -55,7 +55,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 1,
@@ -70,12 +71,12 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: null,
-						m_pr_name: 'DSB 2018 model',
+						m_pr_name: 'DSB 2018 model (general)',
 						m_link: 'https://github.com/mirzaevinom/data_science_bowl_2018'
 					},
 					{
 						m_pr_id: null,
-						m_pr_name: 'Mask R-CNN pretrained by BIOMAG',
+						m_pr_name: 'Mask R-CNN pretrained by BIOMAG (general)',
 						m_link: 'https://drive.google.com/open?id=1lVJtS41vzMkIsCa3-i14mSmLBbaKazsq'
 					}
 				]
@@ -144,7 +145,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: null,
-						m_pr_name: 'Pretrained model',
+						m_pr_name: 'Pretrained model (general)',
 						m_link: 'https://drive.google.com/open?id=1lVJtS41vzMkIsCa3-i14mSmLBbaKazsq'
 					}
 				]
@@ -173,7 +174,7 @@ export default {
 				m_pretrained:[
 					{
 						m_pr_id: null,
-						m_pr_name: 'Nuclei model',
+						m_pr_name: 'Nucleus model (general)',
 						m_link: ['https://www.cellpose.org/models/nuclei_0',
 						        'https://www.cellpose.org/models/nuclei_1',
 						        'https://www.cellpose.org/models/nuclei_2',

@@ -38,6 +38,7 @@ export default class Detail extends React.Component {
 			isWobbling: false,
 			isHeterogen: false,
 			isFragmented: false,
+			isOverlapping: false,
 			hoverImg: './data/images/challenge_none.png'
 		}
 		//this.fetchGithubStats(this.props.data.methods);
@@ -211,7 +212,7 @@ export default class Detail extends React.Component {
 				continue;
 			}
 			// challenges:
-			if ((this.state.isElongated && !data[i].challenges.m_elongated) || (this.state.isConcanve && !data[i].challenges.m_concave) || (this.state.isDeviating && !data[i].challenges.m_deviating) || (this.state.isWobbling && !data[i].challenges.m_wobbling) || (this.state.isHeterogen && !data[i].challenges.m_heterogen) || (this.state.isFragmented && !data[i].challenges.m_fragmented)) {
+			if ((this.state.isElongated && !data[i].challenges.m_elongated) || (this.state.isConcanve && !data[i].challenges.m_concave) || (this.state.isDeviating && !data[i].challenges.m_deviating) || (this.state.isWobbling && !data[i].challenges.m_wobbling) || (this.state.isHeterogen && !data[i].challenges.m_heterogen) || (this.state.isFragmented && !data[i].challenges.m_fragmented) || (this.state.isOverlapping && !data[i].challenges.m_overlapping)) {
 				continue;
 			}
 
@@ -889,6 +890,7 @@ export default class Detail extends React.Component {
 											<span className="challenge2">wobbling</span>
 
 									</label>
+									<br />
 
 									<label className="challenge2Outer"
 										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
@@ -909,6 +911,17 @@ export default class Detail extends React.Component {
 											checked={this.state.isFragmented}
 											onChange={this.handleInputChange} />
 											<span className="challenge2">fragmented</span>
+
+									</label>
+
+									<label className="challenge2Outer"
+										onMouseOver={this.showTooltipImg} onMouseLeave={this.hideTooltipImg}>
+										<input
+											name="isOverlapping"
+											type="checkbox"
+											checked={this.state.isOverlapping}
+											onChange={this.handleInputChange} />
+											<span className="challenge2">overlapping</span>
 
 									</label>
 								</form>
