@@ -11,7 +11,7 @@ export default {
     mini_hrefs: [],
     mini_info: [],
     parent_tag: null,
-    methods:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32],
+    methods:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37],
     backup_methods:[],
     pathProps: {
     	className: 'link'
@@ -247,7 +247,7 @@ export default {
         		mini_hrefs: [imDir+'tissue_bf.png',imDir+'tissue_bf_ex4.png',imDir+'tissue_bf_ex3.png',imDir+'tissue_bf_ex2.png'],
         		mini_info: [{m_dataset:'TCGA', m_source:'https://osf.io/rs67v/?pid=nqtys'},{m_dataset:'TCGA', m_source:'https://osf.io/rs67v/?pid=nqtys'},{m_dataset:'BBBC038', m_source:'https://bbbc.broadinstitute.org/BBBC038'},{m_dataset:'TCGA', m_source:'https://zenodo.org/record/1174353#.YPsGEOhLiUk'}],
         		parent_tag: 'Tissue',
-        		methods:[0,1,2,3,28,27,33,34,35,36,],
+        		methods:[0,1,2,3,28,27,33,34,35,36,37],
         		backup_methods:[],
 				children: []
 			}]

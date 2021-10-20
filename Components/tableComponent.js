@@ -149,6 +149,11 @@ class TableComponent extends React.Component {
           else if (curId==='3d') {
             subName=subProp[i].m_pr_name;
             goodSub=true;
+          }
+          else if (nodeId==='1') {
+            // root node, display everything
+            subName=subProp[i].m_pr_name;
+            goodSub=true;
           } else {
             // do nothing
             continue;

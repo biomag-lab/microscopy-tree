@@ -1030,5 +1030,23 @@ export default {
 				m_fragmented: false
 			}
 		},
+		{
+			m_id: 37,
+			m_name: 'QuPath',
+			m_author: 'Bankhead et al.',
+			m_year: '2017',
+			m_journal: 'Scientific Reports',
+			m_links:{
+				m_code: 'https://github.com/qupath/qupath',
+				m_paper: 'https://doi.org/10.1038/s41598-017-17204-5',
+				m_cites: 'https://scholar.google.com/scholar?hl=hu&as_sdt=2005&sciodt=0%2C5&cites=3142627468332962193&scipsc=1&q=&btnG=',
+				m_pretrained: []
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+
+			}
+		},
 	]
 };
