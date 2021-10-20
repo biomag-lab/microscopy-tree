@@ -228,10 +228,10 @@ export default {
 			m_name: 'MultiStar',
 			m_author: 'Walter et al.',
 			m_year: '2021',
-			m_journal: 'arXiv',
+			m_journal: 'ISBI 2021',
 			m_links:{
 				m_code: 'https://github.com/overlapping-instances/MultiStar',
-				m_paper: 'https://arxiv.org/abs/2011.13228',
+				m_paper: 'https://doi.org/10.1109/ISBI48211.2021.9433769',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=7345388908580636549&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
