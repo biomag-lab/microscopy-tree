@@ -66,7 +66,7 @@ export default {
 			m_journal: 'ICCV 2017',
 			m_links:{
 				m_code: 'https://github.com/matterport/Mask_RCNN',
-				m_paper: 'https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html',
+				m_paper: 'https://doi.org/10.1109/ICCV.2017.322',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=11459229647356475672&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
@@ -89,17 +89,18 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 2,
 			m_name: 'StarDist',
 			m_author: 'Schmidt et al.',
 			m_year: '2018',
-			m_journal: 'arXiv (WACV 2020)',
+			m_journal: 'MICCAI 2018 & WACV 2020)',
 			m_links:{
 				m_code: 'https://github.com/stardist/stardist',
-				m_paper: 'https://arxiv.org/abs/1806.03535',
+				m_paper: 'https://doi.org/10.1007/978-3-030-00934-2_30',
 				m_3D_paper: 'https://dx.doi.org/10.1109/WACV45572.2020.9093435',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=6261085790694927391&scipsc=1&q=&btnG=',
 				m_3D_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=2139260067181824373&scipsc=1&q=&btnG=',
@@ -129,7 +130,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 3,
@@ -158,7 +160,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 4,
@@ -194,7 +197,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 5,
@@ -216,14 +220,15 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 6,
 			m_name: 'MultiStar',
 			m_author: 'Walter et al.',
 			m_year: '2021',
-			m_journal: 'arXiv (ISBI 2021)',
+			m_journal: 'arXiv',
 			m_links:{
 				m_code: 'https://github.com/overlapping-instances/MultiStar',
 				m_paper: 'https://arxiv.org/abs/2011.13228',
@@ -238,7 +243,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 7,
@@ -257,7 +263,9 @@ export default {
 			m_challenges: {
 				m_elongated: true,
 				m_concave: true,
-				m_wobbling: true
+				m_wobbling: true,
+				m_overlapping: true
+
 			}
 		}, {
 			m_id: 8,
@@ -308,7 +316,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 10,
@@ -318,7 +327,7 @@ export default {
 			m_journal: 'Nature Biotechnology',
 			m_links: {
 				m_code: 'https://github.com/Vaa3D/vaa3d_tools',
-				m_paper: 'https://www.nature.com/articles/nbt.1612',
+				m_paper: 'https://doi.org/10.1038/nbt.1612',
 				m_site: 'http://vaa3d.org',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=3380503499651306453&scipsc=1&q=&btnG=',
 				m_pretrained: []
@@ -341,7 +350,7 @@ export default {
 			m_journal: 'Bioinformatics',
 			m_links: {
 				m_code: 'https://imagejdocu.tudor.lu/plugin/stacks/3d_ij_suite/start',
-				m_paper: 'https://academic.oup.com/bioinformatics/article/29/14/1840/231770',
+				m_paper: 'https://doi.org/10.1093/bioinformatics/btt276',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=15174242674682245726&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
@@ -353,7 +362,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: false,
 				m_heterogen: false,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: false
 			}
 		}, {
 			m_id: 12,
@@ -363,7 +373,7 @@ export default {
 			m_journal: 'Computer Graphics Forum',
 			m_links: {
 				m_code: 'https://www.physikalischebiologie.de/downloads',
-				m_paper: 'https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.12169',
+				m_paper: 'https://doi.org/10.1111/cgf.12169',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=14687221567883628747&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
@@ -375,7 +385,8 @@ export default {
 				m_deviating: false,
 				m_wobbling: false,
 				m_heterogen: true,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 13,
@@ -385,7 +396,7 @@ export default {
 			m_journal: 'BioInformatics',
 			m_links: {
 				m_code: 'http://opensegspim.weebly.com/',
-				m_paper: 'https://academic.oup.com/bioinformatics/article/32/13/2075/1743029',
+				m_paper: 'https://doi.org/10.1093/bioinformatics/btw093',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=8492492200472410638&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
@@ -407,7 +418,7 @@ export default {
 			m_journal: 'Developmental Cell',
 			m_links: {
 				m_code: 'https://bitbucket.org/jstegmaier/race',
-				m_paper: 'https://www.sciencedirect.com/science/article/pii/S1534580715008370',
+				m_paper: 'https://doi.org/10.1016/j.devcel.2015.12.028',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=5100987867408303662&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
@@ -429,7 +440,7 @@ export default {
 			m_journal: 'MICCAI 2016',
 			m_links: {
 				m_code: 'https://lmb.informatik.uni-freiburg.de/resources/opensource/unet.en.html',
-				m_paper: 'https://link.springer.com/chapter/10.1007/978-3-319-46723-8_49',
+				m_paper: 'https://doi.org/10.1007/978-3-319-46723-8_49',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=9776881218649496640&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
@@ -457,7 +468,7 @@ export default {
 			m_journal: 'Frontiers in Neuroanatomy',
 			m_links: {
 				m_code: 'https://gitlab.com/pnmis/nuclear-segmentation',
-				m_paper: 'https://www.frontiersin.org/articles/10.3389/fnana.2019.00081/full',
+				m_paper: 'https://doi.org/10.3389/fnana.2019.00081',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=11591389986563403030&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
@@ -469,7 +480,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: false,
 				m_heterogen: true,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 17,
@@ -479,7 +491,7 @@ export default {
 			m_journal: 'IEEE ISBI',
 			m_links: {
 				m_code: 'https://github.com/s-shailja/ucsb_ctc',
-				m_paper: 'https://ieeexplore.ieee.org/abstract/document/9433831/',
+				m_paper: 'https://doi.org/10.1109/ISBI48211.2021.9433831',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=191409641997327519&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
@@ -501,7 +513,7 @@ export default {
 			m_journal: 'Nature NPJ Systems Biology',
 			m_links: {
 				m_code: 'https://github.com/funalab/QCANet',
-				m_paper: 'https://www.nature.com/articles/s41540-020-00152-8',
+				m_paper: 'https://doi.org/10.1038/s41540-020-00152-8',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=6074850203107615052&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
@@ -520,7 +532,8 @@ export default {
 				m_deviating: false,
 				m_wobbling: true,
 				m_heterogen: false,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 19,
@@ -530,7 +543,7 @@ export default {
 			m_journal: 'BioInformatics',
 			m_links: {
 				m_code: 'https://github.com/etasnadi/3DCellAnnotator',
-				m_paper: 'https://academic.oup.com/bioinformatics/article/36/9/2948/5709038?login=true',
+				m_paper: 'https://doi.org/10.1093/bioinformatics/btaa029',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=4513869250213071894&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
@@ -542,7 +555,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: false,
 				m_heterogen: true,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 20,
@@ -552,7 +566,7 @@ export default {
 			m_journal: 'eLife',
 			m_links: {
 				m_code: 'https://github.com/WenChentao/3DeeCellTracker',
-				m_paper: 'https://elifesciences.org/articles/59187',
+				m_paper: 'https://doi.org/10.7554/eLife.59187',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=10247056894798012587&scipsc=1&q=&btnG=',
 				m_pretrained:[
 					{
@@ -570,7 +584,8 @@ export default {
 				m_deviating: false,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 21,
@@ -647,7 +662,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 24,
@@ -659,7 +675,6 @@ export default {
 				m_code: 'https://github.com/yanglf1121/NuSeT',
 				m_paper: 'https://doi.org/10.1371/journal.pcbi.1008193',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=5605215401951628263&scipsc=1&q=&btnG=',
-				//m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=5605215401951628263&scipsc=1&q=culture+fluorescence&btnG=&oq=',
 				m_pretrained:[
 					{
 						m_pr_id: '17',
@@ -677,7 +692,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 25,
@@ -705,7 +721,8 @@ export default {
 				m_deviating: false,
 				m_wobbling: false,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 26,
@@ -727,7 +744,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 27,
@@ -760,7 +778,8 @@ export default {
 				m_deviating: false,
 				m_wobbling: false,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 28,
@@ -794,7 +813,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 29,
@@ -816,7 +836,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 30,
@@ -838,7 +859,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		}, {
 			m_id: 31,
@@ -882,7 +904,7 @@ export default {
 			m_journal: 'ISBI 2021',
 			m_links:{
 				m_code: 'https://github.com/uhlmanngroup/splinedist',
-				m_paper: 'https://ieeexplore.ieee.org/document/9433928',
+				m_paper: 'https://doi.org/10.1109/ISBI48211.2021.9433928',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=14789189166887443383&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
@@ -894,7 +916,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: true,
-				m_fragmented: true
+				m_fragmented: true,
+				m_overlapping: true
 			}
 		},
 		{
@@ -948,7 +971,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: false,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		},
 		{
@@ -971,7 +995,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: false,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		},
 		{
@@ -999,7 +1024,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: false,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		},
 		{
@@ -1027,7 +1053,8 @@ export default {
 				m_deviating: true,
 				m_wobbling: true,
 				m_heterogen: false,
-				m_fragmented: false
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		},
 		{
