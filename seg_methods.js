@@ -1075,5 +1075,23 @@ export default {
 
 			}
 		},
+		{
+			m_id: 38,
+			m_name: 'SegNet',
+			m_author: 'Badrinarayanan et al.',
+			m_year: '2017',
+			m_journal: 'IEEE Transactions on Pattern Analysis and Machine Intelligence',
+			m_links:{
+				m_code: 'https://github.com/alexgkendall/caffe-segnet',
+				m_paper: 'https://doi.org/10.1109/TPAMI.2016.2644615',
+				m_cites: 'https://scholar.google.com/scholar?hl=hu&as_sdt=2005&sciodt=0%2C5&cites=8599254436676320906&scipsc=1&q=&btnG=',
+				m_pretrained: []
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+
+			}
+		},
 	]
 };
