@@ -1038,7 +1038,8 @@ export default {
 				m_code: 'https://github.com/shyamfec/NucleiSegNet',
 				m_paper: 'https://doi.org/10.1016/j.compbiomed.2020.104075',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&cites=4244248300674709504&as_sdt=2005&sciodt=0,5&&scipsc=1&q=&btnG=',
-				m_pretrained: [					{
+				m_pretrained: [
+					{
 						m_pr_id: '28',
 						m_pr_name: 'Pretrained NucleiSegNet',
 						m_link: 'https://drive.google.com/file/d/1-6Y_cnkerKEtaLHb8L1VnPQkM8GarTiV/view?usp=sharing'
@@ -1090,7 +1091,58 @@ export default {
 			m_2d: true,
 			m_3d: false,
 			m_challenges: {
-
+				m_elongated: true,
+				m_concave: true
+			}
+		},
+		{
+			m_id: 39,
+			m_name: 'EmbedSeg',
+			m_author: 'Lalit et al.',
+			m_year: '2021',
+			m_journal: 'arXiv preprint',
+			m_links:{
+				m_code: 'https://github.com/juglab/EmbedSeg',
+				m_paper: 'https://arxiv.org/abs/2101.10033',
+				m_cites: 'https://scholar.google.com/scholar?hl=hu&as_sdt=2005&sciodt=0%2C5&cites=17088491824780614104&scipsc=1&q=&btnG=',
+				m_pretrained: [
+					{
+						m_pr_id: '28',
+						m_pr_name: 'DSB fluo',
+						m_link: 'https://github.com/juglab/EmbedSeg/tree/main/pretrained_models/dsb-2018'
+					},
+					{
+						m_pr_id: '28',
+						m_pr_name: 'Mouse-Organoid-Cells-CBG',
+						m_link: 'https://github.com/juglab/EmbedSeg/tree/main/pretrained_models/Mouse-Organoid-Cells-CBG'
+					},
+					{
+						m_pr_id: '28',
+						m_pr_name: 'Mouse-Skull-Nuclei-CBG',
+						m_link: 'https://github.com/juglab/EmbedSeg/tree/main/pretrained_models/Mouse-Skull-Nuclei-CBG'
+					},
+					{
+						m_pr_id: '28',
+						m_pr_name: 'Platynereis-ISH-Nuclei-CBG',
+						m_link: 'https://github.com/juglab/EmbedSeg/tree/main/pretrained_models/Platynereis-ISH-Nuclei-CBG'
+					},
+					{
+						m_pr_id: '28',
+						m_pr_name: 'Platynereis-Nuclei-CBG',
+						m_link: 'https://github.com/juglab/EmbedSeg/tree/main/pretrained_models/Platynereis-Nuclei-CBG'
+					},
+				]
+			},
+			m_2d: true,
+			m_3d: true,
+			m_challenges: {
+				m_elongated: true,
+				m_concave: true,
+				m_deviating: true,
+				m_wobbling: true,
+				m_heterogen: true,
+				m_fragmented: false,
+				m_overlapping: true
 			}
 		},
 	]
