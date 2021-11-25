@@ -90,7 +90,7 @@ export default {
         		mini_hrefs: [imDir+'culture_labelledbf.png'],
         		mini_info: [{m_dataset:'(Researchgate)', m_source:'https://www.researchgate.net/post/H_E_staining_of_cultured_cells'}],
         		parent_tag: 'Culture',
-        		methods:[0,1,2,3,38,41,],
+        		methods:[0,1,2,3,4,38,41,42,],
         		backup_methods:[],
 				children: []
 			}]
@@ -120,7 +120,7 @@ export default {
         		mini_hrefs: [imDir+'culture_bf.png',imDir+'culture_bf_ex1.png'],
         		mini_info: [{m_dataset:'(Medium)', m_source:'https://medium.com/@kerimov.nurlan/anomaly-detection-in-brightfield-microscopy-images-c92cdddafcc3'},{m_dataset:'BIOMAG', m_source:'http://group.szbk.u-szeged.hu/sysbiol/horvath-peter-lab-index.html'}],
         		parent_tag: 'Culture',
-        		methods:[0,1,2,3,4,38,],
+        		methods:[0,1,2,3,4,38,41,42,],
         		backup_methods:[],
 				children: []
 			}, {

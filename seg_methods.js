@@ -10,15 +10,7 @@ export default {
 				m_code: 'https://github.com/zhixuhao/unet',
 				m_paper: 'http://dx.doi.org/10.1007/978-3-319-24574-4_28',
 				m_cites: 'https://scholar.google.com/scholar?hl=en&as_sdt=2005&sciodt=0%2C5&cites=10845403114495995712&scipsc=1&q=&btnG=',
-				/*
-				m_pretrained: {
-					m_PC: 'https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/',
-					m_DIC: 'https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/',
-					m_fluo: 'https://github.com/carpenterlab/2019_caicedo_cytometryA.git',
-					m_more: 'https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model',
-					m_more2: 'https://drive.google.com/open?id=1lVJtS41vzMkIsCa3-i14mSmLBbaKazsq'
-				},
-				*/
+
 				m_pretrained:[
 					{
 						m_pr_id: '21',
@@ -1174,6 +1166,26 @@ export default {
 			m_links:{
 				m_code: 'https://github.com/yijingru/KG_Instance_Segmentation',
 				m_paper: 'https://doi.org/10.1007/978-3-030-32239-7_41',
+				m_cites: 'https://scholar.google.com/scholar?hl=hu&as_sdt=2005&sciodt=0%2C5&cites=5861304576848718814&scipsc=1&q=&btnG=',
+				m_pretrained: []
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+				m_elongated: true,
+				m_concave: true,
+				m_deviating: true
+			}
+		},
+		{
+			m_id: 42,
+			m_name: 'Self-supervised Nuclei Segmentation in Histopathological Images Using Attention',
+			m_author: 'Yi et al.',
+			m_year: '2019',
+			m_journal: 'MICCAI 2020',
+			m_links:{
+				m_code: 'https://github.com/msahasrabudhe/miccai2020_self_sup_nuclei_seg',
+				m_paper: 'https://doi.org/10.1007/978-3-030-59722-1_38',
 				m_cites: 'https://scholar.google.com/scholar?hl=hu&as_sdt=2005&sciodt=0%2C5&cites=5861304576848718814&scipsc=1&q=&btnG=',
 				m_pretrained: []
 			},
