@@ -1080,7 +1080,7 @@ export default {
 			m_id: 38,
 			m_name: 'SegNet',
 			m_author: 'Badrinarayanan et al.',
-			m_year: '2017',
+			m_year: '2015',
 			m_journal: 'IEEE Transactions on Pattern Analysis and Machine Intelligence',
 			m_links:{
 				m_code: 'https://github.com/alexgkendall/caffe-segnet',
@@ -1143,6 +1143,26 @@ export default {
 				m_heterogen: true,
 				m_fragmented: false,
 				m_overlapping: true
+			}
+		},
+		{
+			m_id: 40,
+			m_name: 'MSRF-Net',
+			m_author: 'Srivastava et al.',
+			m_year: '2021',
+			m_journal: 'arXiv prepront',
+			m_links:{
+				m_code: 'https://github.com/NoviceMAn-prog/MSRF-Net',
+				m_paper: 'https://arxiv.org/abs/2105.07451',
+				m_cites: 'https://scholar.google.com/scholar?hl=hu&as_sdt=2005&sciodt=0%2C5&cites=16866504810084656657&scipsc=1&q=&btnG=',
+				m_pretrained: []
+			},
+			m_2d: true,
+			m_3d: false,
+			m_challenges: {
+				m_elongated: true,
+				m_concave: true,
+				m_deviating: true
 			}
 		},
 	]
